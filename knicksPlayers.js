@@ -64,7 +64,7 @@ var mitchellRobinson = {
   pos: "C",
   age: "23",
   sal: 1802057,
-  ws: 3.4,
+  ws: 4.4,
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4351852.png&w=350&h=254"
 };
 
@@ -100,7 +100,7 @@ var derrickRose = {
   age: "32",
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3456.png&w=350&h=254",
   cYears: 2,
-  cTotal: 30,
+  cTotal: 28,
   ws: 3.3
 };
 
@@ -123,7 +123,7 @@ var nerlensNoel = {
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991280.png&w=350&h=254",
   cYears: 2,
   cTotal: 26,
-  ws: 5.2
+  ws: 4.2
 };
 
 var elfridPayton = {
@@ -155,8 +155,8 @@ var tajGibson = {
   age: "36",
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3986.png&w=350&h=254",
   cYears: 1,
-  cTotal: 5,
-  ws: 3.8
+  cTotal: 3,
+  ws: 2
 };
 
 var jaredHarper = {

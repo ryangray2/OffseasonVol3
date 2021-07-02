@@ -7,10 +7,10 @@ pos: 'PG',
 age: '36',
 type: 'PO',
 cYears: 3,
-cTotal: 95,
+cTotal: 100,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2779.png&w=350&h=254',
 ws: 9.2,
-interest: 15
+interest: 20
 };
 var KawhiLeonard = {
 firstName: 'Kawhi',
@@ -48,7 +48,7 @@ type: 'UFA',
 cYears: 2,
 cTotal: 50,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3012.png&w=350&h=254',
-ws: 5.1,
+ws: 6.1,
 interest: 50
 };
 var DeMarDeRozan = {
@@ -305,8 +305,8 @@ team: 'BKN',
 pos: 'PG',
 age: '28',
 type: 'PO',
-cYears: 2,
-cTotal: 36,
+cYears: 3,
+cTotal: 45,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2580782.png&w=350&h=254',
 ws: 3,
 interest: 20
@@ -344,8 +344,8 @@ team: 'POR',
 pos: 'SG',
 age: '28',
 type: 'PO',
-cYears: 3,
-cTotal: 55,
+cYears: 4,
+cTotal: 58,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2595516.png&w=350&h=254',
 ws: 4.7,
 interest: 40
@@ -419,17 +419,17 @@ interest: 35
 //here
 
 var LouisWilliams = {
-firstName: 'Louis',
+firstName: 'Lou',
 lastName: 'Williams',
 team: 'ATL',
 pos: 'SG',
 age: '34',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 2,
+cTotal: 12,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2799.png&w=350&h=254',
+ws: 1.7,
+interest: 50
 };
 var CristianoFelicio = {
 firstName: 'Cristiano',
@@ -451,11 +451,11 @@ team: 'MIL',
 pos: 'PF',
 age: '36',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 2,
+cTotal: 15,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3033.png&w=350&h=254',
+ws: 1,
+interest: 50
 };
 var DerrickRose = {
 firstName: 'Derrick',
@@ -503,11 +503,11 @@ team: 'WAS',
 pos: 'C',
 age: '33',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 1,
+cTotal: 8,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3447.png&w=350&h=254',
+ws: 3.2,
+interest: 50
 };
 var NemanjaBjelica = {
 firstName: 'Nemanja',
@@ -523,17 +523,17 @@ ws: 0,
 interest: 100
 };
 var IshmaelSmith = {
-firstName: 'Ishmael',
+firstName: 'Ish',
 lastName: 'Smith',
 team: 'WAS',
 pos: 'PG',
 age: '33',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 2,
+cTotal: 12,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4305.png&w=350&h=254',
+ws: 1,
+interest: 50
 };
 var AlecBurks = {
 firstName: 'Alec',
@@ -607,11 +607,11 @@ team: 'CHI',
 pos: 'C',
 age: '29',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 2,
+cTotal: 10,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2451037.png&w=350&h=254',
+ws: 3.2,
+interest: 50
 };
 var NerlensNoel = {
 firstName: 'Nerlens',
@@ -659,11 +659,11 @@ team: 'POR',
 pos: 'C',
 age: '29',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 2,
+cTotal: 10,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6447.png&w=350&h=254',
+ws: 2,
+interest: 50
 };
 var RichaunHolmes = {
 firstName: 'Richaun',
@@ -1010,11 +1010,11 @@ team: 'LAL',
 pos: 'SG',
 age: '27',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 3,
+cTotal: 27,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991350.png&w=350&h=254',
+ws: 2.4,
+interest: 60
 };
 var WayneEllington = {
 firstName: 'Wayne',
@@ -1049,11 +1049,11 @@ team: 'BKN',
 pos: 'PF',
 age: '35',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 2,
+cTotal: 6,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3209.png&w=350&h=254',
+ws: 2.5,
+interest: 40
 };
 var CarmeloAnthony = {
 firstName: 'Carmelo',
@@ -1062,11 +1062,11 @@ team: 'POR',
 pos: 'PF',
 age: '37',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 1,
+cTotal: 3,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1975.png&w=350&h=254',
+ws: 2.6,
+interest: 50
 };
 var NicolasBatum = {
 firstName: 'Nicolas',
@@ -1075,11 +1075,11 @@ team: 'LAC',
 pos: 'SF',
 age: '32',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 2,
+cTotal: 10,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3416.png&w=350&h=254',
+ws: 3.7,
+interest: 30
 };
 var UdonisHaslem = {
 firstName: 'Udonis',
@@ -1192,11 +1192,11 @@ team: 'GSW',
 pos: 'SG',
 age: '32',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 1,
+cTotal: 5,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6637.png&w=350&h=254',
+ws: 1.8,
+interest: 50
 };
 var TajGibson = {
 firstName: 'Taj',

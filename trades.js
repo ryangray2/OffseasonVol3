@@ -91,7 +91,7 @@ var jalenBrunson = {
   pos: "G",
   age: "24",
   sal: 1802057,
-  ws: 4.5,
+  ws: 3.5,
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3934672.png&w=350&h=254"
 }
 
