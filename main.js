@@ -746,7 +746,7 @@ function generateBroadFA(kind) {
     row.appendChild(priceCol);
 
 
-    if (!offeredArr.includes(filteredFA[i]) && (filteredFA[i].cTotal * 1000000) / filteredFA[i].cYears <= getCapRoom()) {
+    if (!offeredArr.includes(tempArray[i]) && (tempArray[i].cTotal * 1000000) / tempArray[i].cYears <= getCapRoom()) {
       var signCol = document.createElement("div");
       signCol.classList.add("col-12");
 
@@ -763,7 +763,7 @@ function generateBroadFA(kind) {
     if (offeredArr.includes(tempArray[i])) {
       row.style.opacity = ".5";
     }
-    if ((filteredFA[i].cTotal * 1000000) / filteredFA[i].cYears > getCapRoom()) {
+    if ((tempArray[i].cTotal * 1000000) / tempArray[i].cYears > getCapRoom()) {
         row.style.opacity = ".5";
     }
     var hr = document.createElement("hr");
@@ -1161,12 +1161,15 @@ function generateTrades(num) {
     var row = document.createElement("div");
     row.classList.add("row", "text-center");
 
+    var col1 = document.createElement("div");
+    col1.classList.add("col-12");
 
     var p = document.createElement("p");
     p.classList.add("tradeName");
     p.innerHTML = "No offers for this player";
 
-    row.appendChild(p);
+    col1.appendChild(p)
+    row.appendChild(col1);
     root.appendChild(row);
     return;
   }
