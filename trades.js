@@ -10,14 +10,14 @@ var andrewWiggins = {
 
 var gsw1 = {
   team: warriors,
-  give: [mitchellRobinson, kevinKnox, first2022, second2021DET],
+  give: [mitchellRobinson, kevinKnox, first2022, second2023DET],
   receive: [andrewWiggins]
 }
 
 var okc1 = {
   team: thunder,
   give: [kevinKnox],
-  receive: ["2021 2nd Round (OKC)", "2026 2nd Round (OKC)"]
+  receive: ["2022 2nd Round (OKC)", "2026 2nd Round (OKC)"]
 }
 
 var damianLillard = {

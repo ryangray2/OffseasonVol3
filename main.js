@@ -36,6 +36,7 @@ function startPressed() {
 
   for (let i = 0; i < draftPlayers.length; i++) {
     draftPlayers[i].rank = i;
+    console.log(i + " " + draftPlayers[i].lastName);
   }
   filterFreeAgents();
 }
