@@ -5,7 +5,8 @@ var andrewWiggins = {
   pos: "F",
   age: "26",
   sal: 31579390,
-  ws: 3.9
+  ws: 3.9,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3059319.png&w=350&h=254"
 }
 
 var gsw1 = {
@@ -26,7 +27,8 @@ var damianLillard = {
   pos: "G",
   age: "31",
   sal: 39344900,
-  ws: 10.4
+  ws: 10.4,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png&w=350&h=254"
 }
 
 var por1 = {
@@ -41,7 +43,8 @@ var malikBeasley = {
   pos: "G",
   age: "24",
   sal: 14391964,
-  ws: 2.5
+  ws: 2.5,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907822.png&w=350&h=254"
 }
 
 var min1 = {
@@ -56,7 +59,8 @@ var shai = {
   pos: "G",
   age: "22",
   sal: 4141320,
-  ws: 5.5
+  ws: 5.5,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278073.png&w=350&h=254"
 }
 
 var okc2 = {
@@ -71,7 +75,8 @@ var benSimmons = {
   pos: "F",
   age: "24",
   sal: 33003936,
-  ws: 6
+  ws: 6,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907387.png&w=350&h=254"
 }
 
 var phi1 = {
@@ -86,7 +91,8 @@ var jalenBrunson = {
   pos: "G",
   age: "24",
   sal: 1802057,
-  ws: 4.5
+  ws: 4.5,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3934672.png&w=350&h=254"
 }
 
 var dal1 = {
@@ -101,7 +107,8 @@ var bradleyBeal = {
   pos: "G",
   age: "28",
   sal: 34502129,
-  ws: 5.9
+  ws: 5.9,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6580.png&w=350&h=254"
 }
 
 var was1 = {
@@ -116,7 +123,8 @@ var zachLavine = {
   pos: "G",
   age: "26",
   sal: 19500000,
-  ws: 5.9
+  ws: 5.9,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064440.png&w=350&h=254"
 }
 
 var chi1 = {
@@ -131,7 +139,8 @@ var collinSexton = {
   pos: "G",
   age: "22",
   sal: 6349671,
-  ws: 3.5
+  ws: 3.5,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277811.png&w=350&h=254"
 }
 
 var cle1 = {

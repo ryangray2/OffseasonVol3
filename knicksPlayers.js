@@ -4,7 +4,8 @@ var juliusRandle = {
   pos: "F",
   age: "26",
   sal: 20745000,
-  ws: 7.8
+  ws: 7.8,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064514.png&w=350&h=254"
 };
 
 var rjBarrett = {
@@ -13,7 +14,8 @@ var rjBarrett = {
   pos: "G",
   age: "21",
   sal: 8623920,
-  ws: 3.1
+  ws: 4.1,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png&w=350&h=254"
 };
 
 var kevinKnox = {
@@ -22,7 +24,8 @@ var kevinKnox = {
   pos: "F",
   age: "22",
   sal: 5845978,
-  ws: .6
+  ws: .6,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278075.png&w=350&h=254"
 };
 
 var obiToppin = {
@@ -31,7 +34,8 @@ var obiToppin = {
   pos: "F",
   age: "23",
   sal: 5105160,
-  ws: 1.5
+  ws: 1.5,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278355.png&w=350&h=254"
 };
 
 var lucaVildoza = {
@@ -40,7 +44,8 @@ var lucaVildoza = {
   pos: "G",
   age: "26",
   sal: 3325000,
-  ws: 1
+  ws: 1,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4231914.png&w=350&h=254"
 }
 
 var immanuelQuickley = {
@@ -49,7 +54,8 @@ var immanuelQuickley = {
   pos: "G",
   age: "22",
   sal: 2210640,
-  ws: 3.2
+  ws: 2.8,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395724.png&w=350&h=254"
 };
 
 var mitchellRobinson = {
@@ -58,7 +64,8 @@ var mitchellRobinson = {
   pos: "C",
   age: "23",
   sal: 1802057,
-  ws: 3.4
+  ws: 3.4,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4351852.png&w=350&h=254"
 };
 
 var norvelPelle = {
@@ -67,7 +74,8 @@ var norvelPelle = {
   pos: "F",
   age: "28",
   sal: 1701593,
-  ws: .2
+  ws: .2,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2608892.png&w=350&h=254"
 };
 
 var roster = [juliusRandle, rjBarrett, kevinKnox, obiToppin, lucaVildoza, immanuelQuickley, mitchellRobinson, norvelPelle];
@@ -93,7 +101,7 @@ var derrickRose = {
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3456.png&w=350&h=254",
   cYears: 2,
   cTotal: 30,
-  ws: 2.8
+  ws: 3.3
 };
 
 var alecBurks = {
@@ -104,7 +112,7 @@ var alecBurks = {
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6429.png&w=350&h=254",
   cYears: 2,
   cTotal: 22,
-  ws: 3.3
+  ws: 3.2
 };
 
 var nerlensNoel = {
@@ -137,7 +145,7 @@ var reggieBullock = {
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2528779.png&w=350&h=254",
   cYears: 2,
   cTotal: 22,
-  ws: 4.6
+  ws: 3.6
 };
 
 var tajGibson = {

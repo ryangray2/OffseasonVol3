@@ -59,6 +59,12 @@ body {
   display: none;
 }
 
+.starter {
+  background-image: url(test.png);
+background-size: cover;
+padding: 0px !important;
+}
+
 #sCap {
   font-family: 'mensch_trialblack';
 color: white;
@@ -152,6 +158,11 @@ font-family: 'mensch_trialblack';
 .faImg {
   width: 100%;
   width: 35vh;
+}
+
+.starterImg {
+    width: 100%;
+    max-width: 200px;
 }
 
 .ovr {

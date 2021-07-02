@@ -17,6 +17,7 @@ var potentialTrades = [];
 var currkind = "all";
 var preDraftTrade;
 var filteredFA = [];
+var starters = [];
 
 
 function getSalary() {
@@ -144,6 +145,44 @@ function preNoTrade() {
   document.getElementById("draftBar").style.display = "flex";
   draftSim();
 }
+
+function getStarters() {
+
+  var g = 0;
+  var f = 0;
+  var c = 0;
+
+  for (let i = 0; i < roster.length; i++) {
+    if (starters.length === 5) {
+      break;
+    }
+    if (roster[i].pos === "PG" || roster[i].pos === "SG" || roster[i].pos === "G") {
+      if (g < 4) {
+        starters.push(roster[i]);
+        g++;
+      } else {
+        continue;
+      }
+    }
+    if (roster[i].pos === "PF" || roster[i].pos === "SF" || roster[i].pos === "F") {
+      if (f < 4) {
+        starters.push(roster[i]);
+        f++;
+      } else {
+        continue;
+      }
+    }
+    if (roster[i].pos === "C") {
+      if (c < 1) {
+        starters.push(roster[i]);
+        c++;
+      } else {
+        continue;
+      }
+    }
+  }
+}
+
 function generateSRoster() {
   // var root = document.getElementById("sRoster");
   // while (root.firstChild) {
@@ -153,9 +192,64 @@ function generateSRoster() {
 
   var test = document.getElementById("sOffense");
 
+  roster.sort(function(a, b){return b.ws-a.ws});
 
+  getStarters();
+
+  var rowS = document.createElement("div");
+  rowS.classList.add("row", "text-center");
+
+  for (let i = 0; i < 3; i++) {
+
+    var imgCol2 = document.createElement("div");
+    imgCol2.classList.add("col-4", "col-md-4", "starter");
+
+    var img = document.createElement("img");
+    img.setAttribute("src", starters[i].img);
+    img.classList.add("starterImg");
+
+    imgCol2.appendChild(img);
+    rowS.appendChild(imgCol2);
+
+  }
+  test.appendChild(rowS);
+
+  var rowSt = document.createElement("div");
+  rowSt.classList.add("row", "text-center");
+
+  for (let i = 3; i < 5; i++) {
+
+
+    var imgCol = document.createElement("div");
+    imgCol.classList.add("col-2", "col-md-2");
+
+    var imgCol2 = document.createElement("div");
+    imgCol2.classList.add("col-4", "col-md-4", "starter");
+
+    var img = document.createElement("img");
+    img.setAttribute("src", starters[i].img);
+    img.classList.add("starterImg");
+
+
+    imgCol2.appendChild(img);
+
+    if (i === 3) {
+      rowSt.appendChild(imgCol);
+      rowSt.appendChild(imgCol2);
+    } else {
+      rowSt.appendChild(imgCol2);
+      rowSt.appendChild(imgCol);
+
+    }
+
+  }
+  test.appendChild(rowSt);
 
   for (let i = 0; i < roster.length; i++) {
+
+    if (starters.includes(roster[i])) {
+      continue;
+    }
 
     var row2 = document.createElement("div");
     row2.classList.add("row");

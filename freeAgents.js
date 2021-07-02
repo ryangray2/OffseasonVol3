@@ -48,7 +48,7 @@ type: 'UFA',
 cYears: 2,
 cTotal: 50,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3012.png&w=350&h=254',
-ws: 4.1,
+ws: 5.1,
 interest: 50
 };
 var DeMarDeRozan = {
