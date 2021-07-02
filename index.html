@@ -1,0 +1,317 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>TKW Offseason App</title>
+  <meta name="description" content="TKW Offseason App">
+  <meta name="author" content="Ryan Gray">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css">
+  <link rel="stylesheet" href="hitch.css">
+  <link rel="stylesheet" href="mensch.css">
+  <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+  <div class="container" id="startCont">
+    <div class="row text-center">
+      <div class="col-12">
+        <img src="thelogo copy.png" class="slide-in-left" style="width: 100%">
+      </div>
+      <div class="col-12">
+        <button onclick="startPressed()" class="slide-in-right heartbeat" id="startbutton">START</button>
+      </div>
+    </div>
+  </div>
+  <div class="container slide-in-right" id="introCont">
+    <div class="row text-center">
+      <div class="col-12">
+        <img src="restorethefeeling.png" style="width: 100%">
+      </div>
+      <div class="col-12" id="introParagraph">
+        <p>Are we having fun yet? It's time to build on this momentum. You are about to become the president of the Knicks (although I'm not sure why seeing as we might actually have a competent president now). You will make draft choices, free agent signings, and perhaps even some trades. Keep us moving in the right direction.</p>
+      </div>
+      <div class="col-12">
+        <button onclick="introPressed()" class="" id="continuebutton">CONTINUE</button>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="draftCont">
+
+    <div class="row text-center">
+      <div class="col-12">
+        <img src="draftLogo.png" id="draftLogo" class="slide-in-left">
+      </div>
+    </div>
+    <div class="row text-center slide-in-right" id="pre">
+      <div class="col-12">
+        <img id="preLogo">
+        <p id="preDraftDisplay"></p>
+        <button onclick="preYesTrade()" class="" id="yesbutton">YES</button>
+        <button onclick="preNoTrade()" class="" id="nobutton">NO</button>
+      </div>
+    </div>
+    <div class="row text-center" id="draftBar">
+      <div class="col-sm-6">
+        <p id="barTeam"></p>
+      </div>
+      <div class="col-sm-3">
+        <p id="barRound"></p>
+      </div>
+      <div class="col-sm-3">
+        <p id="barPick"></p>
+      </div>
+    </div>
+    <div class="container" id="showDraftCont">
+      <div class="row text-center">
+        <div class="col-12">
+          <h2 id="showDraftTeam"></h2>
+        </div>
+        <div class="col-12">
+          <h1 id="showDraftName"></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="draftPoolCont">
+
+    </div>
+  </div>
+  <div class="container" id="teamCont">
+    <div class="container" id="topBlock">
+      <div class="row text-center">
+        <div class="col-12">
+          <!-- <h1>TEAM DECISIONS</h1> -->
+          <img src="teamDec.png" class="headPic">
+        </div>
+      </div>
+      <div class="row text-center" id="capBar">
+        <div class="col-12">
+          <p id="capSpaceText">Cap Space: </p>
+        </div>
+      </div>
+      <div class="row text-center" id="advanceBar">
+        <div class="col-12">
+          <button id="advancebutton" onclick="teamDone()"  id="advancebutton">ADVANCE</button>
+          <!-- <button id="draftButton" onclick="draftPressed()">Go to Draft</button> -->
+        </div>
+      </div>
+      <div class="row text-center" id="navbar" style="margin-bottom: 10px">
+        <div class="col-6">
+          <button onclick="rosterNav()" class="bttn-minimal bttn-sm bttn-success">Roster</button>
+        </div>
+        <div class="col-6">
+          <button onclick="faNav()" class="bttn-minimal bttn-sm bttn-success">Free Agents</button>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="rosterNavCont">
+      <div class="row">
+        <div class="col-2">
+          <p class="rosterPos">F</p>
+        </div>
+        <div class="col-7">
+          <p class="rosterName">Julius Randle</p>
+        </div>
+        <!-- <div class="col-3">
+        <button class="rosterCut">Cut</button>
+      </div> -->
+    </div>
+  </div>
+  <div class="container" id="faNavCont">
+  </div>
+
+</div>
+<div class="container slide-in-left" id="faCont">
+  <div class="row text-center">
+    <div class="col-12">
+      <img src="signandtrade.png" class="headPic">
+    </div>
+  </div>
+  <div class="row text-center" id="capBar2">
+    <div class="col-12">
+      <p id="capSpaceText2">Cap Space: </p>
+    </div>
+  </div>
+  <div class="row text-center" id="finishBar">
+    <div class="col-12">
+      <button id="finishbutton" onclick="faDone()" class="">FINISH</button>
+      <!-- <button id="draftButton" onclick="draftPressed()">Go to Draft</button> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div id="signPop">TEST</div>
+    </div>
+  </div>
+  <div class="row text-center" id="navbar" style="margin-bottom: 10px">
+    <div class="col-4">
+      <button onclick="roster2Nav()" class="bttn-minimal bttn-sm bttn-success butt">Roster</button>
+    </div>
+    <div class="col-4">
+      <button onclick="fa2Nav()" class="bttn-minimal bttn-sm bttn-success butt">Free Agents</button>
+    </div>
+    <div class="col-4">
+      <button onclick="trade2Nav()" class="bttn-minimal bttn-sm bttn-success butt">Trades</button>
+    </div>
+  </div>
+  <div class="container" id="roster2NavCont">
+    <div class="row">
+      <div class="col-2">
+        <p class="rosterPos">F</p>
+      </div>
+      <div class="col-7">
+        <p class="rosterName">Julius Randle</p>
+      </div>
+      <!-- <div class="col-3">
+      <button class="rosterCut">Cut</button>
+    </div> -->
+  </div>
+</div>
+<div class="dropdown" id="broadSort">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    SORT
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" onclick="generateBroadFA('all')">ALL</a>
+    <a class="dropdown-item" onclick="generateBroadFA('G')">G</a>
+    <a class="dropdown-item" onclick="generateBroadFA('F')">F</a>
+    <a class="dropdown-item" onclick="generateBroadFA('C')">C</a>
+  </div>
+</div>
+<div class="container" id="fa2NavCont">
+</div>
+
+<div class="container" id="trade2NavCont">
+  <div class="row text-center">
+    <div class="col-12">
+      <p id="tradeDesc">Pick a player to view offers.</p>
+    </div>
+  </div>
+  <div class="row text-center" id="acceptBack">
+    <div class="col-6">
+      <button onclick="acceptOffer()" class="bttn-slant bttn-md bttn-success butt">ACCEPT</button>
+    </div>
+    <div class="col-6">
+      <button onclick="tradeBack()" class="bttn-slant bttn-md bttn-danger butt">BACK</button>
+    </div>
+  </div>
+  <div id="trades">
+  </div>
+</div>
+
+
+</div>
+
+<div  id="summary" class="slide-in-left">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12 col-md-12">
+        <h1 id="summaryHead" class="slide-in-left"></h1>
+      </div>
+      <!-- <div class="col-4 col-md-9">
+        <img id="summaryLogo" src="">
+      </div> -->
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-4 col-lg-3">
+        <button class="bttn-minimal bttn-sm bttn-success butt" onclick="sMoves()">MOVES</button>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <button class="bttn-minimal bttn-sm bttn-success butt" onclick="sRoster()">ROSTER</button>
+      </div>
+    </div>
+    <hr>
+      <div id="sMoves" class="row">
+        <div class="col-12">
+          <p id="sCap">CAP SPACE: </p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <p class="sumAddDrop" id="dHead">Drafted</p>
+            </div>
+          </div>
+          <div id="drafted" >
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <p class="sumAddDrop" id="sHead">Signed</p>
+            </div>
+          </div>
+          <div id="signed" >
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <p class="sumAddDrop" id="tfHead">Traded For</p>
+            </div>
+          </div>
+          <div id="tradedFor" >
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <p class="sumAddDrop" id="taHead">Traded Away</p>
+            </div>
+          </div>
+          <div id="tradedAway" >
+          </div>
+        </div>
+      <!-- <div class="row text-center" id="share">
+        <div class="col-12">
+          <p id="screenshot">Screenshot and Share</p>
+        </div>
+        <div class="col-12">
+          <p id="screenshot2">(Click One)</p>
+        </div>
+        <div class="col-6 col-md-6">
+          <a id="twitter" href="https://twitter.com/jetsxfactor" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+        </div>
+        <div class="col-6 col-md-6">
+          <a id="facebook" href="https://www.facebook.com/jetsxfactor/" target="_blank"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
+        </div>
+      </div> -->
+      </div>
+      <div class="container" id="sRoster">
+        <div class="row">
+          <div class="col-12" id="sOffense">
+          </div>
+        </div>
+      </div>
+      <div class="container" id="shareCont">
+        <div class="row text-center">
+          <div class="col-12" >
+            <img id="share" src="share.png">
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script src="freeAgents.js"></script>
+<script src="draftPlayers.js"></script>
+<script src="knicksPicks.js"></script>
+<script src="teams.js"></script>
+<script src="knicksPlayers.js"></script>
+<script src="trades.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

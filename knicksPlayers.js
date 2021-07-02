@@ -1,0 +1,179 @@
+var juliusRandle = {
+  firstName: "Julius",
+  lastName: "Randle",
+  pos: "F",
+  age: "26",
+  sal: 20745000,
+  ws: 7.8
+};
+
+var rjBarrett = {
+  firstName: "R.J.",
+  lastName: "Barrett",
+  pos: "G",
+  age: "21",
+  sal: 8623920,
+  ws: 3.1
+};
+
+var kevinKnox = {
+  firstName: "Kevin",
+  lastName: "Knox",
+  pos: "F",
+  age: "22",
+  sal: 5845978,
+  ws: .6
+};
+
+var obiToppin = {
+  firstName: "Obi",
+  lastName: "Toppin",
+  pos: "F",
+  age: "23",
+  sal: 5105160,
+  ws: 1.5
+};
+
+var lucaVildoza = {
+  firstName: "Luca",
+  lastName: "Vildoza",
+  pos: "G",
+  age: "26",
+  sal: 3325000,
+  ws: 1
+}
+
+var immanuelQuickley = {
+  firstName: "Immanuel",
+  lastName: "Quickley",
+  pos: "G",
+  age: "22",
+  sal: 2210640,
+  ws: 3.2
+};
+
+var mitchellRobinson = {
+  firstName: "Mitchell",
+  lastName: "Robinson",
+  pos: "C",
+  age: "23",
+  sal: 1802057,
+  ws: 3.4
+};
+
+var norvelPelle = {
+  firstName: "Norvel",
+  lastName: "Pelle",
+  pos: "F",
+  age: "28",
+  sal: 1701593,
+  ws: .2
+};
+
+var roster = [juliusRandle, rjBarrett, kevinKnox, obiToppin, lucaVildoza, immanuelQuickley, mitchellRobinson, norvelPelle];
+
+//////////////
+
+var frankNtilikina = {
+  firstName: "Frank",
+  lastName: "Ntilikina",
+  pos: "G",
+  age: "23",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4230547.png&w=350&h=254",
+  cYears: 2,
+  cTotal: 10,
+  ws: .5
+};
+
+var derrickRose = {
+  firstName: "Derrick",
+  lastName: "Rose",
+  pos: "G",
+  age: "32",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3456.png&w=350&h=254",
+  cYears: 2,
+  cTotal: 30,
+  ws: 2.8
+};
+
+var alecBurks = {
+  firstName: "Alec",
+  lastName: "Burks",
+  pos: "G",
+  age: "30",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6429.png&w=350&h=254",
+  cYears: 2,
+  cTotal: 22,
+  ws: 3.3
+};
+
+var nerlensNoel = {
+  firstName: "Nerlens",
+  lastName: "Noel",
+  pos: "C",
+  age: "27",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991280.png&w=350&h=254",
+  cYears: 2,
+  cTotal: 26,
+  ws: 5.2
+};
+
+var elfridPayton = {
+  firstName: "Elfrid",
+  lastName: "Payton",
+  pos: "G",
+  age: "27",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2583639.png&w=350&h=254",
+  cYears: 2,
+  cTotal: 12,
+  ws: 1
+};
+
+var reggieBullock = {
+  firstName: "Reggie",
+  lastName: "Bullock",
+  pos: "G",
+  age: "30",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2528779.png&w=350&h=254",
+  cYears: 2,
+  cTotal: 22,
+  ws: 4.6
+};
+
+var tajGibson = {
+  firstName: "Taj",
+  lastName: "Gibson",
+  pos: "F",
+  age: "36",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3986.png&w=350&h=254",
+  cYears: 1,
+  cTotal: 5,
+  ws: 3.8
+};
+
+var jaredHarper = {
+  firstName: "Jared",
+  lastName: "Harper",
+  pos: "G",
+  age: "24",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066248.png&w=350&h=254",
+  cYears: 1,
+  cTotal: 1.5,
+  ws: .1
+}
+
+var theoPinson = {
+  firstName: "Theo",
+  lastName: "Pinson",
+  pos: "G",
+  age: "25",
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3138154.png&w=350&h=254",
+  cYears: 1,
+  cTotal: 1.5,
+  ws: .1
+};
+
+var teamFA = [frankNtilikina, derrickRose, alecBurks, nerlensNoel, elfridPayton, reggieBullock, tajGibson, jaredHarper, theoPinson]
+
+var deadCap = 6431666;
+var salaryCap = 115000000;

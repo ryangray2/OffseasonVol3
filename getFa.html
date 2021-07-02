@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    var namesArr = [];
+    var posArr = [];
+    var teamArr =[];
+    var ageArr = [];
+    var heightArr = [];
+    var typeArr = [];
+    $("button").click(function(){
+      console.log("test");
+      $("tr a:nth-child(2)").each(function() {
+        // console.log($( this ).text() );
+        namesArr.push($( this ).text());
+      });
+      $("tr td:nth-child(3)").each(function() {
+        posArr.push($( this ).text());
+      });
+      $("tr td:nth-child(2)").each(function() {
+        teamArr.push($( this ).text());
+      });
+      $("tr td:nth-child(4)").each(function() {
+        ageArr.push($( this ).text());
+      });
+      $("tr td:nth-child(6)").each(function() {
+
+        typeArr.push($( this ).text());
+      });
+      $("tr td:nth-child(8)").each(function() {
+        heightArr.push($( this ).text());
+      });
+      var playerObjects = [];
+      for (let i = 0; i < namesArr.length; i++) {
+        playerObjects[i] = {
+          firstName: namesArr[i].substr(0,namesArr[i].indexOf(' ')),
+          lastName: namesArr[i].substr(namesArr[i].indexOf(' ')+1),
+          team: teamArr[i],
+          pos: posArr[i],
+          age: ageArr[i],
+          type: typeArr[i],
+          cYears: 0,
+          cTotal: 0,
+          img: "",
+          ws: 0,
+          interest: 100
+        };
+      }
+      for (let i = 0; i < playerObjects.length; i++) {
+        var label = playerObjects[i].firstName.replace(/\s+/g, '') + playerObjects[i].lastName.replace(/\s+/g, '');
+        console.log("var " + label.replace(/[^A-Z0-9]/ig, "") + " = {\n" + "firstName: '" + playerObjects[i].firstName + "',\nlastName: '" + playerObjects[i].lastName + "',\nteam: '" + playerObjects[i].team + "',\npos: '" + playerObjects[i].pos + "',\nage: '" + playerObjects[i].age + "',\ntype: '" + playerObjects[i].type + "',\ncYears: 0,\ncTotal: 0,\nimg: '',\nws: 0,\ninterest: 100\n};");
+      }
+      var str = 'var broadFA = [ ';
+      for (let i=0; i < playerObjects.length; i++) {
+        var label =  playerObjects[i].firstName.replace(/\s+/g, '') + playerObjects[i].lastName.replace(/\s+/g, '');
+        str += label.replace(/[^A-Z0-9]/ig, "") + ", ";
+      }
+      str += ']';
+      console.log(str);
+      // console.log(playerObjects);
+    });
+  });
+</script>
+</head>
+<body>
+
+  <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+  <button>Get External Content</button>
+
+  <table class="datatable rtable tablesorter tablesorter-default tablesorter766b1a8df04bd" role="grid">
+  								<thead>
+  									<tr role="row" class="tablesorter-headerRow">
+  										<th class="player tablesorter-header tablesorter-headerUnSorted" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Player (203): No sort applied, activate to apply a descending sort" style="user-select: none;"><div class="tablesorter-header-inner">Player (203)</div></th>
+  										<th class="center med tablesorter-header tablesorter-headerUnSorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Team: No sort applied, activate to apply a descending sort" style="user-select: none;"><div class="tablesorter-header-inner">Team</div></th>										<th class="center small tablesorter-header tablesorter-headerUnSorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Pos.: No sort applied, activate to apply a descending sort" style="user-select: none;"><div class="tablesorter-header-inner">Pos.</div></th>
+  										<th class="center small xs-hide tablesorter-header tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Age: No sort applied, activate to apply a descending sort" style="user-select: none;"><div class="tablesorter-header-inner">Age</div></th>
+  										<th class="center small xs-hide tablesorter-header tablesorter-headerUnSorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Exp: No sort applied, activate to apply a descending sort" style="user-select: none;"><div class="tablesorter-header-inner">Exp</div></th>
+  										<th class="center med tablesorter-header tablesorter-headerUnSorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Type: No sort applied, activate to apply a descending sort" style="user-select: none;"><div class="tablesorter-header-inner">Type</div></th>
+  										 <th class="center tablesorter-header tablesorter-headerUnSorted" data-column="6" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Rights: No sort applied, activate to apply a descending sort" style="user-select: none;"><div class="tablesorter-header-inner">Rights</div></th>
+
+  																														                                        																				<th class="center tablesorter-header tablesorter-headerUnSorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="2020-2021 AAV: No sort applied, activate to apply a descending sort" style="user-select: none;"><div class="tablesorter-header-inner">2020-2021 AAV</div></th>
+  									</tr>
+  								</thead>
+  								<tbody aria-live="polite" aria-relevant="all">
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Paul</span>    <a href="https://www.spotrac.com/redirect/player/2609/">Chris Paul</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/115/cap/">PHX</a></td>																				<td class=" center option-player">PG</td>
+  										<td class="center xs-hide option-player">36</td>
+  										<td class="center xs-hide option-player">15</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$39,932,648</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Leonard</span>    <a href="https://www.spotrac.com/redirect/player/8066/">Kawhi Leonard</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/104/cap/">LAC</a></td>																				<td class=" center option-player">SF</td>
+  										<td class="center xs-hide option-player">30</td>
+  										<td class="center xs-hide option-player">9</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$34,379,100</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Conley</span>    <a href="https://www.spotrac.com/redirect/player/2532/">Mike Conley</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/121/cap/">UTH</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">14</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$30,521,116</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Lowry</span>    <a href="https://www.spotrac.com/redirect/player/2536/">Kyle Lowry</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/120/cap/">TOR</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">35</td>
+  										<td class="center xs-hide ">15</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$30,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">DeRozan</span>    <a href="https://www.spotrac.com/redirect/player/6327/">DeMar DeRozan</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/118/cap/">SAS</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">12</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$27,800,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Porter Jr.</span>    <a href="https://www.spotrac.com/redirect/player/13316/">Otto Porter Jr.</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/113/cap/">ORL</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$26,631,244</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Oladipo</span>    <a href="https://www.spotrac.com/redirect/player/13315/">Victor Oladipo</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$21,250,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Dragic</span>    <a href="https://www.spotrac.com/redirect/player/6146/">Goran Dragic</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center option-club">PG</td>
+  										<td class="center xs-hide option-club">35</td>
+  										<td class="center xs-hide option-club">12</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$18,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Hardaway Jr.</span>    <a href="https://www.spotrac.com/redirect/player/13337/">Tim Hardaway Jr.</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/98/cap/">DAL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$17,737,500</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Schröder</span>    <a href="https://www.spotrac.com/redirect/player/13330/">Dennis Schröder</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$17,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Fournier</span>    <a href="https://www.spotrac.com/redirect/player/10845/">Evan Fournier</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/95/cap/">BOS</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">9</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$17,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Green</span>    <a href="https://www.spotrac.com/redirect/player/6277/">Danny Green</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/114/cap/">PHI</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">34</td>
+  										<td class="center xs-hide ">12</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$15,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Iguodala</span>    <a href="https://www.spotrac.com/redirect/player/2652/">Andre Iguodala</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center option-club">SF</td>
+  										<td class="center xs-hide option-club">37</td>
+  										<td class="center xs-hide option-club">16</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$15,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Oubre Jr.</span>    <a href="https://www.spotrac.com/redirect/player/17843/">Kelly Oubre Jr.</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/101/cap/">GSW</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$15,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Johnson</span>    <a href="https://www.spotrac.com/redirect/player/6279/">James Johnson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/180/cap/">NOP</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">34</td>
+  										<td class="center xs-hide ">12</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$14,431,700</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Zeller</span>    <a href="https://www.spotrac.com/redirect/player/13317/">Cody Zeller</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/212/cap/">CHA</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$14,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Barton</span>    <a href="https://www.spotrac.com/redirect/player/10865/">Will Barton</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/99/cap/">DEN</a></td>																				<td class=" center option-player">SF</td>
+  										<td class="center xs-hide option-player">30</td>
+  										<td class="center xs-hide option-player">8</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$13,250,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Redick</span>    <a href="https://www.spotrac.com/redirect/player/2643/">J.J. Redick</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/98/cap/">DAL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">37</td>
+  										<td class="center xs-hide ">15</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$13,250,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Winslow</span>    <a href="https://www.spotrac.com/redirect/player/17838/">Justise Winslow</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/106/cap/">MEM</a></td>																				<td class=" center option-club">SF</td>
+  										<td class="center xs-hide option-club">25</td>
+  										<td class="center xs-hide option-club">5</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$13,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Olynyk</span>    <a href="https://www.spotrac.com/redirect/player/13326/">Kelly Olynyk</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">30</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$12,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Ariza</span>    <a href="https://www.spotrac.com/redirect/player/2513/">Trevor Ariza</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">36</td>
+  										<td class="center xs-hide ">17</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$12,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Mills</span>    <a href="https://www.spotrac.com/redirect/player/6322/">Patrick Mills</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/118/cap/">SAS</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">12</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$12,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Snell</span>    <a href="https://www.spotrac.com/redirect/player/13333/">Tony Snell</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/94/cap/">ATL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$11,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Dinwiddie</span>    <a href="https://www.spotrac.com/redirect/player/15390/">Spencer Dinwiddie</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/158/cap/">BKN</a></td>																				<td class=" center option-player">PG</td>
+  										<td class="center xs-hide option-player">28</td>
+  										<td class="center xs-hide option-player">6</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$11,454,048</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Exum</span>    <a href="https://www.spotrac.com/redirect/player/15357/">Dante Exum</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">7</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$11,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Richardson</span>    <a href="https://www.spotrac.com/redirect/player/17868/">Josh Richardson</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/98/cap/">DAL</a></td>																				<td class=" center option-player">SG</td>
+  										<td class="center xs-hide option-player">28</td>
+  										<td class="center xs-hide option-player">5</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$10,491,264</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Powell</span>    <a href="https://www.spotrac.com/redirect/player/17874/">Norman Powell</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center option-player">SG</td>
+  										<td class="center xs-hide option-player">28</td>
+  										<td class="center xs-hide option-player">5</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$10,491,264</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Millsap</span>    <a href="https://www.spotrac.com/redirect/player/2754/">Paul Millsap</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/99/cap/">DEN</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">36</td>
+  										<td class="center xs-hide ">15</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$10,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Ibaka</span>    <a href="https://www.spotrac.com/redirect/player/6313/">Serge Ibaka</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/104/cap/">LAC</a></td>																				<td class=" center option-player">C</td>
+  										<td class="center xs-hide option-player">32</td>
+  										<td class="center xs-hide option-player">11</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$9,489,450</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Jones Jr.</span>    <a href="https://www.spotrac.com/redirect/player/21067/">Derrick Jones Jr.</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center option-player">SF</td>
+  										<td class="center xs-hide option-player">24</td>
+  										<td class="center xs-hide option-player">4</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$9,489,450</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Harrell</span>    <a href="https://www.spotrac.com/redirect/player/17860/">Montrezl Harrell</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center option-player">PF</td>
+  										<td class="center xs-hide option-player">27</td>
+  										<td class="center xs-hide option-player">5</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$9,489,450</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Ball</span>    <a href="https://www.spotrac.com/redirect/player/23597/">Lonzo Ball</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/180/cap/">NOP</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$8,367,906</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Williams</span>    <a href="https://www.spotrac.com/redirect/player/2657/">Louis Williams</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/94/cap/">ATL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">34</td>
+  										<td class="center xs-hide ">16</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$8,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Felicio</span>    <a href="https://www.spotrac.com/redirect/player/17990/">Cristiano Felicio</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$8,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Tucker</span>    <a href="https://www.spotrac.com/redirect/player/11059/">P.J. Tucker</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/108/cap/">MIL</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">36</td>
+  										<td class="center xs-hide ">10</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$7,969,537</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Rose</span>    <a href="https://www.spotrac.com/redirect/player/6095/">Derrick Rose</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">13</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$7,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Green</span>    <a href="https://www.spotrac.com/redirect/player/11666/">JaMychal Green</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/99/cap/">DEN</a></td>																				<td class=" center option-player">PF</td>
+  										<td class="center xs-hide option-player">31</td>
+  										<td class="center xs-hide option-player">6</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$7,379,754</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">McDermott</span>    <a href="https://www.spotrac.com/redirect/player/15363/">Doug McDermott</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/103/cap/">IND</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">7</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$7,333,333</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Lopez</span>    <a href="https://www.spotrac.com/redirect/player/6147/">Robin Lopez</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/122/cap/">WAS</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">13</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$7,300,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Bjelica</span>    <a href="https://www.spotrac.com/redirect/player/6917/">Nemanja Bjelica</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$6,825,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Smith</span>    <a href="https://www.spotrac.com/redirect/player/7116/">Ishmael Smith</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/122/cap/">WAS</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">11</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$6,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Burks</span>    <a href="https://www.spotrac.com/redirect/player/8063/">Alec Burks</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">30</td>
+  										<td class="center xs-hide ">10</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$6,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Bradley</span>    <a href="https://www.spotrac.com/redirect/player/6901/">Avery Bradley</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center option-player">PG</td>
+  										<td class="center xs-hide option-player">30</td>
+  										<td class="center xs-hide option-player">10</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$5,775,875</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Lyles</span>    <a href="https://www.spotrac.com/redirect/player/17840/">Trey Lyles</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/118/cap/">SAS</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$5,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Markkanen</span>    <a href="https://www.spotrac.com/redirect/player/23602/">Lauri Markkanen</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$5,097,417</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Dunn</span>    <a href="https://www.spotrac.com/redirect/player/20210/">Kris Dunn</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/94/cap/">ATL</a></td>																				<td class=" center option-player">PG</td>
+  										<td class="center xs-hide option-player">27</td>
+  										<td class="center xs-hide option-player">4</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$5,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Theis</span>    <a href="https://www.spotrac.com/redirect/player/23828/">Daniel Theis</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$5,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Noel</span>    <a href="https://www.spotrac.com/redirect/player/13319/">Nerlens Noel</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$5,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Scott</span>    <a href="https://www.spotrac.com/redirect/player/10868/">Mike Scott</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/114/cap/">PHI</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">9</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$4,900,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Davis</span>    <a href="https://www.spotrac.com/redirect/player/6895/">Ed Davis</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/109/cap/">MIN</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">11</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$4,886,175</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Kanter</span>    <a href="https://www.spotrac.com/redirect/player/8053/">Enes Kanter</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">10</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$4,886,175</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Holmes</span>    <a href="https://www.spotrac.com/redirect/player/17865/">Richaun Holmes</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/117/cap/">SAC</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$4,886,175</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Looney</span>    <a href="https://www.spotrac.com/redirect/player/17858/">Kevon Looney</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/101/cap/">GSW</a></td>																				<td class=" center option-player">PF</td>
+  										<td class="center xs-hide option-player">25</td>
+  										<td class="center xs-hide option-player">5</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$4,821,429</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Kaminsky</span>    <a href="https://www.spotrac.com/redirect/player/17837/">Frank Kaminsky</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/115/cap/">PHX</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$4,767,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Temple</span>    <a href="https://www.spotrac.com/redirect/player/6492/">Garrett Temple</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">35</td>
+  										<td class="center xs-hide ">11</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$4,767,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Payton</span>    <a href="https://www.spotrac.com/redirect/player/15362/">Elfrid Payton</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">7</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$4,767,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Ntilikina</span>    <a href="https://www.spotrac.com/redirect/player/23603/">Frank Ntilikina</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$4,672,305</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Valentine</span>    <a href="https://www.spotrac.com/redirect/player/20219/">Denzel Valentine</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$4,642,800</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Smith Jr.</span>    <a href="https://www.spotrac.com/redirect/player/23604/">Dennis Smith Jr.</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/100/cap/">DET</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$4,297,139</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">McGee</span>    <a href="https://www.spotrac.com/redirect/player/6159/">JaVale McGee</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/99/cap/">DEN</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">13</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$4,100,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Bullock</span>    <a href="https://www.spotrac.com/redirect/player/13338/">Reggie Bullock</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">30</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$4,100,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Cauley-Stein</span>    <a href="https://www.spotrac.com/redirect/player/17834/">Willie Cauley-Stein</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/98/cap/">DAL</a></td>																				<td class=" center option-club">C</td>
+  										<td class="center xs-hide option-club">28</td>
+  										<td class="center xs-hide option-club">5</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$4,100,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Collins</span>    <a href="https://www.spotrac.com/redirect/player/23605/">Zach Collins</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$4,083,154</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Melli</span>    <a href="https://www.spotrac.com/redirect/player/31886/">Nicolo Melli</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/98/cap/">DAL</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">30</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$4,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Monk</span>    <a href="https://www.spotrac.com/redirect/player/23606/">Malik Monk</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/212/cap/">CHA</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$3,931,512</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Johnson</span>    <a href="https://www.spotrac.com/redirect/player/17836/">Stanley Johnson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/120/cap/">TOR</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$3,713,575</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Portis</span>    <a href="https://www.spotrac.com/redirect/player/17850/">Bobby Portis</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/108/cap/">MIL</a></td>																				<td class=" center option-player">PF</td>
+  										<td class="center xs-hide option-player">26</td>
+  										<td class="center xs-hide option-player">5</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$3,713,575</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Harkless</span>    <a href="https://www.spotrac.com/redirect/player/10823/">Maurice Harkless</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/117/cap/">SAC</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">9</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$3,623,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Matthews</span>    <a href="https://www.spotrac.com/redirect/player/6489/">Wesley Matthews</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">34</td>
+  										<td class="center xs-hide ">12</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$3,623,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Marjanovic</span>    <a href="https://www.spotrac.com/redirect/player/17984/">Boban Marjanovic</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/98/cap/">DAL</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$3,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">McConnell</span>    <a href="https://www.spotrac.com/redirect/player/18252/">T.J. McConnell</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/103/cap/">IND</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$3,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Biyombo</span>    <a href="https://www.spotrac.com/redirect/player/8057/">Bismack Biyombo</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/212/cap/">CHA</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">10</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$3,500,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Ennis III</span>    <a href="https://www.spotrac.com/redirect/player/13363/">James Ennis III</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/113/cap/">ORL</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">31</td>
+  										<td class="center xs-hide ">7</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$3,300,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Patterson</span>    <a href="https://www.spotrac.com/redirect/player/6896/">Patrick Patterson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/104/cap/">LAC</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">11</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$3,077,704</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Wilson</span>    <a href="https://www.spotrac.com/redirect/player/23612/">DJ Wilson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$3,044,680</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Arcidiacono</span>    <a href="https://www.spotrac.com/redirect/player/20275/">Ryan Arcidiacono</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center option-club">PG</td>
+  										<td class="center xs-hide option-club">27</td>
+  										<td class="center xs-hide option-club">3</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$3,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Collins</span>    <a href="https://www.spotrac.com/redirect/player/23614/">John Collins</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/94/cap/">ATL</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$2,764,966</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Caruso</span>    <a href="https://www.spotrac.com/redirect/player/21076/">Alex Caruso</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$2,750,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Ellington</span>    <a href="https://www.spotrac.com/redirect/player/6302/">Wayne Ellington</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/100/cap/">DET</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">12</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,564,753</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Dudley</span>    <a href="https://www.spotrac.com/redirect/player/2228/">Jared Dudley</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">36</td>
+  										<td class="center xs-hide ">14</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$2,564,753</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Green</span>    <a href="https://www.spotrac.com/redirect/player/2720/">Jeff Green</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/158/cap/">BKN</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">35</td>
+  										<td class="center xs-hide ">14</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,564,753</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Anthony</span>    <a href="https://www.spotrac.com/redirect/player/2283/">Carmelo Anthony</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">37</td>
+  										<td class="center xs-hide ">17</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$2,564,753</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Batum</span>    <a href="https://www.spotrac.com/redirect/player/6149/">Nicolas Batum</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/104/cap/">LAC</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">13</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,564,753</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Haslem</span>    <a href="https://www.spotrac.com/redirect/player/2549/">Udonis Haslem</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">41</td>
+  										<td class="center xs-hide ">18</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$2,564,753</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Howard</span>    <a href="https://www.spotrac.com/redirect/player/2640/">Dwight Howard</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/114/cap/">PHI</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">35</td>
+  										<td class="center xs-hide ">17</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,564,753</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Allen</span>    <a href="https://www.spotrac.com/redirect/player/23617/">Jarrett Allen</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/97/cap/">CLE</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$2,508,646</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Forbes</span>    <a href="https://www.spotrac.com/redirect/player/20796/">Bryn Forbes</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/108/cap/">MIL</a></td>																				<td class=" center option-player">SG</td>
+  										<td class="center xs-hide option-player">28</td>
+  										<td class="center xs-hide option-player">4</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$2,395,574</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Morris</span>    <a href="https://www.spotrac.com/redirect/player/8064/">Markieff Morris</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">10</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$2,331,593</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Jackson</span>    <a href="https://www.spotrac.com/redirect/player/8075/">Reggie Jackson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/104/cap/">LAC</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">31</td>
+  										<td class="center xs-hide ">10</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$2,331,593</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Moore</span>    <a href="https://www.spotrac.com/redirect/player/8107/">E'Twaun Moore</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/115/cap/">PHX</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">10</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,331,593</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Whiteside</span>    <a href="https://www.spotrac.com/redirect/player/6915/">Hassan Whiteside</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/117/cap/">SAC</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">9</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,320,044</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Bazemore</span>    <a href="https://www.spotrac.com/redirect/player/11079/">Kent Bazemore</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/101/cap/">GSW</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">9</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,320,044</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Gibson</span>    <a href="https://www.spotrac.com/redirect/player/6278/">Taj Gibson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">36</td>
+  										<td class="center xs-hide ">12</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,283,684</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Rivers</span>    <a href="https://www.spotrac.com/redirect/player/10818/">Austin Rivers</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/99/cap/">DEN</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">9</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,271,991</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Kornet</span>    <a href="https://www.spotrac.com/redirect/player/23670/">Luke Kornet</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/95/cap/">BOS</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$2,250,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Wanamaker</span>    <a href="https://www.spotrac.com/redirect/player/27289/">Brad Wanamaker</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/212/cap/">CHA</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,250,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Hill</span>    <a href="https://www.spotrac.com/redirect/player/13336/">Solomon Hill</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/94/cap/">ATL</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">30</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,174,318</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Dellavedova</span>    <a href="https://www.spotrac.com/redirect/player/13478/">Matthew Dellavedova</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/97/cap/">CLE</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">31</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$2,174,318</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Bradley</span>    <a href="https://www.spotrac.com/redirect/player/23623/">Tony Bradley</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/119/cap/">OKC</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$2,149,715</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Hart</span>    <a href="https://www.spotrac.com/redirect/player/23625/">Josh Hart</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/180/cap/">NOP</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$2,118,750</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Sumner</span>    <a href="https://www.spotrac.com/redirect/player/23653/">Edmond Sumner</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/103/cap/">IND</a></td>																				<td class=" center option-club">PG</td>
+  										<td class="center xs-hide option-club">25</td>
+  										<td class="center xs-hide option-club">3</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$2,080,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Galloway</span>    <a href="https://www.spotrac.com/redirect/player/15824/">Langston Galloway</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/115/cap/">PHX</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">7</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$2,028,594</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Johnson</span>    <a href="https://www.spotrac.com/redirect/player/15645/">Tyler Johnson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/158/cap/">BKN</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">7</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$2,028,594</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Neto</span>    <a href="https://www.spotrac.com/redirect/player/13360/">Raul Neto</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/122/cap/">WAS</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,882,867</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Sampson</span>    <a href="https://www.spotrac.com/redirect/player/15838/">JaKarr Sampson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/103/cap/">IND</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,882,867</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Hernangomez</span>    <a href="https://www.spotrac.com/redirect/player/17863/">Willy Hernangomez</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/180/cap/">NOP</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">5</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,737,145</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Len</span>    <a href="https://www.spotrac.com/redirect/player/13318/">Alex Len</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/122/cap/">WAS</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,697,755</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-player"><span style="display:none">Hartenstein</span>    <a href="https://www.spotrac.com/redirect/player/23644/">Isaiah Hartenstein</a></td>
+  										<td class="center option-player"><a href="https://www.spotrac.com/redirect/team/97/cap/">CLE</a></td>																				<td class=" center option-player">C</td>
+  										<td class="center xs-hide option-player">23</td>
+  										<td class="center xs-hide option-player">2</td>
+  										<td class="center option-player"><span class="info" title="" data-original-title="">PO</span></td>
+  										<td class="center option-player"></td>
+
+  																																								                                        																				<td class="center option-player">$1,691,680</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Craig</span>    <a href="https://www.spotrac.com/redirect/player/24230/">Torrey Craig</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/115/cap/">PHX</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">30</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,678,854</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Giles</span>    <a href="https://www.spotrac.com/redirect/player/23615/">Harry Giles</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,678,854</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Brown</span>    <a href="https://www.spotrac.com/redirect/player/23647/">Sterling Brown</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,678,854</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Niang</span>    <a href="https://www.spotrac.com/redirect/player/20256/">Georges Niang</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/121/cap/">UTH</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">5</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,658,337</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Gabriel</span>    <a href="https://www.spotrac.com/redirect/player/27806/">Wenyen Gabriel</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/180/cap/">NOP</a></td>																				<td class=" center option-club">PF</td>
+  										<td class="center xs-hide option-club">24</td>
+  										<td class="center xs-hide option-club">2</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$1,620,564</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Antetokounmpo</span>    <a href="https://www.spotrac.com/redirect/player/15403/">Thanasis Antetokounmpo</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/108/cap/">MIL</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,573,645</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Robinson</span>    <a href="https://www.spotrac.com/redirect/player/27002/">Mitchell Robinson</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center option-club">C</td>
+  										<td class="center xs-hide option-club">23</td>
+  										<td class="center xs-hide option-club">2</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$1,569,671</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Mykhailiuk</span>    <a href="https://www.spotrac.com/redirect/player/27013/">Sviatoslav Mykhailiuk</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/119/cap/">OKC</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,522,802</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Pinson</span>    <a href="https://www.spotrac.com/redirect/player/27827/">Theo Pinson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,445,697</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Ojeleye</span>    <a href="https://www.spotrac.com/redirect/player/23632/">Semi Ojeleye</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/95/cap/">BOS</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,429,551</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Nwaba</span>    <a href="https://www.spotrac.com/redirect/player/21577/">David Nwaba</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">5</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,382,681</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Bonga</span>    <a href="https://www.spotrac.com/redirect/player/27005/">Isaac Bonga</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/122/cap/">WAS</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">21</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,360,238</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Graham</span>    <a href="https://www.spotrac.com/redirect/player/27000/">Devonte' Graham</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/212/cap/">CHA</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,356,392</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Trent Jr.</span>    <a href="https://www.spotrac.com/redirect/player/27003/">Gary Trent Jr.</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/120/cap/">TOR</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,306,392</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Vanderbilt</span>    <a href="https://www.spotrac.com/redirect/player/27007/">Jarred Vanderbilt</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/109/cap/">MIN</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,306,392</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Brown</span>    <a href="https://www.spotrac.com/redirect/player/27008/">Bruce Brown</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/158/cap/">BKN</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,306,392</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Diallo</span>    <a href="https://www.spotrac.com/redirect/player/27011/">Hamidou Diallo</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/100/cap/">DET</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,306,392</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Griffin</span>    <a href="https://www.spotrac.com/redirect/player/6501/">Blake Griffin</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/158/cap/">BKN</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">11</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,229,676</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Davis</span>    <a href="https://www.spotrac.com/redirect/player/32059/">Terence Davis</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/117/cap/">SAC</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,208,146</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Horton-Tucker</span>    <a href="https://www.spotrac.com/redirect/player/31605/">Talen Horton-Tucker</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">20</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,208,146</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Green</span>    <a href="https://www.spotrac.com/redirect/player/32409/">Javonte Green</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,208,146</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Ilyasova</span>    <a href="https://www.spotrac.com/redirect/player/6341/">Ersan Ilyasova</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/121/cap/">UTH</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">34</td>
+  										<td class="center xs-hide ">14</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,194,542</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Morgan</span>    <a href="https://www.spotrac.com/redirect/player/32678/">Juwan Morgan</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/121/cap/">UTH</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,132,018</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Goodwin</span>    <a href="https://www.spotrac.com/redirect/player/28020/">Brandon Goodwin</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/94/cap/">ATL</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,112,166</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Payne</span>    <a href="https://www.spotrac.com/redirect/player/17842/">Cameron Payne</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/115/cap/">PHX</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$1,086,650</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Robinson</span>    <a href="https://www.spotrac.com/redirect/player/27658/">Duncan Robinson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,030,062</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Nunn</span>    <a href="https://www.spotrac.com/redirect/player/28041/">Kendrick Nunn</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">$1,028,483</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Dieng</span>    <a href="https://www.spotrac.com/redirect/player/13334/">Gorgui Dieng</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/118/cap/">SAS</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">31</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$1,000,000</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Teague</span>    <a href="https://www.spotrac.com/redirect/player/6272/">Jeff Teague</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/108/cap/">MIL</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">33</td>
+  										<td class="center xs-hide ">12</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$808,073</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Drummond</span>    <a href="https://www.spotrac.com/redirect/player/10817/">Andre Drummond</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">9</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$794,536</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Burton</span>    <a href="https://www.spotrac.com/redirect/player/28767/">Deonte Burton</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/119/cap/">OKC</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">$784,220</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">McLemore</span>    <a href="https://www.spotrac.com/redirect/player/13320/">Ben McLemore</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$610,596</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Dedmon</span>    <a href="https://www.spotrac.com/redirect/player/13536/">Dewayne Dedmon</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">32</td>
+  										<td class="center xs-hide ">8</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$580,811</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Birch</span>    <a href="https://www.spotrac.com/redirect/player/15786/">Khem Birch</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/120/cap/">TOR</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$425,463</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Cousins</span>    <a href="https://www.spotrac.com/redirect/player/6886/">DeMarcus Cousins</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/104/cap/">LAC</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">31</td>
+  										<td class="center xs-hide ">10</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$335,366</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Frazier</span>    <a href="https://www.spotrac.com/redirect/player/15755/">Tim Frazier</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/106/cap/">MEM</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">30</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$296,616</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Hollis-Jefferson</span>    <a href="https://www.spotrac.com/redirect/player/17851/">Rondae Hollis-Jefferson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">6</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$245,031</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Wagner</span>    <a href="https://www.spotrac.com/redirect/player/26991/">Moritz Wagner</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/113/cap/">ORL</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$221,995</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player option-club"><span style="display:none">Louzada</span>    <a href="https://www.spotrac.com/redirect/player/31594/">Didi Louzada</a></td>
+  										<td class="center option-club"><a href="https://www.spotrac.com/redirect/team/180/cap/">NOP</a></td>																				<td class=" center option-club">SF</td>
+  										<td class="center xs-hide option-club">22</td>
+  										<td class="center xs-hide option-club">0</td>
+  										<td class="center option-club"><span class="info" title="" data-original-title="">CO</span></td>
+  										<td class="center option-club"></td>
+
+  																																								                                        																				<td class="center option-club">$123,056</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Thornwell</span>    <a href="https://www.spotrac.com/redirect/player/23649/">Sindarius Thornwell</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/113/cap/">ORL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$11,499</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Bell</span>    <a href="https://www.spotrac.com/redirect/player/23633/">Jordan Bell</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/101/cap/">GSW</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$11,499</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Harper</span>    <a href="https://www.spotrac.com/redirect/player/32403/">Jared Harper</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/112/cap/">NYK</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$9,902</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">James</span>    <a href="https://www.spotrac.com/redirect/player/24021/">Mike James</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/158/cap/">BKN</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">31</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">$9,902</td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Brazdeikis</span>    <a href="https://www.spotrac.com/redirect/player/31606/">Ignas Brazdeikis</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/113/cap/">ORL</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Scrubb</span>    <a href="https://www.spotrac.com/redirect/player/70697/">Jay Scrubb</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/104/cap/">LAC</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">21</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Harrison</span>    <a href="https://www.spotrac.com/redirect/player/21066/">Shaquille Harrison</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/99/cap/">DEN</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Perry</span>    <a href="https://www.spotrac.com/redirect/player/70699/">Reggie Perry</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/158/cap/">BKN</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">21</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Mays</span>    <a href="https://www.spotrac.com/redirect/player/70692/">Skylar Mays</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/94/cap/">ATL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Brantley</span>    <a href="https://www.spotrac.com/redirect/player/31609/">Jarrell Brantley</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/121/cap/">UTH</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide "></td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Bates-Diop</span>    <a href="https://www.spotrac.com/redirect/player/27014/">Keita Bates-Diop</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/118/cap/">SAS</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Lee</span>    <a href="https://www.spotrac.com/redirect/player/70680/">Saben Lee</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/100/cap/">DET</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Bey</span>    <a href="https://www.spotrac.com/redirect/player/70678/">Tyler Bey</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/98/cap/">DAL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Howard</span>    <a href="https://www.spotrac.com/redirect/player/70705/">Markus Howard</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/99/cap/">DEN</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Strus</span>    <a href="https://www.spotrac.com/redirect/player/32411/">Max Strus</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Riller</span>    <a href="https://www.spotrac.com/redirect/player/70698/">Grant Riller</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/212/cap/">CHA</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Darling</span>    <a href="https://www.spotrac.com/redirect/player/70703/">Nate Darling</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/212/cap/">CHA</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Martin</span>    <a href="https://www.spotrac.com/redirect/player/32318/">Jeremiah Martin</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/97/cap/">CLE</a></td>																				<td class=" center ">G</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Guy</span>    <a href="https://www.spotrac.com/redirect/player/31614/">Kyle Guy</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/117/cap/">SAC</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Coffey</span>    <a href="https://www.spotrac.com/redirect/player/32198/">Amir Coffey</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/104/cap/">LAC</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Hoard</span>    <a href="https://www.spotrac.com/redirect/player/31893/">Jaylen Hoard</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/119/cap/">OKC</a></td>																				<td class=" center ">F</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Hall</span>    <a href="https://www.spotrac.com/redirect/player/70707/">Josh Hall</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/119/cap/">OKC</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">20</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Antetokounmpo</span>    <a href="https://www.spotrac.com/redirect/player/27026/">Kostas Antetokounmpo</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Cacok</span>    <a href="https://www.spotrac.com/redirect/player/32199/">Devontae Cacok</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/105/cap/">LAL</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Mannion</span>    <a href="https://www.spotrac.com/redirect/player/70690/">Nico Mannion</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/101/cap/">GSW</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">20</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Toupane</span>    <a href="https://www.spotrac.com/redirect/player/18042/">Axel Toupane</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/108/cap/">MIL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">29</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Clark</span>    <a href="https://www.spotrac.com/redirect/player/27627/">Gary Clark</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/114/cap/">PHI</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">26</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">King</span>    <a href="https://www.spotrac.com/redirect/player/32043/">Louis King</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/117/cap/">SAC</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Randle</span>    <a href="https://www.spotrac.com/redirect/player/20940/">Chasson Randle</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/113/cap/">ORL</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">28</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Tucker</span>    <a href="https://www.spotrac.com/redirect/player/32785/">Rayjon Tucker</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/114/cap/">PHI</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center "></td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Mokoka</span>    <a href="https://www.spotrac.com/redirect/player/31961/">Adam Mokoka</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Mason III</span>    <a href="https://www.spotrac.com/redirect/player/23629/">Frank Mason III</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/113/cap/">ORL</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center "></td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Thomas</span>    <a href="https://www.spotrac.com/redirect/player/70795/">Brodric Thomas</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/97/cap/">CLE</a></td>																				<td class=" center ">G</td>
+  										<td class="center xs-hide "></td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center "></td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Fall</span>    <a href="https://www.spotrac.com/redirect/player/31972/">Tacko Fall</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/95/cap/">BOS</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Waters</span>    <a href="https://www.spotrac.com/redirect/player/31610/">Tremont Waters</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/95/cap/">BOS</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Nunnally</span>    <a href="https://www.spotrac.com/redirect/player/13578/">James Nunnally</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/180/cap/">NOP</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">31</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center "></td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Blevins</span>    <a href="https://www.spotrac.com/redirect/player/32992/">Keljin Blevins</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center ">G</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Forrest</span>    <a href="https://www.spotrac.com/redirect/player/70708/">Trent Forrest</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/121/cap/">UTH</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Stanley</span>    <a href="https://www.spotrac.com/redirect/player/70696/">Cassius Stanley</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/103/cap/">IND</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Harris</span>    <a href="https://www.spotrac.com/redirect/player/70701/">Jalen Harris</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/120/cap/">TOR</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Brimah</span>    <a href="https://www.spotrac.com/redirect/player/24503/">Amida Brimah</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/103/cap/">IND</a></td>																				<td class=" center ">C</td>
+  										<td class="center xs-hide ">27</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">McLaughlin</span>    <a href="https://www.spotrac.com/redirect/player/27975/">Jordan McLaughlin</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/109/cap/">MIN</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Lamb</span>    <a href="https://www.spotrac.com/redirect/player/70763/">Anthony Lamb</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center "></td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Leaf</span>    <a href="https://www.spotrac.com/redirect/player/23613/">TJ Leaf</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/116/cap/">POR</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Chiozza</span>    <a href="https://www.spotrac.com/redirect/player/28033/">Chris Chiozza</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/158/cap/">BKN</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">3</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Jackson</span>    <a href="https://www.spotrac.com/redirect/player/23626/">Frank Jackson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/100/cap/">DET</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">4</td>
+  										<td class="center "><span class="info" title="" data-original-title="Unrestricted Free Agent">UFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Tillie</span>    <a href="https://www.spotrac.com/redirect/player/70714/">Killian Tillie</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/106/cap/">MEM</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">McDermott</span>    <a href="https://www.spotrac.com/redirect/player/70715/">Sean McDermott</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/106/cap/">MEM</a></td>																				<td class=" center ">SF</td>
+  										<td class="center xs-hide "></td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Knight</span>    <a href="https://www.spotrac.com/redirect/player/70772/">Nathan Knight</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/94/cap/">ATL</a></td>																				<td class=" center ">PF</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Winston</span>    <a href="https://www.spotrac.com/redirect/player/70695/">Cassius Winston</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/122/cap/">WAS</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Hinton</span>    <a href="https://www.spotrac.com/redirect/player/70711/">Nate Hinton</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/98/cap/">DAL</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Vincent</span>    <a href="https://www.spotrac.com/redirect/player/28087/">Gabe Vincent</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/107/cap/">MIA</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Dotson</span>    <a href="https://www.spotrac.com/redirect/player/70709/">Devon Dotson</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/64/cap/">CHI</a></td>																				<td class=" center ">PG</td>
+  										<td class="center xs-hide ">22</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Mathews</span>    <a href="https://www.spotrac.com/redirect/player/32044/">Garrison Mathews</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/122/cap/">WAS</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">24</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Weatherspoon</span>    <a href="https://www.spotrac.com/redirect/player/31608/">Quinndary Weatherspoon</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/118/cap/">SAS</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">25</td>
+  										<td class="center xs-hide ">2</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Early Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																		<tr role="row">
+  										<td class=" player "><span style="display:none">Brooks</span>    <a href="https://www.spotrac.com/redirect/player/32812/">Armoni Brooks</a></td>
+  										<td class="center "><a href="https://www.spotrac.com/redirect/team/102/cap/">HOU</a></td>																				<td class=" center ">SG</td>
+  										<td class="center xs-hide ">23</td>
+  										<td class="center xs-hide ">1</td>
+  										<td class="center "><span class="info" title="" data-original-title="Restricted Free Agent">RFA</span></td>
+  										<td class="center ">Non-Bird</td>
+
+  																																								                                        																				<td class="center ">-<span style="display:none">0</span></td>
+
+
+  									</tr>
+  																	</tbody>
+  							</table>
+
+
+</body>
+
+</html>

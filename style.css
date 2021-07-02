@@ -1,0 +1,1148 @@
+body {
+  background-image: url("paper.jpg");
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
+}
+
+
+#introCont {
+  display: none;
+}
+
+#draftCont {
+  display: none;
+}
+
+#teamCont {
+  display: none;
+}
+
+#faNavCont {
+  display: none;
+  overflow: scroll;
+    height: 76vh;
+}
+
+#fa2NavCont {
+  display: none;
+  overflow: scroll;
+    height: 76vh;
+}
+
+.tradePromptName {
+  color: white;
+  background-color: #e77807;
+  padding: 5px;
+  font-family: 'hitchcutregular';
+  text-shadow: 2px 2px black;
+}
+
+#summary {
+  display: none;
+}
+
+#summaryHead {
+  color: white;
+      font-family: 'mensch_trialblack';
+      text-shadow: 3px 3px #003aaa;
+      -webkit-text-stroke: 2px black;
+      background-image: url(test2.png);
+      background-size: cover;
+      background-position: center;
+}
+
+#sRoster {
+  display: none;
+}
+
+#sCap {
+  font-family: 'mensch_trialblack';
+color: white;
+}
+
+.sumAddDrop {
+  font-family: 'hitchcutregular';
+      color: white;
+      text-shadow: 2px 2px #ff8000;
+      -webkit-text-stroke: 1px black;
+      font-size: 2.5vh;
+}
+
+#dropdownMenuButton {
+  display: none;
+}
+
+.sumP {
+  font-family: 'mensch_trialblack';
+  color: white;
+  text-shadow: 2px 2px black;
+  -webkit-text-stroke: 1px black;
+
+}
+
+#share {
+  width: 100%;
+    max-width: 400px;
+}
+
+#tradeDesc {
+  color: white;
+font-family: 'mensch_trialblack';
+}
+
+#faCont {
+  display: none;
+}
+
+#fa2NavCont {
+  display: none;
+}
+
+#trade2NavCont {
+  display: none;
+}
+
+#signPop {
+  display: none;
+      /* transform: translateY(-100%); */
+      /* height: 11vh; */
+      padding: 4vh;
+      font-size: 1em;
+      position: fixed;
+      color: #e87803;
+      font-family: 'mensch_trialblack';
+      width: 92vw;
+      top: 30vh;
+      border-bottom: 5px solid #e87803;
+      background-color: #ffffff;
+      border-top: 5px solid black;
+      border-right: 5px solid #e77807;
+      border-left: 5px solid black;
+      z-index: 100000;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+}
+
+.tradeLogo {
+  /* width: 70%;
+      height: 70%; */
+      max-height: 100px;
+      max-width: 150px;
+      /* background-color: black; */
+      background-image: url(tradeLogoBG.png);
+      background-size: cover;
+      margin-bottom: 10px;
+      margin-top: 5px;
+      border-radius: 20px;
+}
+
+.trade {
+  margin-top: 5px;
+}
+
+.tradeName {
+    font-family: 'hitchcutregular';
+    color: white;
+}
+
+.faImg {
+  width: 100%;
+  width: 35vh;
+}
+
+.ovr {
+    background-image: url("test.png");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.faName {
+  font-family: hitchcutregular;
+color: white;
+font-size: 3.5vh;
+margin-bottom: 0;
+}
+
+.bttn-slant.bttn-success:before {
+    background: #e87803;
+}
+
+.butt {
+  font-family: 'mensch_trialblack' !important;
+}
+
+.signButton {
+  font-family: 'mensch_trialblack' !important;
+}
+
+.faPos {
+  color: white;
+    font-family: 'mensch_trialblack';
+    margin-bottom: 0;
+}
+
+.faPrice {
+  color: white;
+    font-family: 'mensch_trialblack';
+    margin-bottom: 0;
+}
+
+.acceptBack {
+  display: none;
+  margin-bottom: 5px;
+}
+
+#introParagraph {
+  color: white;
+  /* font-family: 'hitchcutregular' */
+  font-family: 'mensch_trialblack';
+  font-size: 20px;
+}
+
+#draftLogo {
+  width: 27vh;
+}
+
+#preLogo {
+  width: 12vh;
+  margin: 3vh;
+
+}
+
+#rosterNavCont {
+  background-color: rgb(11 82 130 / 55%);
+  border-radius: 20px;
+}
+
+#roster2NavCont {
+  background-color: rgb(11 82 130 / 55%);
+  border-radius: 20px;
+}
+
+.nav {
+  font-family: 'mensch_trialblack';
+color: #ffffff;
+}
+
+.navbar {
+  margin-bottom: 10px;
+background-color: #1570af;
+padding: 5px;
+
+}
+
+#navbar {
+  margin-bottom: 10px;
+font-family: 'mensch_trialblack';
+color: white;
+}
+
+#capSpaceText {
+  font-family: 'mensch_trialblack';
+  background-color: #e97800;
+  color: #150800;
+  border: 3px solid;
+}
+
+#capSpaceText2 {
+  font-family: 'mensch_trialblack';
+  background-color: #e97800;
+  color: #150800;
+  border: 3px solid;
+}
+
+.rosterName {
+  font-family: 'mensch_trialblack';
+    color: white;
+    text-shadow: 7 10 black;
+    text-shadow: 2px 2px #000000;
+}
+
+#topBlock {
+
+z-index: 100;
+
+
+}
+
+.bttn-minimal.bttn-success {
+    color: white;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #e77807;
+    font-family: 'mensch_trialblack';
+    border-color: #1994e5;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #e77807;
+    font-family: 'mensch_trialblack';
+    border-color: #1994e5;
+}
+
+
+.rosterPos {
+  font-family: 'mensch_trialblack';
+    color: white;
+    text-shadow: 7 10 black;
+    text-shadow: 2px 2px #000000;
+}
+
+.rosterHead {
+  font-family: 'mensch_trialblack';
+    color: white;
+    text-shadow: 7 10 black;
+    text-shadow: 2px 2px #000000;
+}
+
+#preDraftDisplay {
+  font-family: 'mensch_trialblack';
+  font-size: 3vh;
+}
+
+#draftBar {
+  display: none;
+  height: 6vh;
+flex-wrap: nowrap;
+  font-family: 'Roboto Mono';
+  color: white;
+  padding: 1vh;
+  border: 3px solid black;
+  background-color: #c80f2e;
+}
+
+#showDraftTeam {
+  margin-top: 10vh;
+  font-family: 'mensch_trialblack';
+  font-size: 3vh;
+  color: black;
+
+
+}
+
+#showDraftName {
+
+  font-family: 'mensch_trialblack';
+  font-size: 5vh;
+  color: black;
+
+}
+
+.headPic {
+  width: 100%;
+}
+
+.bttn-slant.bttn-success:hover:before, .bttn-slant.bttn-success:focus:before {
+    box-shadow: inset 0 -1px 0 #160900, inset 0 1px 0px #000000, inset -1px 0px 0px #000000;
+}
+
+.bttn-slant.bttn-success:after {
+    background: #000000;
+}
+
+
+.draftSchool, .draftPos, .draftName {
+  font-family: "Roboto Mono"
+}
+
+
+#startbutton, #startbutton::after {
+  margin-top: 2vh;
+  cursor: pointer;
+  width: 30vw;
+  height: 86px;
+  font-size: 4vh;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, #ff7800 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 88px;
+  box-shadow: 6px 0px 0px #000000;
+  outline: transparent;
+  position: relative;
+}
+
+#startbutton::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: 'START';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #ff7800 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #000000;
+  clip-path: var(--slice-0);
+}
+
+#startbutton:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+#continuebutton, #continuebutton::after {
+  margin-top: 2vh;
+  cursor: pointer;
+  width: 42vw;
+  height: 86px;
+  font-size: 4vh;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, #ff7800 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 88px;
+  box-shadow: 6px 0px 0px #000000;
+  outline: transparent;
+  position: relative;
+}
+
+#continuebutton::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: 'CONTINUE';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #ff7800 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #000000;
+  clip-path: var(--slice-0);
+}
+
+#continuebutton:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+#nobutton, #nobutton::after {
+  margin-top: 2vh;
+  cursor: pointer;
+  width: 30vw;
+  height: 86px;
+  font-size: 4vh;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, #c80f2e 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 88px;
+  box-shadow: 6px 0px 0px #000000;
+  outline: transparent;
+  position: relative;
+}
+
+#nobutton::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: 'NO';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #c80f2e 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #000000;
+  clip-path: var(--slice-0);
+}
+
+#nobutton:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+#yesbutton, #yesbutton::after {
+  margin-top: 2vh;
+  cursor: pointer;
+  width: 30vw;
+  height: 86px;
+  font-size: 4vh;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, #c80f2e 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 88px;
+  box-shadow: 6px 0px 0px #000000;
+  outline: transparent;
+  position: relative;
+}
+
+#yesbutton::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: 'YES';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #c80f2e 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #000000;
+  clip-path: var(--slice-0);
+}
+
+#yesbutton:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+#advancebutton, #advancebutton::after {
+  margin-top: 0;
+  cursor: pointer;
+  width: 31vw;
+  height: 60px;
+  font-size: 3vh;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, #e87803 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 60px;
+  box-shadow: 6px 0px 0px #000000;
+  outline: transparent;
+  position: relative;
+}
+
+#advancebutton::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: 'ADVANCE';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #e87803 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #000000;
+  clip-path: var(--slice-0);
+}
+
+#advancebutton:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+#finishbutton, #finishbutton::after {
+  margin-top: 0;
+  cursor: pointer;
+  width: 31vw;
+  height: 60px;
+  font-size: 3vh;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, #e87803 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 60px;
+  box-shadow: 6px 0px 0px #000000;
+  outline: transparent;
+  position: relative;
+}
+
+#finishbutton::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: 'FINISH';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #000000 3%, #000000 5%, #e87803 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #000000;
+  clip-path: var(--slice-0);
+}
+
+#finishbutton:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+
+
+
+
+.heartbeat {
+	-webkit-animation: heartbeat 3s ease-in-out infinite both;
+	        animation: heartbeat 3s ease-in-out infinite both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-6-27 13:13:51
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-6-27 13:16:40
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+	-webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-6-27 13:16:59
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-out-left {
+	-webkit-animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-6-27 16:17:7
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-out-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+.slide-out-right {
+	-webkit-animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-6-28 22:3:14
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-out-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+}
