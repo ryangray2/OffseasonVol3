@@ -149,4 +149,20 @@ var cle1 = {
   receive: [collinSexton]
 }
 
-trades = [gsw1, okc1, por1, min1, okc2, phi1, dal1, was1, chi1, cle1];
+var cjMccollum = {
+  firstName: "CJ",
+  lastName: "McCollum",
+  pos: "G",
+  age: "29",
+  sal: 30864198,
+  ws: 3.5,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2490149.png&w=350&h=254"
+}
+
+var por2 = {
+  team: blazers,
+  give: [immanuelQuickley, kevinKnox, first2022],
+  receive: [cjMccollum]
+}
+
+trades = [gsw1, okc1, por1, min1, okc2, phi1, dal1, was1, chi1, cle1, por2];
