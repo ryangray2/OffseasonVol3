@@ -181,7 +181,7 @@ var pelicans = {
 var spurs = {
   city: "San Antonio",
   name: "Spurs",
-  logo: "http://assets.stickpng.com/images/58419cbca6515b1e0ad75a66.png"
+  logo: "spurs.png"
 };
 
 var teams = [celtics, nets, knicks, sixers, raptors, bulls, cavaliers, pistons, pacers, bucks, hawks, hornets, heat, magic, wizards, nuggets, timberwolves, thunder, blazers, jazz, warriors, clippers, lakers, suns, kings, mavericks, rockets, grizzlies, pelicans, spurs];
