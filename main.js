@@ -280,16 +280,34 @@ function generateSRoster() {
   }
 }
 
+// function getRecord() {
+//   var here = document.getElementById("summaryHead");
+//   var wins = 0;
+//   for (let i = 0; i < roster.length; i++) {
+//     if (roster[i].hasOwnProperty("ws")) {
+//       wins += roster[i].ws;
+//     }
+//   }
+//   wins *= 1.138;
+//   // wins += 3;
+//   wins = Math.round(wins);
+//
+//   losses = 82 - wins;
+//
+//   here.innerHTML = wins + " - " + losses;
+// }
+
 function getRecord() {
   var here = document.getElementById("summaryHead");
   var wins = 0;
-  for (let i = 0; i < roster.length; i++) {
-    if (roster[i].hasOwnProperty("ws")) {
+  roster.sort(function(a, b){return b.ws-a.ws});
+  for (let i = 0; i < 8; i++) {
+    if (roster[i].hasOwnProperty('ws')) {
       wins += roster[i].ws;
     }
   }
+  wins *= 1.17;
   wins *= 1.138;
-  // wins += 3;
   wins = Math.round(wins);
 
   losses = 82 - wins;
@@ -738,6 +756,137 @@ function draftPlayer(player) {
   }
 }
 
+// function generateBroadFA(kind) {
+//   currKind = kind;
+//   var tempArray = [];
+//   var amount = filteredFA.length;
+//
+//   if (kind === "G") {
+//     var count = 0;
+//     while (count < amount) {
+//       if (filteredFA[count].pos === "PG" || filteredFA[count].pos === "SG") {
+//         tempArray.push(filteredFA[count]);
+//       }
+//       count++;
+//     }
+//     amount = tempArray.length;
+//   } else if (kind === "F") {
+//       var count = 0;
+//       while (count < amount) {
+//         if (filteredFA[count].pos === "PF" || filteredFA[count].pos === "SF") {
+//           tempArray.push(filteredFA[count]);
+//         }
+//         count++;
+//       }
+//       amount = tempArray.length;
+//   } else if (kind === "C") {
+//       var count = 0;
+//       while (count < amount) {
+//         if (filteredFA[count].pos === "C") {
+//           tempArray.push(filteredFA[count]);
+//         }
+//         count++;
+//       }
+//       amount = tempArray.length;
+//   } else {
+//       tempArray = filteredFA;
+//   }
+//   var root = document.getElementById("fa2NavCont");
+//   while (root.firstChild) {
+//     root.removeChild(root.firstChild);
+//   }
+//   for (let i = 0; i < tempArray.length; i++) {
+//     var ovr = document.createElement("div");
+//     ovr.classList.add("ovr");
+// //// PICTURE
+//     var imgrow = document.createElement("div");
+//     imgrow.classList.add("row", "text-center");
+//
+//     var imgcol = document.createElement("div");
+//     imgcol.classList.add("col-12");
+//
+//     var img = document.createElement("img");
+//     img.setAttribute("src", tempArray[i].img);
+//     img.classList.add("faImg");
+//
+//     imgcol.appendChild(img);
+//     imgrow.appendChild(imgcol);
+//     ovr.appendChild(imgrow);
+// ////
+//     var row = document.createElement("div");
+//     row.classList.add("row", "text-center");
+//
+//     var nameCol = document.createElement("div");
+//     nameCol.classList.add("col-12");
+//
+//     var nameP = document.createElement("p");
+//     nameP.classList.add("faName");
+//     nameP.innerHTML = tempArray[i].firstName.toUpperCase() + " " + tempArray[i].lastName.toUpperCase();
+//     nameCol.appendChild(nameP);
+//     row.appendChild(nameCol);
+//
+//
+//         // var dumCol = document.createElement("div");
+//         // dumCol.classList.add("col-3");
+//         //     row.appendChild(dumCol);
+//
+//     var posCol = document.createElement("div");
+//     posCol.classList.add("col-12");
+//
+//     var posP = document.createElement("p");
+//     posP.classList.add("faPos");
+//     posP.innerHTML = tempArray[i].pos + "  /  Age: " + tempArray[i].age;
+//     posCol.appendChild(posP);
+//     row.appendChild(posCol);
+//
+//     // var ageCol = document.createElement("div");
+//     // ageCol.classList.add("col-3");
+//     //
+//     // var ageP = document.createElement("p");
+//     // ageP.classList.add("faAge");
+//     // ageP.innerHTML = teamFA[i].age;
+//     // ageCol.appendChild(ageP);
+//     // row.appendChild(ageCol);
+//
+//
+//     var priceCol = document.createElement("div");
+//     priceCol.classList.add("col-12");
+//
+//     var priceP = document.createElement("p");
+//     priceP.classList.add("faPrice");
+//     priceP.innerHTML = tempArray[i].cYears + " yr./$" + tempArray[i].cTotal + "M";
+//     priceCol.appendChild(priceP);
+//     row.appendChild(priceCol);
+//
+//
+//     if (!offeredArr.includes(tempArray[i]) && (tempArray[i].cTotal * 1000000) / tempArray[i].cYears <= getCapRoom()) {
+//       var signCol = document.createElement("div");
+//       signCol.classList.add("col-12");
+//
+//       var signButton = document.createElement("button");
+//       signButton.classList.add("signButton", "bttn-slant", "bttn-md", "bttn-success", "butt");
+//       signButton.innerHTML = "SIGN";
+//       signButton.addEventListener('click', function() {
+//         signBroadFA(tempArray[i]);
+//       });
+//       signCol.appendChild(signButton);
+//       row.appendChild(signCol);
+//     }
+//
+//     if (offeredArr.includes(tempArray[i])) {
+//       row.style.opacity = ".5";
+//     }
+//     if ((tempArray[i].cTotal * 1000000) / tempArray[i].cYears > getCapRoom()) {
+//         row.style.opacity = ".5";
+//     }
+//     var hr = document.createElement("hr");
+//     ovr.appendChild(row)
+//     root.appendChild(ovr);
+//     root.appendChild(hr);
+//
+//   }
+// }
+
 function generateBroadFA(kind) {
   currKind = kind;
   var tempArray = [];
@@ -856,6 +1005,85 @@ function generateBroadFA(kind) {
     }
 
     if (offeredArr.includes(tempArray[i])) {
+        continue;
+    }
+    if ((tempArray[i].cTotal * 1000000) / tempArray[i].cYears > getCapRoom()) {
+        continue;
+    }
+    var hr = document.createElement("hr");
+    ovr.appendChild(row)
+    root.appendChild(ovr);
+    root.appendChild(hr);
+
+  }
+
+  for (let i = 0; i < tempArray.length; i++) {
+    var ovr = document.createElement("div");
+    ovr.classList.add("ovr");
+//// PICTURE
+    var imgrow = document.createElement("div");
+    imgrow.classList.add("row", "text-center");
+
+    var imgcol = document.createElement("div");
+    imgcol.classList.add("col-12");
+
+    var img = document.createElement("img");
+    img.setAttribute("src", tempArray[i].img);
+    img.classList.add("faImg");
+
+    imgcol.appendChild(img);
+    imgrow.appendChild(imgcol);
+    ovr.appendChild(imgrow);
+////
+    var row = document.createElement("div");
+    row.classList.add("row", "text-center");
+
+    var nameCol = document.createElement("div");
+    nameCol.classList.add("col-12");
+
+    var nameP = document.createElement("p");
+    nameP.classList.add("faName");
+    nameP.innerHTML = tempArray[i].firstName.toUpperCase() + " " + tempArray[i].lastName.toUpperCase();
+    nameCol.appendChild(nameP);
+    row.appendChild(nameCol);
+
+
+        // var dumCol = document.createElement("div");
+        // dumCol.classList.add("col-3");
+        //     row.appendChild(dumCol);
+
+    var posCol = document.createElement("div");
+    posCol.classList.add("col-12");
+
+    var posP = document.createElement("p");
+    posP.classList.add("faPos");
+    posP.innerHTML = tempArray[i].pos + "  /  Age: " + tempArray[i].age;
+    posCol.appendChild(posP);
+    row.appendChild(posCol);
+
+    // var ageCol = document.createElement("div");
+    // ageCol.classList.add("col-3");
+    //
+    // var ageP = document.createElement("p");
+    // ageP.classList.add("faAge");
+    // ageP.innerHTML = teamFA[i].age;
+    // ageCol.appendChild(ageP);
+    // row.appendChild(ageCol);
+
+
+    var priceCol = document.createElement("div");
+    priceCol.classList.add("col-12");
+
+    var priceP = document.createElement("p");
+    priceP.classList.add("faPrice");
+    priceP.innerHTML = tempArray[i].cYears + " yr./$" + tempArray[i].cTotal + "M";
+    priceCol.appendChild(priceP);
+    row.appendChild(priceCol);
+
+    if (!offeredArr.includes(tempArray[i]) && (tempArray[i].cTotal * 1000000) / tempArray[i].cYears <= getCapRoom()) {
+      continue;
+    }
+    if (offeredArr.includes(tempArray[i])) {
       row.style.opacity = ".5";
     }
     if ((tempArray[i].cTotal * 1000000) / tempArray[i].cYears > getCapRoom()) {
@@ -865,9 +1093,9 @@ function generateBroadFA(kind) {
     ovr.appendChild(row)
     root.appendChild(ovr);
     root.appendChild(hr);
-
   }
 }
+
 
 function generateTeamFA() {
   var root = document.getElementById("faNavCont");
@@ -965,6 +1193,11 @@ function generateTeamFA() {
 
 function signTeamFA(player) {
 
+  if (player.lastName === "Payton") {
+    fired();
+    return;
+  }
+
   player.sal = Math.floor((player.cTotal * 1000000) / player.cYears);
   if (player.sal <= getCapRoom()) {
       roster.push(player);
@@ -975,6 +1208,23 @@ function signTeamFA(player) {
       generateTeamFA();
       generateRoster();
   }
+}
+
+function fired() {
+  document.getElementById("teamCont").classList.add("fade-out-bck");
+  setTimeout(function(){
+    document.getElementById("teamCont").style.display = "none";
+ }, 1200);
+ setTimeout(function(){
+   document.getElementById("newsCont").style.display = "block";
+ }, 1100);
+ setTimeout(function(){
+   document.getElementById("restartRow").style.display = "block";
+ }, 1500);
+}
+
+function restart() {
+  location.reload();
 }
 
 function signBroadFA(player) {

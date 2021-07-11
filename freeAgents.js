@@ -9,7 +9,7 @@ type: 'PO',
 cYears: 3,
 cTotal: 100,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2779.png&w=350&h=254',
-ws: 9.2,
+ws: 10.2,
 interest: 20
 };
 var KawhiLeonard = {
@@ -22,7 +22,7 @@ type: 'PO',
 cYears: 3,
 cTotal: 106,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6450.png&w=350&h=254',
-ws: 8.8,
+ws: 10.8,
 interest: 20
 };
 var MikeConley = {

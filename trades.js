@@ -27,7 +27,7 @@ var damianLillard = {
   pos: "G",
   age: "31",
   sal: 39344900,
-  ws: 10.4,
+  ws: 11.4,
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png&w=350&h=254"
 }
 
@@ -59,7 +59,7 @@ var shai = {
   pos: "G",
   age: "22",
   sal: 4141320,
-  ws: 5.5,
+  ws: 6.5,
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278073.png&w=350&h=254"
 }
 

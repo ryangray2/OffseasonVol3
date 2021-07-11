@@ -123,7 +123,7 @@ var nerlensNoel = {
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991280.png&w=350&h=254",
   cYears: 2,
   cTotal: 26,
-  ws: 4.2
+  ws: 3.2
 };
 
 var elfridPayton = {
@@ -156,7 +156,7 @@ var tajGibson = {
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3986.png&w=350&h=254",
   cYears: 1,
   cTotal: 3,
-  ws: 2
+  ws: 1
 };
 
 var jaredHarper = {
