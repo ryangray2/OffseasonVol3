@@ -41,12 +41,12 @@ max-width: 19vh;
 .badgePopText {
   font-size: 4vh;
 color: white;
-font-family: "hitchcut";
+font-family: hitchcutregular;
 text-shadow: 1px 4px black;
 }
 
 .badgeTitle {
-  font-family: 'hitchcut';
+  font-family: hitchcutregular;
       color: white;
       font-size: 3vh;
       margin-bottom: -2px;
