@@ -10,6 +10,7 @@ var leftOffShow = 0;
 var offeredArr = [];
 var knicksPicks = [];
 var signedArr = [];
+var broadFASigned = [];
 var tradedFor = [];
 var tradedAway = [];
 var tradesNav = 0;
@@ -18,6 +19,24 @@ var currkind = "all";
 var preDraftTrade;
 var filteredFA = [];
 var starters = [];
+var wins = 0;
+var tradeUp = false;
+var runs = 0;
+
+
+console.log(runs);
+
+str_runs = localStorage.getItem("runs");
+//get a numeric value from str_count, put it in count
+if (str_runs == null || str_runs == "null"){
+  runs = 0;
+} else {
+  runs = parseInt(str_runs);
+}
+
+if (localStorage.getItem("badgesStored")) {
+  badges = JSON.parse(localStorage.getItem("badgesStored"));
+}
 
 
 function getSalary() {
@@ -40,6 +59,146 @@ function startPressed() {
     console.log(i + " " + draftPlayers[i].lastName);
   }
   filterFreeAgents();
+}
+
+function badgesPressed() {
+  startCont.style.display = "none";
+  badgesCont.style.display = "block";
+  generateBadges();
+}
+
+function badgesBack() {
+  startCont.style.display = "block";
+  badgesCont.style.display = "none";
+}
+
+function generateBadges() {
+  var root = document.getElementById("badgesShelf");
+  while (root.firstChild) {
+    root.removeChild(root.firstChild);
+  }
+  var row = document.createElement("div");
+  row.classList.add("row", "text-center");
+  for (let i = 0; i < badges.length; i++) {
+    if (badges[i].won) {
+      var col = document.createElement("div");
+      col.classList.add("col-6", "col-md-3");
+      var img = document.createElement("img");
+      img.classList.add("badgeImg");
+      img.setAttribute("src", badges[i].img);
+      var title = document.createElement("p");
+      title.classList.add("badgeTitle");
+      title.innerHTML = badges[i].title;
+      var desc = document.createElement("p");
+      desc.classList.add("badgeDesc");
+      desc.innerHTML = badges[i].desc;
+      col.appendChild(img);
+          col.appendChild(title);
+              col.appendChild(desc);
+                  row.appendChild(col);
+
+    } else {
+      continue;
+    }
+  }
+  for (let i = 0; i < badges.length; i++) {
+    if (!badges[i].won) {
+      var col = document.createElement("div");
+      col.classList.add("col-6", "col-md-3");
+      var img = document.createElement("img");
+      img.classList.add("badgeImg");
+      img.setAttribute("src", "nobadge.png");
+      var title = document.createElement("p");
+      title.classList.add("badgeTitle");
+      title.innerHTML = "????";
+      col.appendChild(img);
+      col.appendChild(title);
+      row.appendChild(col);
+    } else {
+      continue;
+    }
+  }
+  root.appendChild(row);
+}
+
+function checkBadges() {
+  if (wins >= 30) {
+    badges[badges.indexOf(thirtyPlus)].won = true;
+  }
+  if (wins >= 40) {
+    badges[badges.indexOf(fortyPlus)].won = true;
+  }
+  if (wins >= 50) {
+    badges[badges.indexOf(fiftyPlus)].won = true;
+  }
+  if (tradeUp) {
+    badges[badges.indexOf(movingUp)].won = true;
+  }
+  if (broadFASigned.length === 0 && tradedFor.length === 0) {
+    badges[badges.indexOf(runItBack)].won = true;
+  }
+  if (runs === 10) {
+    badges[badges.indexOf(tenRuns)].won = true;
+  }
+  if (runs === 25) {
+    badges[badges.indexOf(twentyFiveRuns)].won = true;
+  }
+  if (runs === 50) {
+    badges[badges.indexOf(fiftyRuns)].won = true;
+  }
+  if (runs === 100) {
+    badges[badges.indexOf(hundredRuns)].won = true;
+  }
+  if (fired) {
+    badges[badges.indexOf(fired)].won = true;
+  }
+  if (roster.length > 15) {
+    badges[badges.indexOf(fullHouse)].won = true;
+  }
+  if (roster.length < 10) {
+    badges[badges.indexOf(tightCircle)].won = true;
+  }
+  console.log(badges);
+  localStorage.setItem("badgesStored", JSON.stringify(badges));
+
+}
+
+function badgeAlert(badge) {
+
+  var root = document.getElementById("badgePop");
+  var row = document.createElement("div");
+  row.classList.add("row", "text-center", "slide-in-top");
+
+  var imgCol = document.createElement("div");
+  imgCol.classList.add("col-12");
+
+  var img = document.createElement("img");
+  img.classList.add("badgePopImg");
+  img.setAttribute("src", badge.img);
+
+  imgCol.appendChild(img);
+
+  var pCol = document.createElement("div");
+  pCol.classList.add("col-12");
+
+  var p = document.createElement("div");
+  p.classList.add("badgePopText");
+  p.innerHTML = "NEW BADGE!"
+
+  pCol.appendChild(p);
+  row.appendChild(imgCol);
+  row.appendChild(pCol);
+  root.appendChild(row);
+
+  setTimeout(function(){
+    row.classList.remove("slide-in-top");
+    row.classList.add("fade-out-bck");
+  }, 1500);
+
+  setTimeout(function(){
+    root.removeChild(row);
+  }, 2100);
+
 }
 
 function filterFreeAgents() {
@@ -104,7 +263,81 @@ function faDone() {
   // document.getElementById("faCont").style.display = "block";
   document.getElementById("summary").style.display = "block";
   generateSummary();
-  getRecord();
+    getRecord();
+  if (wins >= 30) {
+    if (!badges[0].won) {
+      badges[0].won = true;
+      badgeAlert(thirtyPlus);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  if (wins >= 40) {
+    if (!badges[1].won) {
+      badges[1].won = true;
+      badgeAlert(fortyPlus);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  if (wins >= 50) {
+    if (!badges[2].won) {
+      badges[2].won = true;
+      badgeAlert(fiftyPlus);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  if (broadFASigned.length === 0 && tradedFor.length === 0) {
+    if (!badges[4].won) {
+      badges[4].won = true;
+      badgeAlert(runItBack);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  runs++;
+  if (runs === 10) {
+    if (!badges[5].won) {
+      badges[5].won = true;
+      badgeAlert(tenRuns);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  if (runs === 25) {
+    if (!badges[6].won) {
+      badges[6].won = true;
+      badgeAlert(twentyFiveRuns);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  if (runs === 50) {
+    if (!badges[7].won) {
+      badges[7].won = true;
+      badgeAlert(fiftyRuns);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  if (runs === 100) {
+    if (!badges[8].won) {
+      badges[8].won = true;
+      badgeAlert(hundredRuns);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  if (roster.length > 15) {
+    if (!badges[10].won) {
+      badges[10].won = true;
+      badgeAlert(fullHouse);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  if (roster.length < 10) {
+    if (!badges[11].won) {
+      badges[11].won = true;
+      badgeAlert(tightCircle);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  localStorage.setItem("runs", runs);
+
+  // checkBadges();
 }
 
 function displayPreDraftTrade() {
@@ -123,6 +356,16 @@ function displayPreDraftTrade() {
 }
 
 function preYesTrade() {
+    tradeUp = true;
+    //// badge
+    console.log(badges);
+    if (!badges[3].won) {
+      badges[3].won = true;
+      badgeAlert(movingUp);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+
+
     if (preDraftTrade === "Spurs") {
       draftOrder[11] = knicks;
       draftOrder[18] = spurs;
@@ -299,7 +542,6 @@ function generateSRoster() {
 
 function getRecord() {
   var here = document.getElementById("summaryHead");
-  var wins = 0;
   roster.sort(function(a, b){return b.ws-a.ws});
   for (let i = 0; i < 8; i++) {
     if (roster[i].hasOwnProperty('ws')) {
@@ -1191,6 +1433,26 @@ function generateTeamFA() {
   }
 }
 
+function fired() {
+
+    if (!badges[9].won) {
+    badges[9].won = true;
+    badgeAlert(terminated);
+    localStorage.setItem("badgesStored", JSON.stringify(badges));
+  }
+
+  document.getElementById("teamCont").classList.add("fade-out-bck");
+  setTimeout(function(){
+    document.getElementById("teamCont").style.display = "none";
+ }, 1200);
+ setTimeout(function(){
+   document.getElementById("newsCont").style.display = "block";
+ }, 1100);
+ setTimeout(function(){
+   document.getElementById("restartRow").style.display = "block";
+ }, 1500);
+}
+
 function signTeamFA(player) {
 
   if (player.lastName === "Payton") {
@@ -1210,18 +1472,7 @@ function signTeamFA(player) {
   }
 }
 
-function fired() {
-  document.getElementById("teamCont").classList.add("fade-out-bck");
-  setTimeout(function(){
-    document.getElementById("teamCont").style.display = "none";
- }, 1200);
- setTimeout(function(){
-   document.getElementById("newsCont").style.display = "block";
- }, 1100);
- setTimeout(function(){
-   document.getElementById("restartRow").style.display = "block";
- }, 1500);
-}
+
 
 function restart() {
   location.reload();
@@ -1235,6 +1486,7 @@ function signBroadFA(player) {
       popUp(player, true);
       roster.push(player);
       signedArr.push(player);
+      broadFASigned.push(player);
       offeredArr.push(player);
 
       updateCapBar2();

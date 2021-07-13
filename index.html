@@ -34,8 +34,31 @@
       </div>
       <div class="col-12">
         <button onclick="startPressed()" class="slide-in-right heartbeat" id="startbutton">START</button>
+        <button onclick="badgesPressed()" class="slide-in-right heartbeat" id="badgesbutton">BADGES</button>
       </div>
     </div>
+  </div>
+  <div class="container badgePopCont" id="badgePop">
+    <!-- <div class="row text-center">
+      <div class="col-12">
+        <img src="badgeTest.png" class="badgePopImg">
+      </div>
+      <div class="col-12">
+        <p class="badgePopText">NEW BADGE</p>
+      </div>
+    </div> -->
+  </div>
+  <div class="container" id="badgesCont">
+    <div class="row text-center">
+      <div class="col-12">
+        <img src="badgesTitle.png" class="slide-in-left" style="width: 100%">
+      </div>
+      <div class="col-12">
+      <button onclick="badgesBack()" class="bttn-slant bttn-md bttn-danger butt">BACK</button>
+      </div>
+    </div>
+    <div class="container" id="badgesShelf">
+  </div>
   </div>
   <div class="container slide-in-right" id="introCont">
     <div class="row text-center">
@@ -320,6 +343,7 @@
   </div>
 </div>
 
+<script src="badges.js"></script>
 <script src="freeAgents.js"></script>
 <script src="draftPlayers.js"></script>
 <script src="knicksPicks.js"></script>
