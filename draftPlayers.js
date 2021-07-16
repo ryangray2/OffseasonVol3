@@ -67,8 +67,10 @@ age: 'Fr.',
 height: '6-6',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4432171.png&w=350&h=254',
+ ws:0,
+ note: "I have him in the five-to-eight range, personally, but not everyone does. The reasons for being lower on him mostly stem from a perceived lack of upside, beginning with this crucial detail: he’s a solidly below-average athlete, lacking both explosion and quick-twitchiness. He’s smart in how he utilizes his length, but he’s going to need to be smarter than most if he’s going to use that length to effectively compensate against high-level athletes in the NBA.",
+ noteAuthor: "Eli Cohen"
 };
 var ScottieBarnes = {
 firstName: 'Scottie',
@@ -115,8 +117,10 @@ age: 'Sr.',
 height: '6-7',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4280151.png&w=350&h=254',
+ ws:0,
+ note: "As stressed in the past, it’s okay to take high-floor prospects with lower ceilings. You don’t always need to hit a home run with a draft pick, especially if it’s the 19th or 21st pick. If Kispert turns into a high-level role player/good starter, then that’s a success. After analyzing Kispert’s game, it’s very hard to see him failing to become that. That’s why he’d be the perfect pick for the Knicks in this year’s NBA draft.",
+ noteAuthor: "Dylan Burd"
 };
 var JadenSpringer = {
 firstName: 'Jaden',
@@ -139,8 +143,10 @@ age: 'So.',
 height: '6-5',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4431712.png&w=350&h=254',
+ ws:0,
+ note: "Offensively, Bouknight is as NBA-ready as they come. Yes, his three-point percentage dropped significantly from year one to year two (34.7% to 29.3%), but his usage almost doubled (2.6 attempts per game to 5.0). And yes, his shot selection left a lot to be desired at times, but this is an all-too-common problem among collegiate scorers. If there’s anything to worry about with Bouknight, it’s how he’ll fare on the other end.",
+ noteAuthor: "Jesse Cinquini"
 };
 var UsmanGaruba = {
 firstName: 'Usman',
@@ -199,8 +205,10 @@ age: 'Jr.',
 height: '6-5',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4397002.png&w=350&h=254',
+ ws:0,
+ note: "Dosunmu fits the bill for what the Knicks are in dire need of and that’s offensive firepower and playmaking from the backcourt. His ability to create his own shot and jumpstart an offense would be helpful on a Knicks team that struggled to find a rhythm at times and often looked stagnant and ineffective on that end of the floor.",
+ noteAuthor: "Nick Scolaro"
 };
 var JoshChristopher = {
 firstName: 'Josh',
@@ -211,8 +219,10 @@ age: 'Fr.',
 height: '6-4',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4432168.png&w=350&h=254',
+ ws:0,
+ note: "Although I love Christopher’s game, I do not believe he will be selected at 19 or 21 by the Knicks. If he is available at 32, the Knicks should take a flyer on him. Yes, the Knicks need knockdown shooters and I know that Christopher has a long way to go in that department, but the energy and the hunger are there and I believe the talent and upside are too high to pass on. Christopher seems like he and his big personality would thrive in an atmosphere like the Garden.",
+ noteAuthor: "Nick Scolaro"
 };
 var BJBoston = {
 firstName: 'BJ',
@@ -223,8 +233,10 @@ age: 'Fr.',
 height: '6-7',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4432162.png&w=350&h=254',
+ ws:0,
+ note: "Assuming Boston makes zero improvements to his game or adds any weight, he can still be as effective as Reggie Bullock. Barrett and Randle will always need spot-up shooters flanking them, and spot-up shooting is one thing Boston looked good doing in Lexington.",
+ noteAuthor: "Mike Cortez"
 };
 var JalenJohnson = {
 firstName: 'Jalen',
@@ -235,8 +247,10 @@ age: 'Fr.',
 height: '6-9',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4701230.png&w=350&h=254',
+ ws:0,
+ note: "Johnson is an utter handful to contain when attacking the rim, particularly in transition. He possesses excellent body control, speed, and strength at 6’9″, all of which allowed him to be an elite dribble-drive threat; Johnson averaged 5.5 free-throw attempts per 40 minutes in his short stint with Duke. It’s an open secret that New York struggled to score in the open court—their 7.7 fast-break points per game ranked dead last in the NBA. Therefore, adding a top-tier athlete and potent at-the-rim scorer in Johnson could go a long way towards rectifying the team’s transition woes.",
+ noteAuthor: "Jesse Cinquini"
 };
 var GregBrown = {
 firstName: 'Greg',
@@ -283,8 +297,10 @@ age: 'Fr.',
 height: '6-4',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4432174.png&w=350&h=254',
+ ws:0,
+ note: "He’s got great size for a guard, an efficient shooting stroke from behind the arc, and the ability to drive the ball to the basket when his shot isn’t available. Even though defense isn’t his strong suit, it’s something the Knicks could help him improve upon working within one of the league’s top defensive squads.",
+ noteAuthor: "Patrick Kiernan"
 };
 var OchaiAgbaji = {
 firstName: 'Ochai',
@@ -487,8 +503,10 @@ age: 'Fr.',
 height: '6-1',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4432173.png&w=350&h=254',
+ ws:0,
+ note: "I think Sharife’s fit with the Knicks is pretty clear. The Knicks have many interesting guys right now, from Barrett to Randle to Robinson to Quickley, and even Obi Toppin, but the one type of player they don’t have is a waterbug guard who can penetrate defenses and make them pay for collapsing. Once again, the shooting concerns exist, but a team as defensively sound as the Knicks were is perfect for insulating him defensively, and New York will be in the market for shooters with or without Cooper.",
+ noteAuthor: "Eli Cohen"
 };
 var TerrenceClarke = {
 firstName: 'Terrence',
@@ -511,8 +529,10 @@ age: 'Sr.',
 height: '6-6',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4592402.png&w=350&h=254',
+ ws:0,
+ note: "The most obvious red flag about Duarte is his age. At 24 years old come draft night, it’s very hard to say he will be able to improve upon any part of the game he’s already crafted. Teams won’t view him as an asset they can give water and grow for years while honing in on his potential, but rather as someone who will have to be good immediately or question his spot in the league. If he can’t succeed within the first two years of his career, he’ll already be on the wrong side of his 20s.",
+ noteAuthor: "Patrick Kiernan"
 };
 var DJStewart = {
 firstName: 'DJ',
@@ -571,8 +591,10 @@ age: 'So.',
 height: '6-9',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4432813.png&w=350&h=254',
+ ws:0,
+ note: "Added frontcourt could be nice, but would Tom Thibodeau dare cut down on Julius Randle minutes to give other guys a turn?! Besides, if the Knicks were to go with a frontcourt pick, they’d probably want to go with a more reliable rim protector or someone that already has stretch big capabilities to start.",
+ noteAuthor: "Eugene Rapay"
 };
 var AlperenSengun = {
 firstName: 'Alperen',
@@ -727,8 +749,10 @@ age: 'So.',
 height: '6-2',
 cYears: 0,
 cTotal: 0,
-img: '',
- ws:0
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4431823.png&w=350&h=254',
+ ws:0,
+ note: "McBride will almost definitely be a good defender at the NBA level. It is just a matter of how high his defensive ceiling can be. His point-of-attack defense, ball denial, and team defense skills make him a candidate to be an elite guard defender at the next level. This is a player that is built to make opposing guards miserable with extreme activity on defense and will make himself known because of that activity leading to blocks, steals, deflections, and denials.",
+ noteAuthor: "Nick Carannante"
 };
 var IsaiahTodd = {
 firstName: 'Isaiah',

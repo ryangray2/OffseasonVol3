@@ -76,12 +76,14 @@ var benSimmons = {
   age: "24",
   sal: 33003936,
   ws: 6,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907387.png&w=350&h=254"
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907387.png&w=350&h=254",
+  note: "He’s one of the biggest and fastest cars in the race but what holds him back is his motor going cold. If he’s not slashing and generating points for himself or teammates, he’s pretty much worthless. And I don’t expect Thibodeau to become an offensive genius this offseason. I don’t think he’s nimble enough to walk the tightrope that leads to an offense in which Simmons is always producing. That’s why, despite his talent, I’m not sure how much better he would make the Knicks.",
+  noteAuthor: "Sam DiGiovanni"
 }
 
 var phi1 = {
   team: sixers,
-  give: [immanuelQuickley, obiToppin, first2023DAL, first2024],
+  give: [rjBarrett, obiToppin, first2023DAL, first2024],
   receive: [benSimmons]
 }
 
@@ -140,12 +142,14 @@ var collinSexton = {
   age: "22",
   sal: 6349671,
   ws: 3.5,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277811.png&w=350&h=254"
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277811.png&w=350&h=254",
+  note: "If the Knicks can acquire Sexton, he would be a fine player for the Knicks, thanks to the foundation. Thibodeau and Mitchell Robinson can cover for him on defense, while the offense has some room for improvement, and he can offer the shooting and driving element it needs. However, the concerns about how he impacts the team’s creativity while taking over a sizable chunk of the team’s ball-handling are a concern—also, the imminent contract extension.",
+  noteAuthor: "Quentin Haynes"
 }
 
 var cle1 = {
   team: cavaliers,
-  give: [kevinKnox, first2022, first2023DAL],
+  give: [obiToppin, kevinKnox, first2022],
   receive: [collinSexton]
 }
 

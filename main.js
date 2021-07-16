@@ -243,6 +243,7 @@ function draftDone() {
       }
       generateRoster();
       updateCapBar();
+      faNav();
   }, 500);
 
 
@@ -256,6 +257,7 @@ function teamDone() {
   }, 500);
   generateRoster2();
   updateCapBar2();
+  fa2Nav();
 }
 
 function faDone() {
@@ -928,6 +930,15 @@ function generateDraftPool() {
     var nameP = document.createElement("p");
     nameP.classList.add("draftName");
     nameP.innerHTML = draftPlayers[i].firstName + " " + draftPlayers[i].lastName;
+
+    if (draftPlayers[i].hasOwnProperty("note")) {
+      var icn = document.createElement("i");
+      icn.classList.add("fa", "fa-sticky-note");
+      icn.addEventListener("click", function(){ notePopDraft(draftPlayers[i]); });
+      nameP.innerHTML = draftPlayers[i].firstName + " " + draftPlayers[i].lastName + " ";
+      nameP.appendChild(icn);
+    }
+
     nameCol.appendChild(nameP);
     row.appendChild(nameCol);
 
@@ -960,6 +971,110 @@ function generateDraftPool() {
 
   root.appendChild(row);
   }
+}
+
+function notePopDraft(player) {
+  var root = document.getElementById("notePop");
+  while (root.firstChild) {
+    root.removeChild(root.firstChild);
+  }
+  root.classList.remove("slide-in-left");
+
+  var imgRow = document.createElement("div");
+  imgRow.classList.add("row", "text-center");
+
+  var imgCol = document.createElement("div");
+  imgCol.classList.add("col-12", "noteImgCol");
+
+
+  var img = document.createElement("img");
+  img.classList.add("noteImg");
+  img.setAttribute("src", player.img);
+
+  imgCol.appendChild(img);
+  imgRow.appendChild(imgCol);
+
+  var topRow = document.createElement("div");
+  topRow.classList.add("row", "text-center");
+
+
+  var nameCol = document.createElement("div");
+  nameCol.classList.add("col-12");
+
+  var fn = document.createElement("h1");
+  fn.classList.add("noteName");
+  fn.innerHTML = player.firstName;
+
+  var ln = document.createElement("h1");
+  ln.classList.add("noteName");
+  ln.innerHTML = player.lastName;
+  ln.style.marginTop = "-3vh";
+
+  nameCol.appendChild(fn);
+  nameCol.appendChild(ln);
+  topRow.appendChild(nameCol);
+
+  var noteRow = document.createElement("div");
+  noteRow.classList.add("row", "text-center");
+
+  var dCol = document.createElement("div");
+  dCol.classList.add("col-0", "col-md-1");
+
+  var noteCol = document.createElement("div");
+  noteCol.classList.add("col-12", "col-md-10");
+
+  var d2Col = document.createElement("div");
+  d2Col.classList.add("col-0", "col-md-1");
+
+  var note = document.createElement("p");
+  note.classList.add("note");
+  note.innerHTML = player.note;
+
+  noteCol.appendChild(note);
+  noteRow.appendChild(dCol);
+  noteRow.appendChild(noteCol);
+  noteRow.appendChild(d2Col);
+
+  var noteAuthorRow = document.createElement("div");
+  noteAuthorRow.classList.add("row", "text-center");
+
+  var noteAuthorCol = document.createElement("div");
+  noteAuthorCol.classList.add("col-12");
+
+  var noteAuthor = document.createElement("p");
+  noteAuthor.classList.add("noteAuthor");
+  noteAuthor.innerHTML = player.noteAuthor;
+
+  noteAuthorCol.appendChild(noteAuthor);
+  noteAuthorRow.appendChild(noteAuthorCol);
+
+  var buttonRow = document.createElement("div");
+  buttonRow.classList.add("row", "text-center");
+
+  var buttonCol = document.createElement("div");
+  buttonCol.classList.add("col-12");
+
+  var button = document.createElement("button");
+  button.innerHTML = "BACK";
+  button.addEventListener("click", function(){ noteBack(); });
+  button.classList.add('bttn-slant', 'bttn-md', 'bttn-danger', 'butt');
+
+  buttonCol.appendChild(button);
+  buttonRow.appendChild(buttonCol);
+
+  root.appendChild(imgRow);
+  root.appendChild(topRow);
+  root.appendChild(noteRow);
+  root.appendChild(noteAuthorRow);
+  root.appendChild(buttonRow);
+
+  root.classList.add("slide-in-left");
+  root.style.display = "block";
+}
+
+function noteBack() {
+  document.getElementById("notePop").style.display = "none";
+
 }
 
 function getPick(team, place) {
@@ -1195,8 +1310,17 @@ function generateBroadFA(kind) {
     var nameP = document.createElement("p");
     nameP.classList.add("faName");
     nameP.innerHTML = tempArray[i].firstName.toUpperCase() + " " + tempArray[i].lastName.toUpperCase();
+    if (tempArray[i].hasOwnProperty("note")) {
+      var icn = document.createElement("i");
+      icn.classList.add("fa", "fa-sticky-note");
+      icn.addEventListener("click", function(){ notePopBroad(tempArray[i]); });
+      nameP.innerHTML = tempArray[i].firstName + " " + tempArray[i].lastName + " ";
+      nameP.appendChild(icn);
+    }
     nameCol.appendChild(nameP);
     row.appendChild(nameCol);
+
+
 
 
         // var dumCol = document.createElement("div");
@@ -1338,6 +1462,105 @@ function generateBroadFA(kind) {
   }
 }
 
+function notePopBroad(player) {
+  var root = document.getElementById("notePop");
+  while (root.firstChild) {
+    root.removeChild(root.firstChild);
+  }
+  root.classList.remove("slide-in-left");
+
+  var imgRow = document.createElement("div");
+  imgRow.classList.add("row", "text-center");
+
+  var imgCol = document.createElement("div");
+  imgCol.classList.add("col-12", "noteImgCol");
+
+
+  var img = document.createElement("img");
+  img.classList.add("noteImg");
+  img.setAttribute("src", player.img);
+
+  imgCol.appendChild(img);
+  imgRow.appendChild(imgCol);
+
+  var topRow = document.createElement("div");
+  topRow.classList.add("row", "text-center");
+
+
+  var nameCol = document.createElement("div");
+  nameCol.classList.add("col-12");
+
+  var fn = document.createElement("h1");
+  fn.classList.add("noteName");
+  fn.innerHTML = player.firstName;
+
+  var ln = document.createElement("h1");
+  ln.classList.add("noteName");
+  ln.innerHTML = player.lastName;
+  ln.style.marginTop = "-3vh";
+
+  nameCol.appendChild(fn);
+  nameCol.appendChild(ln);
+  topRow.appendChild(nameCol);
+
+  var noteRow = document.createElement("div");
+  noteRow.classList.add("row", "text-center");
+
+  var dCol = document.createElement("div");
+  dCol.classList.add("col-0", "col-md-1");
+
+  var noteCol = document.createElement("div");
+  noteCol.classList.add("col-12", "col-md-10");
+
+  var d2Col = document.createElement("div");
+  d2Col.classList.add("col-0", "col-md-1");
+
+  var note = document.createElement("p");
+  note.classList.add("note");
+  note.innerHTML = player.note;
+
+  noteCol.appendChild(note);
+  noteRow.appendChild(dCol);
+  noteRow.appendChild(noteCol);
+  noteRow.appendChild(d2Col);
+
+  var noteAuthorRow = document.createElement("div");
+  noteAuthorRow.classList.add("row", "text-center");
+
+  var noteAuthorCol = document.createElement("div");
+  noteAuthorCol.classList.add("col-12");
+
+  var noteAuthor = document.createElement("p");
+  noteAuthor.classList.add("noteAuthor");
+  noteAuthor.innerHTML = player.noteAuthor;
+
+  noteAuthorCol.appendChild(noteAuthor);
+  noteAuthorRow.appendChild(noteAuthorCol);
+
+  var buttonRow = document.createElement("div");
+  buttonRow.classList.add("row", "text-center");
+
+  var buttonCol = document.createElement("div");
+  buttonCol.classList.add("col-12");
+
+  var button = document.createElement("button");
+  button.innerHTML = "BACK";
+  button.addEventListener("click", function(){ noteBack(); });
+  button.classList.add('bttn-slant', 'bttn-md', 'bttn-danger', 'butt');
+
+  buttonCol.appendChild(button);
+  buttonRow.appendChild(buttonCol);
+
+  root.appendChild(imgRow);
+  root.appendChild(topRow);
+  root.appendChild(noteRow);
+  root.appendChild(noteAuthorRow);
+  root.appendChild(buttonRow);
+
+  root.classList.add("slide-in-left");
+  root.style.display = "block";
+}
+
 
 function generateTeamFA() {
   var root = document.getElementById("faNavCont");
@@ -1371,6 +1594,13 @@ function generateTeamFA() {
     var nameP = document.createElement("p");
     nameP.classList.add("faName");
     nameP.innerHTML = teamFA[i].firstName.toUpperCase() + " " + teamFA[i].lastName.toUpperCase();
+    if (teamFA[i].hasOwnProperty("note")) {
+      var icn = document.createElement("i");
+      icn.classList.add("fa", "fa-sticky-note");
+      icn.addEventListener("click", function(){ notePopBroad(teamFA[i]); });
+      nameP.innerHTML = teamFA[i].firstName.toUpperCase() + " " + teamFA[i].lastName.toUpperCase() + " ";
+      nameP.appendChild(icn);
+    }
     nameCol.appendChild(nameP);
     row.appendChild(nameCol);
 
@@ -1613,6 +1843,7 @@ function generateTradePlayers() {
       var nameP = document.createElement("p");
       nameP.classList.add("tradePromptName");
       nameP.innerHTML = roster[i].firstName.toUpperCase() + " " + roster[i].lastName.toUpperCase();
+
       nameCol.appendChild(nameP);
 
       var d2Col = document.createElement("div");
@@ -1804,6 +2035,13 @@ function generateTrades(num) {
     p.classList.add("tradeName");
     if (potentialTrades[num].receive[k].hasOwnProperty("firstName")) {
       p.innerHTML = potentialTrades[num].receive[k].firstName + " " +  potentialTrades[num].receive[k].lastName;
+      if (potentialTrades[num].receive[k].hasOwnProperty("note")) {
+        var icn = document.createElement("i");
+        icn.classList.add("fa", "fa-sticky-note");
+        icn.addEventListener("click", function(){ notePopBroad(potentialTrades[num].receive[k]); });
+        p.innerHTML = potentialTrades[num].receive[k].firstName + " " + potentialTrades[num].receive[k].lastName + " ";
+        p.appendChild(icn);
+      }
     } else if (potentialTrades[num].receive[k].hasOwnProperty("name")) {
       p.innerHTML = potentialTrades[num].receive[k].name;
     } else {

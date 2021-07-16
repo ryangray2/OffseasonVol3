@@ -413,7 +413,9 @@ cYears: 4,
 cTotal: 100,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066421.png&w=350&h=254',
 ws: 3.2,
-interest: 35
+interest: 50,
+note: "The price for Ball’s next contract will be contentious, but with New York’s most glaring weakness being the starting point guard, signing Ball in restricted free agency is a step in the right direction. The Knicks can’t afford to have another dud at point guard next season.",
+noteAuthor: "Ty Jordan"
 };
 
 //here

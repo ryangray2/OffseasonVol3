@@ -101,7 +101,9 @@ var derrickRose = {
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3456.png&w=350&h=254",
   cYears: 2,
   cTotal: 28,
-  ws: 3.3
+  ws: 3.3,
+  note: "With copious amounts of cap space, the Knicks don’t have to be frugal here. However, balancing the need for Derrick Rose next season against giving Immanuel Quickley and Vildoza a larger role will be a question nonetheless as unlocking Quickley could push the ceiling of the Knicks higher in the upcoming seasons.",
+  noteAuthor: "Quentin Haynes"
 };
 
 var alecBurks = {
