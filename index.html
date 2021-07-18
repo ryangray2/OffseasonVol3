@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="hitch.css">
@@ -31,11 +32,14 @@
   <div class="container" id="startCont">
     <div class="row text-center">
       <div class="col-12">
-        <img src="thelogo copy.png" class="slide-in-left" style="width: 100%">
+        <img src="thelogoTwitterShadow.png" class="slide-in-left" style="width: 100%">
       </div>
       <div class="col-12">
         <button onclick="startPressed()" class="slide-in-right heartbeat" id="startbutton">START</button>
+      </div>
+      <div class="col-12">
         <button onclick="badgesPressed()" class="slide-in-right heartbeat" id="badgesbutton">BADGES</button>
+        <button onclick="historyPressed()" class="slide-in-right heartbeat" id="historybutton">HISTORY</button>
       </div>
     </div>
   </div>
@@ -61,7 +65,19 @@
       </div>
     </div>
     <div class="container" id="badgesShelf">
+    </div>
   </div>
+  <div class="container" id="historyCont">
+    <div class="row text-center">
+      <div class="col-12">
+        <img src="history.png" class="slide-in-left" style="width: 100%">
+      </div>
+      <div class="col-12">
+        <button onclick="historyBack()" style="margin-bottom: 5px;" class="bttn-slant bttn-md bttn-danger butt">BACK</button>
+      </div>
+    </div>
+    <div class="container" id="historyShelf">
+    </div>
   </div>
   <div class="container slide-in-right" id="introCont">
     <div class="row text-center">
@@ -341,6 +357,11 @@
           <div class="col-12" >
             <img id="share" src="share.png">
           </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-12">
+          <button onclick="restart()" class="slide-in-right heartbeat" id="restartbutton">RESTART</button>
         </div>
       </div>
   </div>

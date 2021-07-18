@@ -141,7 +141,7 @@ var collinSexton = {
   pos: "G",
   age: "22",
   sal: 6349671,
-  ws: 3.5,
+  ws: 3.7,
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277811.png&w=350&h=254",
   note: "If the Knicks can acquire Sexton, he would be a fine player for the Knicks, thanks to the foundation. Thibodeau and Mitchell Robinson can cover for him on defense, while the offense has some room for improvement, and he can offer the shooting and driving element it needs. However, the concerns about how he impacts the team’s creativity while taking over a sizable chunk of the team’s ball-handling are a concern—also, the imminent contract extension.",
   noteAuthor: "Quentin Haynes"
@@ -169,4 +169,36 @@ var por2 = {
   receive: [cjMccollum]
 }
 
-trades = [gsw1, okc1, por1, min1, okc2, phi1, dal1, was1, chi1, cle1, por2];
+var dejounteMurray = {
+  firstName: "Dejounte",
+  lastName: "Murray",
+  pos: "G",
+  age: "24",
+  sal: 15428880,
+  ws: 3.3,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907497.png&w=350&h=254"
+}
+
+var sas1 = {
+  team: spurs,
+  give: [obiToppin, kevinKnox, first2022],
+  receive: [dejounteMurray]
+}
+
+var derrickWhite = {
+  firstName: "Derrick",
+  lastName: "White",
+  pos: "G",
+  age: "27",
+  sal: 15178571,
+  ws: 4.2,
+  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3078576.png&w=350&h=254"
+}
+
+var sas2 = {
+  team: spurs,
+  give: [obiToppin, first2022],
+  receive: [derrickWhite]
+}
+
+trades = [gsw1, okc1, por1, min1, phi1, dal1, was1, chi1, cle1, por2, sas1, sas2];

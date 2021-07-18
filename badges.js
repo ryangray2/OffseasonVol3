@@ -82,5 +82,19 @@ var tightCircle = {
   won: false
 }
 
+var oakaak = {
+  title: "#OAKAAK",
+  desc: "Sign 3 former Knicks",
+  img: "oakaak.png",
+  won: false
+}
 
-var badges = [thirtyPlus, fortyPlus, fiftyPlus, movingUp, runItBack, tenRuns, twentyFiveRuns, fiftyRuns, hundredRuns, terminated, fullHouse, tightCircle];
+var hoarder = {
+  title: "Hoarder",
+  desc: "Finish with over $40,000,000 in cap space",
+  img: "hoarder.png",
+  won: false
+}
+
+
+var badges = [thirtyPlus, fortyPlus, fiftyPlus, movingUp, runItBack, tenRuns, twentyFiveRuns, fiftyRuns, hundredRuns, terminated, fullHouse, tightCircle, oakaak, hoarder];

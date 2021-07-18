@@ -22,21 +22,36 @@ var starters = [];
 var wins = 0;
 var tradeUp = false;
 var runs = 0;
+var formerKnicksCount = 0;
+var rosterHistory = [];
+// 0: roster, 1: wins, 2: tradeUp, 3: # of broadFA, 4: # of teamFA
+
+var historyTradeUp = false;
+var historyBroadFA = 0;
+var historyTeamFA = 0;
+
+
 
 
 console.log(runs);
 
-str_runs = localStorage.getItem("runs");
-//get a numeric value from str_count, put it in count
-if (str_runs == null || str_runs == "null"){
-  runs = 0;
-} else {
-  runs = parseInt(str_runs);
-}
+// str_runs = localStorage.getItem("runs");
+// //get a numeric value from str_count, put it in count
+// if (str_runs == null || str_runs == "null"){
+//   runs = 0;
+// } else {
+//   runs = parseInt(str_runs);
+// }
 
 if (localStorage.getItem("badgesStored")) {
   badges = JSON.parse(localStorage.getItem("badgesStored"));
 }
+
+if (localStorage.getItem("rosterHistory")) {
+  rosterHistory = JSON.parse(localStorage.getItem("rosterHistory"));
+}
+
+
 
 
 function getSalary() {
@@ -67,9 +82,20 @@ function badgesPressed() {
   generateBadges();
 }
 
+function historyPressed() {
+  startCont.style.display = "none";
+  historyCont.style.display = "block";
+  generateHistory();
+}
+
 function badgesBack() {
   startCont.style.display = "block";
   badgesCont.style.display = "none";
+}
+
+function historyBack() {
+  startCont.style.display = "block";
+  historyCont.style.display = "none";
 }
 
 function generateBadges() {
@@ -294,29 +320,29 @@ function faDone() {
       localStorage.setItem("badgesStored", JSON.stringify(badges));
     }
   }
-  runs++;
-  if (runs === 10) {
+  rosterHistory.push([roster, wins, historyTradeUp, historyBroadFA, historyTeamFA]);
+  if (rosterHistory.length === 10) {
     if (!badges[5].won) {
       badges[5].won = true;
       badgeAlert(tenRuns);
       localStorage.setItem("badgesStored", JSON.stringify(badges));
     }
   }
-  if (runs === 25) {
+  if (rosterHistory.length === 25) {
     if (!badges[6].won) {
       badges[6].won = true;
       badgeAlert(twentyFiveRuns);
       localStorage.setItem("badgesStored", JSON.stringify(badges));
     }
   }
-  if (runs === 50) {
+  if (rosterHistory.length === 50) {
     if (!badges[7].won) {
       badges[7].won = true;
       badgeAlert(fiftyRuns);
       localStorage.setItem("badgesStored", JSON.stringify(badges));
     }
   }
-  if (runs === 100) {
+  if (rosterHistory.length === 100) {
     if (!badges[8].won) {
       badges[8].won = true;
       badgeAlert(hundredRuns);
@@ -337,8 +363,17 @@ function faDone() {
       localStorage.setItem("badgesStored", JSON.stringify(badges));
     }
   }
-  localStorage.setItem("runs", runs);
+  console.log(getCapRoom());
+  if (getCapRoom() > 40000000) {
+    if (!badges[13].won) {
+      badges[13].won = true;
+      badgeAlert(hoarder);
+      localStorage.setItem("badgesStored", JSON.stringify(badges));
+    }
+  }
+  // localStorage.setItem("runs", runs);
 
+  localStorage.setItem("rosterHistory", JSON.stringify(rosterHistory));
   // checkBadges();
 }
 
@@ -359,6 +394,7 @@ function displayPreDraftTrade() {
 
 function preYesTrade() {
     tradeUp = true;
+    historyTradeUp = true;
     //// badge
     console.log(badges);
     if (!badges[3].won) {
@@ -426,6 +462,197 @@ function getStarters() {
       }
     }
   }
+}
+
+function getStartersUniv(rost) {
+
+  rost.sort(function(a, b){return b.ws-a.ws});
+
+  var g = 0;
+  var f = 0;
+  var c = 0;
+  var start = [];
+
+  for (let i = 0; i < rost.length; i++) {
+    if (start.length === 5) {
+      break;
+    }
+    if (rost[i].pos === "PG" || rost[i].pos === "SG" || rost[i].pos === "G") {
+      if (g < 4) {
+        start.push(rost[i]);
+        g++;
+      } else {
+        continue;
+      }
+    }
+    if (rost[i].pos === "PF" || rost[i].pos === "SF" || rost[i].pos === "F") {
+      if (f < 4) {
+        start.push(rost[i]);
+        f++;
+      } else {
+        continue;
+      }
+    }
+    if (rost[i].pos === "C") {
+      if (c < 1) {
+        start.push(rost[i]);
+        c++;
+      } else {
+        continue;
+      }
+    }
+  }
+  return start;
+}
+
+function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+}
+
+function generateHistory() {
+
+  var root = document.getElementById("historyShelf");
+  while (root.firstChild) {
+    root.removeChild(root.firstChild);
+  }
+
+  rosterHistory.reverse();
+
+  var allTimeWins = 0;
+  var allTimeTradeUps = 0;
+  var allTimeBroadFA = 0;
+  var allTimeTeamFA = 0;
+
+
+  for (let k = 0; k < rosterHistory.length; k++) {
+    allTimeWins += rosterHistory[k][1];
+    if (rosterHistory[k][2]) {
+      allTimeTradeUps += 1;
+    }
+    allTimeBroadFA += rosterHistory[k][3];
+    allTimeTeamFA += rosterHistory[k][4];
+  }
+
+  var rowRecord = document.createElement("div");
+  rowRecord.classList.add("row", "text-center");
+
+
+  var colRecord = document.createElement("div");
+  colRecord.classList.add("col-12");
+
+
+  var pRecord = document.createElement("p");
+  pRecord.classList.add('allTimeRecord');
+  pRecord.innerHTML = "TOTAL RECORD: " + allTimeWins + " - " + ((rosterHistory.length * 82) - allTimeWins);
+
+  var colOther = document.createElement("div");
+  colOther.classList.add("otherCol");
+  colOther.classList.add("col-12");
+
+  var pPerc = document.createElement("p");
+  // pPerc.classList.add('');
+  var percentage = round(((allTimeWins / (rosterHistory.length * 82)) * 100), 2);
+  pPerc.innerHTML = "Win Percentage: " + percentage + "%";
+
+  var pTU = document.createElement("p");
+  // pPerc.classList.add('');
+  var tupercentage = round(((allTimeTradeUps / rosterHistory.length) * 100), 2);
+  pTU.innerHTML = "You trade up in the draft " + tupercentage + "% of the time.";
+
+  var pBF = document.createElement("p");
+  // pPerc.classList.add('');
+  var averageBF = round((allTimeBroadFA / rosterHistory.length), 2);
+  pBF.innerHTML = "You sign an average of " + averageBF + " (non-Knicks) free agents per sim.";
+
+  var pTF = document.createElement("p");
+  // pPerc.classList.add('');
+  var averageTF = round((allTimeTeamFA / rosterHistory.length), 2);
+  pTF.innerHTML = "You re-sign an average of " + averageTF + " Knicks free agents per sim.";
+
+  if (rosterHistory.length > 0) {
+    colOther.appendChild(pPerc);
+    colOther.appendChild(pTU);
+    colOther.appendChild(pBF);
+    colOther.appendChild(pTF);
+  }
+
+  colRecord.appendChild(pRecord);
+  rowRecord.appendChild(colRecord);
+  rowRecord.appendChild(colOther);
+  root.appendChild(rowRecord);
+
+  for (let j = 0; j < rosterHistory.length; j++) {
+
+    var rowRecord = document.createElement("div");
+    rowRecord.classList.add("row", "text-center");
+
+    var colRecord = document.createElement("div");
+    colRecord.classList.add("col-12");
+
+    var pRecord = document.createElement("p");
+    pRecord.classList.add('historyRecord');
+    pRecord.innerHTML = rosterHistory[j][1] + " - " + (82 - rosterHistory[j][1]);
+
+    colRecord.appendChild(pRecord);
+    rowRecord.appendChild(colRecord);
+    root.appendChild(rowRecord);
+
+    var star = getStartersUniv(rosterHistory[j][0]);
+    console.log(star);
+
+    var rowS = document.createElement("div");
+    rowS.classList.add("row", "text-center");
+
+    for (let i = 0; i < 3; i++) {
+
+      var imgCol2 = document.createElement("div");
+      imgCol2.classList.add("col-4", "col-md-4", "starter");
+
+      var img = document.createElement("img");
+      img.setAttribute("src", star[i].img);
+      img.classList.add("starterImg");
+
+      imgCol2.appendChild(img);
+      rowS.appendChild(imgCol2);
+    }
+
+    var rowSt = document.createElement("div");
+    rowSt.classList.add("row", "text-center");
+    rowSt.style.borderBottom = "2px solid white";
+    rowSt.style.paddingBottom = "20px";
+
+
+    for (let i = 3; i < 5; i++) {
+
+
+      var imgCol = document.createElement("div");
+      imgCol.classList.add("col-2", "col-md-2");
+
+      var imgCol2 = document.createElement("div");
+      imgCol2.classList.add("col-4", "col-md-4", "starter");
+
+      var img = document.createElement("img");
+      img.setAttribute("src", star[i].img);
+      img.classList.add("starterImg");
+
+
+      imgCol2.appendChild(img);
+
+      if (i === 3) {
+        rowSt.appendChild(imgCol);
+        rowSt.appendChild(imgCol2);
+      } else {
+        rowSt.appendChild(imgCol2);
+        rowSt.appendChild(imgCol);
+
+      }
+
+    }
+    root.appendChild(rowS);
+    root.appendChild(rowSt);
+  }
+
 }
 
 function generateSRoster() {
@@ -1694,6 +1921,7 @@ function signTeamFA(player) {
   if (player.sal <= getCapRoom()) {
       roster.push(player);
       signedArr.push(player);
+      historyTeamFA += 1;
       offeredArr.push(player);
 
       updateCapBar();
@@ -1717,7 +1945,19 @@ function signBroadFA(player) {
       roster.push(player);
       signedArr.push(player);
       broadFASigned.push(player);
+      historyBroadFA += 1;
       offeredArr.push(player);
+
+      if (formerKnicks.includes(player)) {
+        formerKnicksCount++;
+        if (formerKnicksCount === 3) {
+          if (!badges[12].won) {
+            badges[12].won = true;
+            badgeAlert(oakaak);
+            localStorage.setItem("badgesStored", JSON.stringify(badges));
+          }
+        }
+      }
 
       updateCapBar2();
       generateBroadFA(currKind);
