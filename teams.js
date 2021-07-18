@@ -19,7 +19,7 @@ var knicks = {
 var sixers = {
   city: "Philadelphia",
   name: "76ers",
-  logo: "http://assets.stickpng.com/images/58419ca3a6515b1e0ad75a64.png",
+  logo: "sixers.png",
   color: "Red"
 };
 
@@ -91,7 +91,7 @@ var magic = {
 var wizards = {
   city: "Washington",
   name: "Wizards",
-  logo: "http://assets.stickpng.com/images/58419c12a6515b1e0ad75a5b.png"
+  logo: "wiz.png"
 };
 
 var nuggets = {
@@ -157,7 +157,7 @@ var kings = {
 var mavericks = {
   city: "Dallas",
   name: "Mavericks",
-  logo: "http://assets.stickpng.com/images/58419cd6a6515b1e0ad75a68.png"
+  logo: "mavs.png"
 };
 
 var rockets = {
