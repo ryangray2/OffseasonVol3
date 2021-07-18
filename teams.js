@@ -53,7 +53,7 @@ var pistons = {
 var pacers = {
   city: "Indiana",
   name: "Pacers",
-  logo: "http://assets.stickpng.com/images/58419b8da6515b1e0ad75a52.png"
+  logo: "pacers.png"
 };
 
 var bucks = {
