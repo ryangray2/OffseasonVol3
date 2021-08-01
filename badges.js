@@ -23,7 +23,7 @@ var movingUp = {
   title: "Moving Up",
   desc: "Trade up in the draft",
   img: "movingUp.png",
-  won: false
+  won: true
 };
 
 var runItBack = {

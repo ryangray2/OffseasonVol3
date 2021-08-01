@@ -78,7 +78,7 @@ var norvelPelle = {
   img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2608892.png&w=350&h=254"
 };
 
-var roster = [juliusRandle, rjBarrett, kevinKnox, obiToppin, lucaVildoza, immanuelQuickley, mitchellRobinson, norvelPelle];
+var roster = [juliusRandle, rjBarrett, kevinKnox, obiToppin, lucaVildoza, immanuelQuickley, mitchellRobinson];
 
 //////////////
 

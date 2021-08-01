@@ -10,7 +10,7 @@ cYears: 3,
 cTotal: 100,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2779.png&w=350&h=254',
 ws: 10.2,
-interest: 20
+interest: 10
 };
 var KawhiLeonard = {
 firstName: 'Kawhi',
@@ -23,7 +23,7 @@ cYears: 3,
 cTotal: 106,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6450.png&w=350&h=254',
 ws: 10.8,
-interest: 20
+interest: 10
 };
 var MikeConley = {
 firstName: 'Mike',
@@ -123,11 +123,11 @@ team: 'LAL',
 pos: 'PG',
 age: '28',
 type: 'UFA',
-cYears: 4,
-cTotal: 100,
+cYears: 3,
+cTotal: 45,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032979.png&w=350&h=254',
 ws: 3.8,
-interest: 100
+interest: 70
 };
 var EvanFournier = {
 firstName: 'Evan',
@@ -140,7 +140,7 @@ cYears: 4,
 cTotal: 76,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6588.png&w=350&h=254',
 ws: 2.8,
-interest: 40
+interest: 70
 };
 var DannyGreen = {
 firstName: 'Danny',
@@ -413,7 +413,7 @@ cYears: 4,
 cTotal: 100,
 img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066421.png&w=350&h=254',
 ws: 3.2,
-interest: 50,
+interest: 35,
 note: "The price for Ball’s next contract will be contentious, but with New York’s most glaring weakness being the starting point guard, signing Ball in restricted free agency is a step in the right direction. The Knicks can’t afford to have another dud at point guard next season.",
 noteAuthor: "Ty Jordan"
 };
@@ -869,11 +869,11 @@ team: 'MIL',
 pos: 'PF',
 age: '26',
 type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+cYears: 3,
+cTotal: 30,
+img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064482.png&w=350&h=254',
+ws: 3.5,
+interest: 40
 };
 var MauriceHarkless = {
 firstName: 'Maurice',

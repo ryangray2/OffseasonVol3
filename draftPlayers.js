@@ -326,6 +326,19 @@ cTotal: 0,
 img: '',
  ws:0
 };
+var JerichoSims = {
+  firstName: 'Jericho',
+  lastName: "Sims",
+  team: "Texas",
+  pos: 'F',
+  age: "Jr.",
+  height: '6-10',
+  cYears: 0,
+  cTotal: 0,
+  img: '',
+  ws: 0
+};
+
 var RJNembhard = {
 firstName: 'RJ',
 lastName: 'Nembhard',
@@ -1235,4 +1248,4 @@ var JTThor = {
   img: '',
  ws:0
 }
-var draftPlayers = [ CadeCunningham, JonathanKuminga, JalenGreen, JalenSuggs, EvanMobley, MosesMoody, DavionMitchell, ScottieBarnes, ZiaireWilliams, KeonJohnson, FranzWagner, JoshGiddey, JamesBouknight, CoreyKispert, AlperenSengun, JadenSpringer,  UsmanGaruba, KaiJones, RokoPrkacin, JoshChristopher, BJBoston, TreMann, SharifeCooper, JalenJohnson, GregBrown, CharlesBassey, JTThor, DavidDuke, CameronThomas, AyoDosunmu, QuentinGrimes, RJNembhard, JoelAyayi, NahShonHyland, MarioNakic,  DayRonSharpe, MilesMcBride, IsaiahJackson, JaredButler, ChrisDuarte, DJStewart, AaronHenry, DavidJohnson, IsaiahLivers, JeremiahRobinsonEarl, RokasJokubaitis, MacMcClung, HerbertJones, AbramoCanka, DaishenNix, TerrenceShannon, FilipPetrusev, MarcusBagley, TreyMurphy, ArielHukporti, IsaiahTodd, MarkWilliams, YvesPons, WillRichardson, MojaveKing, JalenWilson, AntonWatson, FeronHunt, JuhannBegarin, MarcusGarrett, JohnPetty, IbouDianko, AJGreen, RonHarper, JasonPreston, BradyManek, MichaelDevoe, MatthieuGauzin, SamHauser, DerrickAlston, SandroMamukelashvili, AmarSylla, NeemiasQueta, AaronWiggins, ScottieLewis, CarlosAlocen, MalcolmCazalon, DerekCulver, MylesCale, LandersNolley, CourtneyRamey, BoogieEllis, TrendonWatford, LukaGarza, OrlandoRobinson, ]
+var draftPlayers = [ CadeCunningham, JonathanKuminga, JalenGreen, JalenSuggs, EvanMobley, MosesMoody, DavionMitchell, ScottieBarnes, ZiaireWilliams, KeonJohnson, FranzWagner, JoshGiddey, JamesBouknight, CoreyKispert, AlperenSengun, JadenSpringer,  UsmanGaruba, KaiJones, RokoPrkacin, JoshChristopher, BJBoston, TreMann, SharifeCooper, JalenJohnson, GregBrown, CharlesBassey, JTThor, DavidDuke, CameronThomas, AyoDosunmu, QuentinGrimes, RJNembhard, JoelAyayi, NahShonHyland, MarioNakic,  DayRonSharpe, MilesMcBride, IsaiahJackson, JaredButler, ChrisDuarte, DJStewart, AaronHenry, DavidJohnson, IsaiahLivers, JeremiahRobinsonEarl, RokasJokubaitis, MacMcClung, HerbertJones, AbramoCanka, DaishenNix, TerrenceShannon, FilipPetrusev, MarcusBagley, TreyMurphy, ArielHukporti, IsaiahTodd, MarkWilliams, YvesPons, WillRichardson, MojaveKing, JalenWilson, AntonWatson, FeronHunt, JuhannBegarin, MarcusGarrett, JohnPetty, IbouDianko, AJGreen, RonHarper, JasonPreston, BradyManek, MichaelDevoe, MatthieuGauzin, SamHauser, DerrickAlston, SandroMamukelashvili, AmarSylla, NeemiasQueta, AaronWiggins, ScottieLewis, CarlosAlocen, MalcolmCazalon, DerekCulver, MylesCale, LandersNolley, CourtneyRamey, BoogieEllis, TrendonWatford, LukaGarza, OrlandoRobinson, JerichoSims]

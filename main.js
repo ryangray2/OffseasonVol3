@@ -236,11 +236,29 @@ function filterFreeAgents() {
 }
 
 function introPressed() {
-  introCont.style.display = "none";
-  draftCont.style.display = "block";
-  document.body.style.backgroundImage = "url('paperWhite.jpg')";
-  displayPreDraftTrade();
-  // draftSim();
+  introCont.classList.add("slide-out-left");
+
+  setTimeout(function(){
+    introCont.style.display = "none";
+    document.getElementById("teamCont").style.display = "block";
+    QuentinGrimes.sal = 1807300
+    MilesMcBride.sal = 1485440;
+    JerichoSims.sal = 1000000;
+    knicksPicks.push(QuentinGrimes);
+    knicksPicks.push(RokasJokubaitis);
+    knicksPicks.push(MilesMcBride);
+    knicksPicks.push(JerichoSims);
+
+    roster.push(QuentinGrimes);
+    roster.push(MilesMcBride);
+    roster.push(JerichoSims);
+    generateRoster();
+    updateCapBar();
+    faNav();
+  }, 500);
+  // draftCont.style.display = "block";
+  // document.body.style.backgroundImage = "url('paperWhite.jpg')";
+  // displayPreDraftTrade();
 }
 
 function draftDone() {
@@ -572,7 +590,7 @@ function generateHistory() {
 
   if (rosterHistory.length > 0) {
     colOther.appendChild(pPerc);
-    colOther.appendChild(pTU);
+    // colOther.appendChild(pTU);
     colOther.appendChild(pBF);
     colOther.appendChild(pTF);
   }
