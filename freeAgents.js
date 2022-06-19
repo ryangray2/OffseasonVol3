@@ -1,2649 +1,2201 @@
-
-var ChrisPaul = {
-firstName: 'Chris',
-lastName: 'Paul',
-team: 'PHX',
+var JohnWall = {
+name: 'John Wall',
 pos: 'PG',
-age: '36',
 type: 'PO',
-cYears: 3,
-cTotal: 100,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2779.png&w=350&h=254',
-ws: 10.2,
-interest: 10
+age: '31.7',
+sal: 9000000,
+years: 1,
+odds: 60,
+wA: 1.7,
+img: ''
 };
-var KawhiLeonard = {
-firstName: 'Kawhi',
-lastName: 'Leonard',
-team: 'LAC',
-pos: 'SF',
-age: '30',
+var JamesHarden = {
+name: 'James Harden',
+pos: 'SG',
 type: 'PO',
-cYears: 3,
-cTotal: 106,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6450.png&w=350&h=254',
-ws: 10.8,
-interest: 10
+age: '32.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var MikeConley = {
-firstName: 'Mike',
-lastName: 'Conley',
-team: 'UTH',
+var RussellWestbrook = {
+name: 'Russell Westbrook',
 pos: 'PG',
-age: '33',
-type: 'UFA',
-cYears: 4,
-cTotal: 80,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3195.png&w=350&h=254',
-ws: 6.1,
-interest: 50
+type: 'PO',
+age: '33.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var KyleLowry = {
-firstName: 'Kyle',
-lastName: 'Lowry',
-team: 'TOR',
+var BradleyBeal = {
+name: 'Bradley Beal',
+pos: 'SG',
+type: 'PO',
+age: '28.8',
+sal: 45000000,
+years: 4,
+odds: 10,
+wA: 7.6,
+img: ''
+};
+var KyrieIrving = {
+name: 'Kyrie Irving',
 pos: 'PG',
-age: '35',
-type: 'UFA',
-cYears: 2,
-cTotal: 50,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3012.png&w=350&h=254',
-ws: 6.1,
-interest: 50
+type: 'PO',
+age: '30.1',
+sal: 45000000,
+years: 4,
+odds: 5,
+wA: 7.4,
+img: ''
 };
-var DeMarDeRozan = {
-firstName: 'DeMar',
-lastName: 'DeRozan',
-team: 'SAS',
+var GaryHarris = {
+name: 'Gary Harris',
 pos: 'SG',
-age: '32',
 type: 'UFA',
-cYears: 4,
-cTotal: 116,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3978.png&w=350&h=254',
-ws: 7.4,
-interest: 60
+age: '27.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var OttoPorterJr = {
-firstName: 'Otto',
-lastName: 'Porter Jr.',
-team: 'ORL',
-pos: 'SF',
-age: '28',
-type: 'UFA',
-cYears: 2,
-cTotal: 22,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2594922.png&w=350&h=254',
-ws: 1.3,
-interest: 40
-};
-var VictorOladipo = {
-firstName: 'Victor',
-lastName: 'Oladipo',
-team: 'HOU',
+var ZachLaVine = {
+name: 'Zach LaVine',
 pos: 'SG',
-age: '29',
 type: 'UFA',
-cYears: 1,
-cTotal: 19,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2527963.png&w=350&h=254',
-ws: 1.5,
-interest: 40
+age: '27.1',
+sal: 40000000,
+years: 4,
+odds: 15,
+wA: 5.8,
+img: ''
 };
-var GoranDragic = {
-firstName: 'Goran',
-lastName: 'Dragic',
-team: 'MIA',
+var RickyRubio = {
+name: 'Ricky Rubio',
 pos: 'PG',
-age: '35',
-type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3423.png&w=350&h=254',
-ws: 1.3,
-interest: 100
-};
-var TimHardawayJr = {
-firstName: 'Tim',
-lastName: 'Hardaway Jr.',
-team: 'DAL',
-pos: 'SG',
-age: '29',
 type: 'UFA',
-cYears: 3,
-cTotal: 66,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2528210.png&w=350&h=254',
-ws: 4.3,
-interest: 40
-};
-var DennisSchrder = {
-firstName: 'Dennis',
-lastName: 'Schröder',
-team: 'LAL',
-pos: 'PG',
-age: '28',
-type: 'UFA',
-cYears: 3,
-cTotal: 45,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032979.png&w=350&h=254',
-ws: 3.8,
-interest: 70
-};
-var EvanFournier = {
-firstName: 'Evan',
-lastName: 'Fournier',
-team: 'BOS',
-pos: 'SG',
-age: '28',
-type: 'UFA',
-cYears: 4,
-cTotal: 76,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6588.png&w=350&h=254',
-ws: 2.8,
-interest: 70
-};
-var DannyGreen = {
-firstName: 'Danny',
-lastName: 'Green',
-team: 'PHI',
-pos: 'SG',
-age: '34',
-type: 'UFA',
-cYears: 3,
-cTotal: 36,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3988.png&w=350&h=254',
-ws: 3,
-interest: 15
+age: '31.5',
+sal: 1000000,
+years: 2,
+odds: 40,
+wA: 3.1,
+img: ''
 };
 var AndreIguodala = {
-firstName: 'Andre',
-lastName: 'Iguodala',
-team: 'MIA',
+name: 'Andre Iguodala',
 pos: 'SF',
-age: '37',
-type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2386.png&w=350&h=254',
-ws: 1.7,
-interest: 100
-};
-var KellyOubreJr = {
-firstName: 'Kelly',
-lastName: 'Oubre Jr.',
-team: 'GSW',
-pos: 'SF',
-age: '25',
 type: 'UFA',
-cYears: 3,
-cTotal: 63,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3133603.png&w=350&h=254',
-ws: 2.2,
-interest: 50
+age: '38.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var JamesJohnson = {
-firstName: 'James',
-lastName: 'Johnson',
-team: 'NOP',
+var ThaddeusYoung = {
+name: 'Thaddeus Young',
 pos: 'PF',
-age: '34',
 type: 'UFA',
-cYears: 2,
-cTotal: 28,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3999.png&w=350&h=254',
-ws: 1.2,
-interest: 40
+age: '33.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var CodyZeller = {
-firstName: 'Cody',
-lastName: 'Zeller',
-team: 'CHA',
+var JoeIngles = {
+name: 'Joe Ingles',
+pos: 'SF',
+type: 'UFA',
+age: '34.6',
+sal: 14000000,
+years: 1,
+odds: 35,
+wA: 4.5,
+img: ''
+};
+var TaureanPrince = {
+name: 'Taurean Prince',
+pos: 'PF',
+type: 'UFA',
+age: '28.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JusufNurkic = {
+name: 'Jusuf Nurkic',
 pos: 'C',
-age: '28',
 type: 'UFA',
-cYears: 4,
-cTotal: 72,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2579258.png&w=350&h=254',
-ws: 3.3,
-interest: 60
+age: '27.7',
+sal: 15000000,
+years: 4,
+odds: 50,
+wA: 3.6,
+img: ''
 };
-var WillBarton = {
-firstName: 'Will',
-lastName: 'Barton',
-team: 'DEN',
+var TJWarren = {
+name: 'T.J. Warren',
 pos: 'SF',
-age: '30',
-type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6579.png&w=350&h=254',
-ws: 2.2,
-interest: 100
+type: 'UFA',
+age: '28.7',
+sal: 17000000,
+years: 2,
+odds: 40,
+wA: 4,
+img: ''
 };
-var JJRedick = {
-firstName: 'J.J.',
-lastName: 'Redick',
-team: 'DAL',
+var JeremyLamb = {
+name: 'Jeremy Lamb',
 pos: 'SG',
-age: '37',
 type: 'UFA',
-cYears: 2,
-cTotal: 26,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3024.png&w=350&h=254',
-ws: 1,
-interest: 30
+age: '29.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var JustiseWinslow = {
-firstName: 'Justise',
-lastName: 'Winslow',
-team: 'MEM',
-pos: 'SF',
-age: '25',
-type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+var DeandreAyton = {
+name: 'Deandre Ayton',
+pos: 'C',
+type: 'RFA',
+age: '23.8',
+sal: 25000000,
+years: 4,
+odds: 20,
+wA: 7.3,
+img: ''
 };
-var KellyOlynyk = {
-firstName: 'Kelly',
-lastName: 'Olynyk',
-team: 'HOU',
-pos: 'PF',
-age: '30',
-type: 'UFA',
-cYears: 4,
-cTotal: 64,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2489663.png&w=350&h=254',
-ws: 5.1,
-interest: 30
-};
-var TrevorAriza = {
-firstName: 'Trevor',
-lastName: 'Ariza',
-team: 'MIA',
-pos: 'SF',
-age: '36',
-type: 'UFA',
-cYears: 2,
-cTotal: 24,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2426.png&w=350&h=254',
-ws: 1.6,
-interest: 30
-};
-var PatrickMills = {
-firstName: 'Patrick',
-lastName: 'Mills',
-team: 'SAS',
-pos: 'PG',
-age: '33',
-type: 'UFA',
-cYears: 2,
-cTotal: 16,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4004.png&w=350&h=254',
-ws: 2.2,
-interest: 45
-};
-var TonySnell = {
-firstName: 'Tony',
-lastName: 'Snell',
-team: 'ATL',
-pos: 'SG',
-age: '29',
-type: 'UFA',
-cYears: 3,
-cTotal: 36,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2528353.png&w=350&h=254',
-ws: 2,
-interest: 60
-};
-var SpencerDinwiddie = {
-firstName: 'Spencer',
-lastName: 'Dinwiddie',
-team: 'BKN',
-pos: 'PG',
-age: '28',
+var DerrickFavors = {
+name: 'Derrick Favors',
+pos: 'C',
 type: 'PO',
-cYears: 3,
-cTotal: 45,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2580782.png&w=350&h=254',
-ws: 3,
-interest: 20
-};
-var DanteExum = {
-firstName: 'Dante',
-lastName: 'Exum',
-team: 'HOU',
-pos: 'PG',
-age: '26',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3102528.png&w=350&h=254',
-ws: 0,
-interest: 100
-};
-var JoshRichardson = {
-firstName: 'Josh',
-lastName: 'Richardson',
-team: 'DAL',
-pos: 'SG',
-age: '28',
-type: 'PO',
-cYears: 2,
-cTotal: 20,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2581190.png&w=350&h=254',
-ws: 2.4,
-interest: 40
-};
-var NormanPowell = {
-firstName: 'Norman',
-lastName: 'Powell',
-team: 'POR',
-pos: 'SG',
-age: '28',
-type: 'PO',
-cYears: 4,
-cTotal: 58,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2595516.png&w=350&h=254',
-ws: 4.7,
-interest: 40
-};
-var PaulMillsap = {
-firstName: 'Paul',
-lastName: 'Millsap',
-team: 'DEN',
-pos: 'PF',
-age: '36',
-type: 'UFA',
-cYears: 1,
-cTotal: 10,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3015.png&w=350&h=254',
-ws: 3.2,
-interest: 35
+age: '30.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
 var SergeIbaka = {
-firstName: 'Serge',
-lastName: 'Ibaka',
-team: 'LAC',
+name: 'Serge Ibaka',
 pos: 'C',
-age: '32',
-type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 3,
-interest: 100
-};
-var DerrickJonesJr = {
-firstName: 'Derrick',
-lastName: 'Jones Jr.',
-team: 'POR',
-pos: 'SF',
-age: '24',
-type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 2.4,
-interest: 100
+type: 'UFA',
+age: '32.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
 var MontrezlHarrell = {
-firstName: 'Montrezl',
-lastName: 'Harrell',
-team: 'LAL',
+name: 'Montrezl Harrell',
 pos: 'PF',
-age: '27',
-type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 3.5,
-interest: 100
+type: 'UFA',
+age: '28.2',
+sal: 10000000,
+years: 2,
+odds: 40,
+wA: 2.2,
+img: ''
 };
-var LonzoBall = {
-firstName: 'Lonzo',
-lastName: 'Ball',
-team: 'NOP',
+var DerrickJonesJr = {
+name: 'Derrick Jones Jr.',
+pos: 'SF',
+type: 'UFA',
+age: '25.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DelonWright = {
+name: 'Delon Wright',
 pos: 'PG',
-age: '23',
+type: 'UFA',
+age: '30.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var KyleAnderson = {
+name: 'Kyle Anderson',
+pos: 'SF',
+type: 'UFA',
+age: '28.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MarvinBagleyIII = {
+name: 'Marvin Bagley III',
+pos: 'PF',
 type: 'RFA',
-cYears: 4,
-cTotal: 100,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066421.png&w=350&h=254',
-ws: 3.2,
-interest: 35,
-note: "The price for Ball’s next contract will be contentious, but with New York’s most glaring weakness being the starting point guard, signing Ball in restricted free agency is a step in the right direction. The Knicks can’t afford to have another dud at point guard next season.",
-noteAuthor: "Ty Jordan"
+age: '23.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-
-//here
-
-var LouisWilliams = {
-firstName: 'Lou',
-lastName: 'Williams',
-team: 'ATL',
-pos: 'SG',
-age: '34',
-type: 'UFA',
-cYears: 2,
-cTotal: 12,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2799.png&w=350&h=254',
-ws: 1.7,
-interest: 50
-};
-var CristianoFelicio = {
-firstName: 'Cristiano',
-lastName: 'Felicio',
-team: 'CHI',
-pos: 'PF',
-age: '29',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var PJTucker = {
-firstName: 'P.J.',
-lastName: 'Tucker',
-team: 'MIL',
-pos: 'PF',
-age: '36',
-type: 'UFA',
-cYears: 2,
-cTotal: 15,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3033.png&w=350&h=254',
-ws: 1,
-interest: 50
-};
-var DerrickRose = {
-firstName: 'Derrick',
-lastName: 'Rose',
-team: 'NYK',
+var TyusJones = {
+name: 'Tyus Jones',
 pos: 'PG',
-age: '32',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '25.9',
+sal: 12500000,
+years: 4,
+odds: 60,
+wA: 3,
+img: ''
+};
+var ThomasBryant = {
+name: 'Thomas Bryant',
+pos: 'C',
+type: 'UFA',
+age: '24.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
 var JaMychalGreen = {
-firstName: 'JaMychal',
-lastName: 'Green',
-team: 'DEN',
+name: 'JaMychal Green',
 pos: 'PF',
-age: '31',
 type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '31.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var DougMcDermott = {
-firstName: 'Doug',
-lastName: 'McDermott',
-team: 'IND',
-pos: 'SF',
-age: '29',
-type: 'UFA',
-cYears: 3,
-cTotal: 45,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2528588.png&w=350&h=254',
-ws: 3.8,
-interest: 60
-};
-var RobinLopez = {
-firstName: 'Robin',
-lastName: 'Lopez',
-team: 'WAS',
-pos: 'C',
-age: '33',
-type: 'UFA',
-cYears: 1,
-cTotal: 8,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3447.png&w=350&h=254',
-ws: 3.2,
-interest: 50
-};
-var NemanjaBjelica = {
-firstName: 'Nemanja',
-lastName: 'Bjelica',
-team: 'MIA',
+var PJTucker = {
+name: 'P.J. Tucker',
 pos: 'PF',
-age: '33',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+type: 'PO',
+age: '37.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var IshmaelSmith = {
-firstName: 'Ish',
-lastName: 'Smith',
-team: 'WAS',
-pos: 'PG',
-age: '33',
-type: 'UFA',
-cYears: 2,
-cTotal: 12,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4305.png&w=350&h=254',
-ws: 1,
-interest: 50
+var IvicaZubac = {
+name: 'Ivica Zubac',
+pos: 'C',
+type: 'CO',
+age: '25.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var AlecBurks = {
-firstName: 'Alec',
-lastName: 'Burks',
-team: 'NYK',
+var ChrisBoucher = {
+name: 'Chris Boucher',
+pos: 'PF',
+type: 'UFA',
+age: '29.2',
+sal: 25000000,
+years: 2,
+odds: 25,
+wA: 6,
+img: ''
+};
+var JarrettCulver = {
+name: 'Jarrett Culver',
 pos: 'SG',
-age: '30',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '23.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var PatrickMills = {
+name: 'Patty Mills',
+pos: 'PG',
+type: 'PO',
+age: '33.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MohamedBamba = {
+name: 'Mo Bamba',
+pos: 'C',
+type: 'RFA',
+age: '23.9',
+sal: 11000000,
+years: 3,
+odds: 30,
+wA: 4,
+img: ''
+};
+var DennisSchrder = {
+name: 'Dennis Schröder',
+pos: 'PG',
+type: 'UFA',
+age: '28.6',
+sal: 15000000,
+years: 4,
+odds: 35,
+wA: 2.9,
+img: ''
 };
 var AveryBradley = {
-firstName: 'Avery',
-lastName: 'Bradley',
-team: 'HOU',
+name: 'Avery Bradley',
 pos: 'PG',
-age: '30',
+type: 'UFA',
+age: '31.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var PatConnaughton = {
+name: 'Pat Connaughton',
+pos: 'SG',
 type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TreyLyles = {
-firstName: 'Trey',
-lastName: 'Lyles',
-team: 'SAS',
-pos: 'PF',
-age: '25',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var LauriMarkkanen = {
-firstName: 'Lauri',
-lastName: 'Markkanen',
-team: 'CHI',
-pos: 'PF',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var KrisDunn = {
-firstName: 'Kris',
-lastName: 'Dunn',
-team: 'ATL',
-pos: 'PG',
-age: '27',
-type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DanielTheis = {
-firstName: 'Daniel',
-lastName: 'Theis',
-team: 'CHI',
-pos: 'C',
-age: '29',
-type: 'UFA',
-cYears: 2,
-cTotal: 10,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2451037.png&w=350&h=254',
-ws: 3.2,
-interest: 50
-};
-var NerlensNoel = {
-firstName: 'Nerlens',
-lastName: 'Noel',
-team: 'NYK',
-pos: 'C',
-age: '27',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var MikeScott = {
-firstName: 'Mike',
-lastName: 'Scott',
-team: 'PHI',
-pos: 'PF',
-age: '33',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var EdDavis = {
-firstName: 'Ed',
-lastName: 'Davis',
-team: 'MIN',
-pos: 'C',
-age: '32',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var EnesKanter = {
-firstName: 'Enes',
-lastName: 'Kanter',
-team: 'POR',
-pos: 'C',
-age: '29',
-type: 'UFA',
-cYears: 2,
-cTotal: 10,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6447.png&w=350&h=254',
-ws: 2,
-interest: 50
-};
-var RichaunHolmes = {
-firstName: 'Richaun',
-lastName: 'Holmes',
-team: 'SAC',
-pos: 'C',
-age: '27',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var KevonLooney = {
-firstName: 'Kevon',
-lastName: 'Looney',
-team: 'GSW',
-pos: 'PF',
-age: '25',
-type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var FrankKaminsky = {
-firstName: 'Frank',
-lastName: 'Kaminsky',
-team: 'PHX',
-pos: 'C',
-age: '28',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var GarrettTemple = {
-firstName: 'Garrett',
-lastName: 'Temple',
-team: 'CHI',
-pos: 'SG',
-age: '35',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ElfridPayton = {
-firstName: 'Elfrid',
-lastName: 'Payton',
-team: 'NYK',
-pos: 'PG',
-age: '27',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var FrankNtilikina = {
-firstName: 'Frank',
-lastName: 'Ntilikina',
-team: 'NYK',
-pos: 'PG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DenzelValentine = {
-firstName: 'Denzel',
-lastName: 'Valentine',
-team: 'CHI',
-pos: 'SG',
-age: '27',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DennisSmithJr = {
-firstName: 'Dennis',
-lastName: 'Smith Jr.',
-team: 'DET',
-pos: 'PG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JaValeMcGee = {
-firstName: 'JaVale',
-lastName: 'McGee',
-team: 'DEN',
-pos: 'C',
-age: '33',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ReggieBullock = {
-firstName: 'Reggie',
-lastName: 'Bullock',
-team: 'NYK',
-pos: 'SF',
-age: '30',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var WillieCauleyStein = {
-firstName: 'Willie',
-lastName: 'Cauley-Stein',
-team: 'DAL',
-pos: 'C',
-age: '28',
-type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ZachCollins = {
-firstName: 'Zach',
-lastName: 'Collins',
-team: 'POR',
-pos: 'C',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var NicoloMelli = {
-firstName: 'Nicolo',
-lastName: 'Melli',
-team: 'DAL',
-pos: 'PF',
-age: '30',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var MalikMonk = {
-firstName: 'Malik',
-lastName: 'Monk',
-team: 'CHA',
-pos: 'SG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var StanleyJohnson = {
-firstName: 'Stanley',
-lastName: 'Johnson',
-team: 'TOR',
-pos: 'SF',
-age: '25',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var BobbyPortis = {
-firstName: 'Bobby',
-lastName: 'Portis',
-team: 'MIL',
-pos: 'PF',
-age: '26',
-type: 'PO',
-cYears: 3,
-cTotal: 30,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064482.png&w=350&h=254',
-ws: 3.5,
-interest: 40
-};
-var MauriceHarkless = {
-firstName: 'Maurice',
-lastName: 'Harkless',
-team: 'SAC',
-pos: 'SF',
-age: '28',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var WesleyMatthews = {
-firstName: 'Wesley',
-lastName: 'Matthews',
-team: 'LAL',
-pos: 'SG',
-age: '34',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var BobanMarjanovic = {
-firstName: 'Boban',
-lastName: 'Marjanovic',
-team: 'DAL',
-pos: 'C',
-age: '33',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TJMcConnell = {
-firstName: 'T.J.',
-lastName: 'McConnell',
-team: 'IND',
-pos: 'PG',
-age: '29',
-type: 'UFA',
-cYears: 2,
-cTotal: 22,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2530530.png&w=350&h=254',
-ws: 4,
-interest: 50
-};
-var BismackBiyombo = {
-firstName: 'Bismack',
-lastName: 'Biyombo',
-team: 'CHA',
-pos: 'C',
-age: '29',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JamesEnnisIII = {
-firstName: 'James',
-lastName: 'Ennis III',
-team: 'ORL',
-pos: 'SF',
-age: '31',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var PatrickPatterson = {
-firstName: 'Patrick',
-lastName: 'Patterson',
-team: 'LAC',
-pos: 'PF',
-age: '32',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DJWilson = {
-firstName: 'DJ',
-lastName: 'Wilson',
-team: 'HOU',
-pos: 'PF',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var RyanArcidiacono = {
-firstName: 'Ryan',
-lastName: 'Arcidiacono',
-team: 'CHI',
-pos: 'PG',
-age: '27',
-type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JohnCollins = {
-firstName: 'John',
-lastName: 'Collins',
-team: 'ATL',
-pos: 'PF',
-age: '24',
-type: 'RFA',
-cYears: 4,
-cTotal: 104,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3908845.png&w=350&h=254',
-ws: 6.7,
-interest: 10
-};
-var AlexCaruso = {
-firstName: 'Alex',
-lastName: 'Caruso',
-team: 'LAL',
-pos: 'SG',
-age: '27',
-type: 'UFA',
-cYears: 3,
-cTotal: 27,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991350.png&w=350&h=254',
-ws: 2.4,
-interest: 60
-};
-var WayneEllington = {
-firstName: 'Wayne',
-lastName: 'Ellington',
-team: 'DET',
-pos: 'SG',
-age: '33',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JaredDudley = {
-firstName: 'Jared',
-lastName: 'Dudley',
-team: 'LAL',
-pos: 'SF',
-age: '36',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JeffGreen = {
-firstName: 'Jeff',
-lastName: 'Green',
-team: 'BKN',
-pos: 'PF',
-age: '35',
-type: 'UFA',
-cYears: 2,
-cTotal: 6,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3209.png&w=350&h=254',
-ws: 2.5,
-interest: 40
-};
-var CarmeloAnthony = {
-firstName: 'Carmelo',
-lastName: 'Anthony',
-team: 'POR',
-pos: 'PF',
-age: '37',
-type: 'UFA',
-cYears: 1,
-cTotal: 3,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1975.png&w=350&h=254',
-ws: 2.6,
-interest: 50
-};
-var NicolasBatum = {
-firstName: 'Nicolas',
-lastName: 'Batum',
-team: 'LAC',
-pos: 'SF',
-age: '32',
-type: 'UFA',
-cYears: 2,
-cTotal: 10,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3416.png&w=350&h=254',
-ws: 3.7,
-interest: 30
-};
-var UdonisHaslem = {
-firstName: 'Udonis',
-lastName: 'Haslem',
-team: 'MIA',
-pos: 'PF',
-age: '41',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DwightHoward = {
-firstName: 'Dwight',
-lastName: 'Howard',
-team: 'PHI',
-pos: 'C',
-age: '35',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JarrettAllen = {
-firstName: 'Jarrett',
-lastName: 'Allen',
-team: 'CLE',
-pos: 'C',
-age: '23',
-type: 'RFA',
-cYears: 4,
-cTotal: 100,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066328.png&w=350&h=254',
-ws: 6,
-interest: 20
-};
-var BrynForbes = {
-firstName: 'Bryn',
-lastName: 'Forbes',
-team: 'MIL',
-pos: 'SG',
-age: '28',
-type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var MarkieffMorris = {
-firstName: 'Markieff',
-lastName: 'Morris',
-team: 'LAL',
-pos: 'PF',
-age: '32',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ReggieJackson = {
-firstName: 'Reggie',
-lastName: 'Jackson',
-team: 'LAC',
-pos: 'PG',
-age: '31',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ETwaunMoore = {
-firstName: 'E\'Twaun',
-lastName: 'Moore',
-team: 'PHX',
-pos: 'SG',
-age: '32',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var HassanWhiteside = {
-firstName: 'Hassan',
-lastName: 'Whiteside',
-team: 'SAC',
-pos: 'C',
-age: '32',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var KentBazemore = {
-firstName: 'Kent',
-lastName: 'Bazemore',
-team: 'GSW',
-pos: 'SG',
-age: '32',
-type: 'UFA',
-cYears: 1,
-cTotal: 5,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6637.png&w=350&h=254',
-ws: 1.8,
-interest: 50
-};
-var TajGibson = {
-firstName: 'Taj',
-lastName: 'Gibson',
-team: 'NYK',
-pos: 'PF',
-age: '36',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var AustinRivers = {
-firstName: 'Austin',
-lastName: 'Rivers',
-team: 'DEN',
-pos: 'PG',
-age: '29',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var LukeKornet = {
-firstName: 'Luke',
-lastName: 'Kornet',
-team: 'BOS',
-pos: 'C',
-age: '26',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var BradWanamaker = {
-firstName: 'Brad',
-lastName: 'Wanamaker',
-team: 'CHA',
-pos: 'PG',
-age: '32',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var SolomonHill = {
-firstName: 'Solomon',
-lastName: 'Hill',
-team: 'ATL',
-pos: 'SF',
-age: '30',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var MatthewDellavedova = {
-firstName: 'Matthew',
-lastName: 'Dellavedova',
-team: 'CLE',
-pos: 'PG',
-age: '31',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TonyBradley = {
-firstName: 'Tony',
-lastName: 'Bradley',
-team: 'OKC',
-pos: 'C',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JoshHart = {
-firstName: 'Josh',
-lastName: 'Hart',
-team: 'NOP',
-pos: 'SG',
-age: '26',
-type: 'RFA',
-cYears: 3,
-cTotal: 42,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3062679.png&w=350&h=254',
-ws: 2.7,
-interest: 60
-};
-var EdmondSumner = {
-firstName: 'Edmond',
-lastName: 'Sumner',
-team: 'IND',
-pos: 'PG',
-age: '25',
-type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var LangstonGalloway = {
-firstName: 'Langston',
-lastName: 'Galloway',
-team: 'PHX',
-pos: 'SG',
-age: '29',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TylerJohnson = {
-firstName: 'Tyler',
-lastName: 'Johnson',
-team: 'BKN',
-pos: 'SG',
-age: '29',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var RaulNeto = {
-firstName: 'Raul',
-lastName: 'Neto',
-team: 'WAS',
-pos: 'PG',
-age: '29',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JaKarrSampson = {
-firstName: 'JaKarr',
-lastName: 'Sampson',
-team: 'IND',
-pos: 'SF',
-age: '28',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var WillyHernangomez = {
-firstName: 'Willy',
-lastName: 'Hernangomez',
-team: 'NOP',
-pos: 'C',
-age: '27',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var AlexLen = {
-firstName: 'Alex',
-lastName: 'Len',
-team: 'WAS',
-pos: 'C',
-age: '28',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var IsaiahHartenstein = {
-firstName: 'Isaiah',
-lastName: 'Hartenstein',
-team: 'CLE',
-pos: 'C',
-age: '23',
-type: 'PO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TorreyCraig = {
-firstName: 'Torrey',
-lastName: 'Craig',
-team: 'PHX',
-pos: 'SF',
-age: '30',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var HarryGiles = {
-firstName: 'Harry',
-lastName: 'Giles',
-team: 'POR',
-pos: 'C',
-age: '23',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var SterlingBrown = {
-firstName: 'Sterling',
-lastName: 'Brown',
-team: 'HOU',
-pos: 'SG',
-age: '26',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var GeorgesNiang = {
-firstName: 'Georges',
-lastName: 'Niang',
-team: 'UTH',
-pos: 'SF',
-age: '28',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var WenyenGabriel = {
-firstName: 'Wenyen',
-lastName: 'Gabriel',
-team: 'NOP',
-pos: 'PF',
-age: '24',
-type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ThanasisAntetokounmpo = {
-firstName: 'Thanasis',
-lastName: 'Antetokounmpo',
-team: 'MIL',
-pos: 'SF',
-age: '29',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var MitchellRobinson = {
-firstName: 'Mitchell',
-lastName: 'Robinson',
-team: 'NYK',
-pos: 'C',
-age: '23',
-type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var SviatoslavMykhailiuk = {
-firstName: 'Sviatoslav',
-lastName: 'Mykhailiuk',
-team: 'OKC',
-pos: 'SG',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TheoPinson = {
-firstName: 'Theo',
-lastName: 'Pinson',
-team: 'NYK',
-pos: 'SG',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var SemiOjeleye = {
-firstName: 'Semi',
-lastName: 'Ojeleye',
-team: 'BOS',
-pos: 'PF',
-age: '26',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DavidNwaba = {
-firstName: 'David',
-lastName: 'Nwaba',
-team: 'HOU',
-pos: 'SG',
-age: '28',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var IsaacBonga = {
-firstName: 'Isaac',
-lastName: 'Bonga',
-team: 'WAS',
-pos: 'SF',
-age: '21',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DevonteGraham = {
-firstName: 'Devonte\'',
-lastName: 'Graham',
-team: 'CHA',
-pos: 'PG',
-age: '26',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var GaryTrentJr = {
-firstName: 'Gary',
-lastName: 'Trent Jr.',
-team: 'TOR',
-pos: 'SG',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JarredVanderbilt = {
-firstName: 'Jarred',
-lastName: 'Vanderbilt',
-team: 'MIN',
-pos: 'PF',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var BruceBrown = {
-firstName: 'Bruce',
-lastName: 'Brown',
-team: 'BKN',
-pos: 'SG',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '29.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
 var HamidouDiallo = {
-firstName: 'Hamidou',
-lastName: 'Diallo',
-team: 'DET',
+name: 'Hamidou Diallo',
 pos: 'SG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var BlakeGriffin = {
-firstName: 'Blake',
-lastName: 'Griffin',
-team: 'BKN',
-pos: 'PF',
-age: '32',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TerenceDavis = {
-firstName: 'Terence',
-lastName: 'Davis',
-team: 'SAC',
-pos: 'SG',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TalenHortonTucker = {
-firstName: 'Talen',
-lastName: 'Horton-Tucker',
-team: 'LAL',
-pos: 'SG',
-age: '20',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JavonteGreen = {
-firstName: 'Javonte',
-lastName: 'Green',
-team: 'CHI',
-pos: 'SG',
-age: '28',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ErsanIlyasova = {
-firstName: 'Ersan',
-lastName: 'Ilyasova',
-team: 'UTH',
-pos: 'PF',
-age: '34',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JuwanMorgan = {
-firstName: 'Juwan',
-lastName: 'Morgan',
-team: 'UTH',
-pos: 'SF',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var BrandonGoodwin = {
-firstName: 'Brandon',
-lastName: 'Goodwin',
-team: 'ATL',
-pos: 'PG',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var CameronPayne = {
-firstName: 'Cameron',
-lastName: 'Payne',
-team: 'PHX',
-pos: 'PG',
-age: '27',
-type: 'UFA',
-cYears: 2,
-cTotal: 26,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064230.png&w=350&h=254',
-ws: 3.6,
-interest: 30
-};
-var DuncanRobinson = {
-firstName: 'Duncan',
-lastName: 'Robinson',
-team: 'MIA',
-pos: 'SF',
-age: '27',
-type: 'RFA',
-cYears: 3,
-cTotal: 50,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3157465.png&w=350&h=254',
-ws: 3.7,
-interest: 20
+type: 'CO',
+age: '23.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
 var KendrickNunn = {
-firstName: 'Kendrick',
-lastName: 'Nunn',
-team: 'MIA',
+name: 'Kendrick Nunn',
 pos: 'SG',
-age: '26',
+type: 'PO',
+age: '26.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var CollinSexton = {
+name: 'Collin Sexton',
+pos: 'PG',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '23.3',
+sal: 20000000,
+years: 4,
+odds: 15,
+wA: 3.5,
+img: ''
+};
+var CoryJoseph = {
+name: 'Cory Joseph',
+pos: 'PG',
+type: 'PO',
+age: '30.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JaValeMcGee = {
+name: 'JaVale McGee',
+pos: 'C',
+type: 'UFA',
+age: '34.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var RobinLopez = {
+name: 'Robin Lopez',
+pos: 'C',
+type: 'UFA',
+age: '34.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var LouisWilliams = {
+name: 'Louis Williams',
+pos: 'SG',
+type: 'UFA',
+age: '35.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JoshJackson = {
+name: 'Josh Jackson',
+pos: 'SG',
+type: 'UFA',
+age: '25.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JalenSmith = {
+name: 'Jalen Smith',
+pos: 'PF',
+type: 'UFA',
+age: '22.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var KevonLooney = {
+name: 'Kevon Looney',
+pos: 'PF',
+type: 'UFA',
+age: '26.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BruceBrownJr = {
+name: 'Bruce Brown',
+pos: 'SG',
+type: 'UFA',
+age: '25.7',
+sal: 7000000,
+years: 3,
+odds: 50,
+wA: 4.8,
+img: ''
+};
+var KevinKnox = {
+name: 'Kevin Knox',
+pos: 'SF',
+type: 'RFA',
+age: '22.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JeffGreen = {
+name: 'Jeff Green',
+pos: 'PF',
+type: 'PO',
+age: '35.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BrynForbes = {
+name: 'Bryn Forbes',
+pos: 'SG',
+type: 'UFA',
+age: '28.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BobbyPortis = {
+name: 'Bobby Portis',
+pos: 'PF',
+type: 'PO',
+age: '27.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MilesBridges = {
+name: 'Miles Bridges',
+pos: 'SF',
+type: 'RFA',
+age: '24.1',
+sal: 28000000,
+years: 4,
+odds: 25,
+wA: 7.2,
+img: ''
 };
 var GorguiDieng = {
-firstName: 'Gorgui',
-lastName: 'Dieng',
-team: 'SAS',
+name: 'Gorgui Dieng',
 pos: 'C',
-age: '31',
 type: 'UFA',
-cYears: 1,
-cTotal: 2,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2534781.png&w=350&h=254',
-ws: 2,
-interest: 70
+age: '32.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var JeffTeague = {
-firstName: 'Jeff',
-lastName: 'Teague',
-team: 'MIL',
-pos: 'PG',
-age: '33',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var AndreDrummond = {
-firstName: 'Andre',
-lastName: 'Drummond',
-team: 'LAL',
-pos: 'C',
-age: '28',
-type: 'UFA',
-cYears: 1,
-cTotal: 10,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6585.png&w=350&h=254',
-ws: 2,
-interest: 40
-};
-var DeonteBurton = {
-firstName: 'Deonte',
-lastName: 'Burton',
-team: 'OKC',
+var JakeLayman = {
+name: 'Jake Layman',
 pos: 'SF',
-age: '27',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '28.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var BenMcLemore = {
-firstName: 'Ben',
-lastName: 'McLemore',
-team: 'LAL',
+var TroyBrownJr = {
+name: 'Troy Brown Jr.',
 pos: 'SF',
-age: '28',
-type: 'UFA',
-cYears: 1,
-cTotal: 1,
-img: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2578213.png&w=350&h=254',
-ws: 1,
-interest: 60
-};
-var DewayneDedmon = {
-firstName: 'Dewayne',
-lastName: 'Dedmon',
-team: 'MIA',
-pos: 'C',
-age: '32',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var KhemBirch = {
-firstName: 'Khem',
-lastName: 'Birch',
-team: 'TOR',
-pos: 'PF',
-age: '29',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DeMarcusCousins = {
-firstName: 'DeMarcus',
-lastName: 'Cousins',
-team: 'LAC',
-pos: 'C',
-age: '31',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TimFrazier = {
-firstName: 'Tim',
-lastName: 'Frazier',
-team: 'MEM',
-pos: 'PG',
-age: '30',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var RondaeHollisJefferson = {
-firstName: 'Rondae',
-lastName: 'Hollis-Jefferson',
-team: 'POR',
-pos: 'SF',
-age: '26',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var MoritzWagner = {
-firstName: 'Moritz',
-lastName: 'Wagner',
-team: 'ORL',
-pos: 'C',
-age: '24',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '22.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var DidiLouzada = {
-firstName: 'Didi',
-lastName: 'Louzada',
-team: 'NOP',
-pos: 'SF',
-age: '22',
+var MikeMuscala = {
+name: 'Mike Muscala',
+pos: 'PF',
 type: 'CO',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '30.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var SindariusThornwell = {
-firstName: 'Sindarius',
-lastName: 'Thornwell',
-team: 'ORL',
+var DonteDiVincenzo = {
+name: 'Donte DiVincenzo',
 pos: 'SG',
-age: '26',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JordanBell = {
-firstName: 'Jordan',
-lastName: 'Bell',
-team: 'GSW',
-pos: 'C',
-age: '26',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JaredHarper = {
-firstName: 'Jared',
-lastName: 'Harper',
-team: 'NYK',
-pos: 'PG',
-age: '24',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '25.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var MikeJames = {
-firstName: 'Mike',
-lastName: 'James',
-team: 'BKN',
-pos: 'PG',
-age: '31',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var IgnasBrazdeikis = {
-firstName: 'Ignas',
-lastName: 'Brazdeikis',
-team: 'ORL',
+var NicolasBatum = {
+name: 'Nicolas Batum',
 pos: 'SF',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+type: 'PO',
+age: '33.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var JayScrubb = {
-firstName: 'Jay',
-lastName: 'Scrubb',
-team: 'LAC',
-pos: 'SG',
-age: '21',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ShaquilleHarrison = {
-firstName: 'Shaquille',
-lastName: 'Harrison',
-team: 'DEN',
+var FacundoCampazzo = {
+name: 'Facundo Campazzo',
 pos: 'PG',
-age: '27',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '22.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var ReggiePerry = {
-firstName: 'Reggie',
-lastName: 'Perry',
-team: 'BKN',
-pos: 'C',
-age: '21',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var SkylarMays = {
-firstName: 'Skylar',
-lastName: 'Mays',
-team: 'ATL',
-pos: 'SG',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JarrellBrantley = {
-firstName: 'Jarrell',
-lastName: 'Brantley',
-team: 'UTH',
-pos: 'PF',
-age: '',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var KeitaBatesDiop = {
-firstName: 'Keita',
-lastName: 'Bates-Diop',
-team: 'SAS',
-pos: 'SF',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var SabenLee = {
-firstName: 'Saben',
-lastName: 'Lee',
-team: 'DET',
+var TreyBurke = {
+name: 'Trey Burke',
 pos: 'PG',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+type: 'PO',
+age: '29.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var TylerBey = {
-firstName: 'Tyler',
-lastName: 'Bey',
-team: 'DAL',
+var LonnieWalkerIV = {
+name: 'Lonnie Walker IV',
 pos: 'SG',
-age: '23',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var MarkusHoward = {
-firstName: 'Markus',
-lastName: 'Howard',
-team: 'DEN',
-pos: 'PG',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var MaxStrus = {
-firstName: 'Max',
-lastName: 'Strus',
-team: 'MIA',
-pos: 'SG',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var GrantRiller = {
-firstName: 'Grant',
-lastName: 'Riller',
-team: 'CHA',
-pos: 'PG',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var NateDarling = {
-firstName: 'Nate',
-lastName: 'Darling',
-team: 'CHA',
-pos: 'SG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JeremiahMartin = {
-firstName: 'Jeremiah',
-lastName: 'Martin',
-team: 'CLE',
-pos: 'G',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var KyleGuy = {
-firstName: 'Kyle',
-lastName: 'Guy',
-team: 'SAC',
-pos: 'SG',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var AmirCoffey = {
-firstName: 'Amir',
-lastName: 'Coffey',
-team: 'LAC',
-pos: 'SG',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JaylenHoard = {
-firstName: 'Jaylen',
-lastName: 'Hoard',
-team: 'OKC',
-pos: 'F',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JoshHall = {
-firstName: 'Josh',
-lastName: 'Hall',
-team: 'OKC',
-pos: 'SF',
-age: '20',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var KostasAntetokounmpo = {
-firstName: 'Kostas',
-lastName: 'Antetokounmpo',
-team: 'LAL',
-pos: 'PF',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var DevontaeCacok = {
-firstName: 'Devontae',
-lastName: 'Cacok',
-team: 'LAL',
-pos: 'C',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var NicoMannion = {
-firstName: 'Nico',
-lastName: 'Mannion',
-team: 'GSW',
-pos: 'PG',
-age: '20',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var AxelToupane = {
-firstName: 'Axel',
-lastName: 'Toupane',
-team: 'MIL',
-pos: 'SG',
-age: '29',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var GaryClark = {
-firstName: 'Gary',
-lastName: 'Clark',
-team: 'PHI',
-pos: 'PF',
-age: '26',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var LouisKing = {
-firstName: 'Louis',
-lastName: 'King',
-team: 'SAC',
-pos: 'SF',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ChassonRandle = {
-firstName: 'Chasson',
-lastName: 'Randle',
-team: 'ORL',
-pos: 'PG',
-age: '28',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var RayjonTucker = {
-firstName: 'Rayjon',
-lastName: 'Tucker',
-team: 'PHI',
-pos: 'SF',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var AdamMokoka = {
-firstName: 'Adam',
-lastName: 'Mokoka',
-team: 'CHI',
-pos: 'SG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var FrankMasonIII = {
-firstName: 'Frank',
-lastName: 'Mason III',
-team: 'ORL',
-pos: 'PG',
-age: '27',
-type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var BrodricThomas = {
-firstName: 'Brodric',
-lastName: 'Thomas',
-team: 'CLE',
-pos: 'G',
-age: '',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TackoFall = {
-firstName: 'Tacko',
-lastName: 'Fall',
-team: 'BOS',
-pos: 'C',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TremontWaters = {
-firstName: 'Tremont',
-lastName: 'Waters',
-team: 'BOS',
-pos: 'PG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JamesNunnally = {
-firstName: 'James',
-lastName: 'Nunnally',
-team: 'NOP',
-pos: 'SF',
-age: '31',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var KeljinBlevins = {
-firstName: 'Keljin',
-lastName: 'Blevins',
-team: 'POR',
-pos: 'G',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TrentForrest = {
-firstName: 'Trent',
-lastName: 'Forrest',
-team: 'UTH',
-pos: 'SG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var CassiusStanley = {
-firstName: 'Cassius',
-lastName: 'Stanley',
-team: 'IND',
-pos: 'SG',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JalenHarris = {
-firstName: 'Jalen',
-lastName: 'Harris',
-team: 'TOR',
-pos: 'PG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var AmidaBrimah = {
-firstName: 'Amida',
-lastName: 'Brimah',
-team: 'IND',
-pos: 'C',
-age: '27',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var JordanMcLaughlin = {
-firstName: 'Jordan',
-lastName: 'McLaughlin',
-team: 'MIN',
-pos: 'PG',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var AnthonyLamb = {
-firstName: 'Anthony',
-lastName: 'Lamb',
-team: 'HOU',
-pos: 'SF',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var TJLeaf = {
-firstName: 'TJ',
-lastName: 'Leaf',
-team: 'POR',
-pos: 'PF',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var ChrisChiozza = {
-firstName: 'Chris',
-lastName: 'Chiozza',
-team: 'BKN',
-pos: 'PG',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '23.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
 var FrankJackson = {
-firstName: 'Frank',
-lastName: 'Jackson',
-team: 'DET',
+name: 'Frank Jackson',
 pos: 'PG',
-age: '23',
+type: 'CO',
+age: '24.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var RyanArcidiacono = {
+name: 'Ryan Arcidiacono',
+pos: 'PG',
 type: 'UFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '28.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var KillianTillie = {
-firstName: 'Killian',
-lastName: 'Tillie',
-team: 'MEM',
-pos: 'PF',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
-};
-var SeanMcDermott = {
-firstName: 'Sean',
-lastName: 'McDermott',
-team: 'MEM',
+var JoshOkogie = {
+name: 'Josh Okogie',
 pos: 'SF',
-age: '',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '23.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var NathanKnight = {
-firstName: 'Nathan',
-lastName: 'Knight',
-team: 'ATL',
+var LaMarcusAldridge = {
+name: 'LaMarcus Aldridge',
 pos: 'PF',
-age: '24',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+type: 'UFA',
+age: '36.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var CassiusWinston = {
-firstName: 'Cassius',
-lastName: 'Winston',
-team: 'WAS',
-pos: 'PG',
-age: '23',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+var PaulMillsap = {
+name: 'Paul Millsap',
+pos: 'PF',
+type: 'UFA',
+age: '37.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var NateHinton = {
-firstName: 'Nate',
-lastName: 'Hinton',
-team: 'DAL',
+var WayneEllington = {
+name: 'Wayne Ellington',
 pos: 'SG',
-age: '22',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+type: 'UFA',
+age: '34.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var GabeVincent = {
-firstName: 'Gabe',
-lastName: 'Vincent',
-team: 'MIA',
+var DwightHoward = {
+name: 'Dwight Howard',
+pos: 'C',
+type: 'UFA',
+age: '36.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BlakeGriffin = {
+name: 'Blake Griffin',
+pos: 'PF',
+type: 'UFA',
+age: '33.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var EdDavis = {
+name: 'Ed Davis',
+pos: 'C',
+type: 'UFA',
+age: '32.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var UdonisHaslem = {
+name: 'Udonis Haslem',
+pos: 'PF',
+type: 'UFA',
+age: '41.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var CarmeloAnthony = {
+name: 'Carmelo Anthony',
+pos: 'PF',
+type: 'UFA',
+age: '37.9',
+sal: 4000000,
+years: 1,
+odds: 30,
+wA: 3.2,
+img: ''
+};
+var RajonRondo = {
+name: 'Rajon Rondo',
 pos: 'PG',
-age: '25',
-type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+type: 'UFA',
+age: '36.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var DevonDotson = {
-firstName: 'Devon',
-lastName: 'Dotson',
-team: 'CHI',
+var MarkieffMorris = {
+name: 'Markieff Morris',
+pos: 'PF',
+type: 'UFA',
+age: '32.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AaronHoliday = {
+name: 'Aaron Holiday',
 pos: 'PG',
-age: '22',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '25.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var GarrisonMathews = {
-firstName: 'Garrison',
-lastName: 'Mathews',
-team: 'WAS',
+var TreyLyles = {
+name: 'Trey Lyles',
+pos: 'PF',
+type: 'CO',
+age: '26.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AnferneeSimons = {
+name: 'Anfernee Simons',
 pos: 'SG',
-age: '24',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '22.8',
+sal: 22000000,
+years: 4,
+odds: 10,
+wA: 2,
+img: ''
+};
+var KentBazemore = {
+name: 'Kent Bazemore',
+pos: 'SG',
+type: 'UFA',
+age: '32.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AustinRivers = {
+name: 'Austin Rivers',
+pos: 'PG',
+type: 'UFA',
+age: '29.8',
+sal: 2400000,
+years: 1,
+odds: 50,
+wA: 1.2,
+img: ''
+};
+var HassanWhiteside = {
+name: 'Hassan Whiteside',
+pos: 'C',
+type: 'UFA',
+age: '32.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AndreDrummond = {
+name: 'Andre Drummond',
+pos: 'C',
+type: 'UFA',
+age: '28.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DewayneDedmon = {
+name: 'Dewayne Dedmon',
+pos: 'C',
+type: 'UFA',
+age: '32.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var VictorOladipo = {
+name: 'Victor Oladipo',
+pos: 'SG',
+type: 'UFA',
+age: '30.0',
+sal: 8000000,
+years: 2,
+odds: 35,
+wA: .4,
+img: ''
+};
+var OttoPorterJr = {
+name: 'Otto Porter Jr.',
+pos: 'SF',
+type: 'UFA',
+age: '28.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BenMcLemore = {
+name: 'Ben McLemore',
+pos: 'SF',
+type: 'UFA',
+age: '29.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var TonySnell = {
+name: 'Tony Snell',
+pos: 'SG',
+type: 'UFA',
+age: '30.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var RodneyHood = {
+name: 'Rodney Hood',
+pos: 'SF',
+type: 'UFA',
+age: '29.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var ElfridPayton = {
+name: 'Elfrid Payton',
+pos: 'PG',
+type: 'UFA',
+age: '28.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BolBol = {
+name: 'Bol Bol',
+pos: 'C',
+type: 'RFA',
+age: '22.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var RaulNeto = {
+name: 'Raul Neto',
+pos: 'PG',
+type: 'UFA',
+age: '29.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var NemanjaBjelica = {
+name: 'Nemanja Bjelica',
+pos: 'PF',
+type: 'UFA',
+age: '33.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var WesleyMatthews = {
+name: 'Wesley Matthews',
+pos: 'SG',
+type: 'UFA',
+age: '35.5',
+sal: 4000000,
+years: 1,
+odds: 40,
+wA: 1.2,
+img: ''
+};
+var RodneyMcGruder = {
+name: 'Rodney McGruder',
+pos: 'SG',
+type: 'UFA',
+age: '30.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var GaryPaytonII = {
+name: 'Gary Payton II',
+pos: 'PG',
+type: 'UFA',
+age: '29.4',
+sal: 6000000,
+years: 2,
+odds: 40,
+wA: 2,
+img: ''
+};
+var TonyBradley = {
+name: 'Tony Bradley',
+pos: 'C',
+type: 'PO',
+age: '24.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var FrankNtilikina = {
+name: 'Frank Ntilikina',
+pos: 'PG',
+type: 'UFA',
+age: '23.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var SviatoslavMykhailiuk = {
+name: 'Sviatoslav Mykhailiuk',
+pos: 'SG',
+type: 'PO',
+age: '24.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var ThanasisAntetokounmpo = {
+name: 'Thanasis Antetokounmpo',
+pos: 'SF',
+type: 'PO',
+age: '29.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MalikMonk = {
+name: 'Malik Monk',
+pos: 'SG',
+type: 'UFA',
+age: '24.2',
+sal: 9000000,
+years: 2,
+odds: 50,
+wA: 3.6,
+img: ''
+};
+var IsaacBonga = {
+name: 'Isaac Bonga',
+pos: 'SF',
+type: 'UFA',
+age: '22.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var IsaiahHartenstein = {
+name: 'Isaiah Hartenstein',
+pos: 'C',
+type: 'UFA',
+age: '24.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MattThomas = {
+name: 'Matt Thomas',
+pos: 'SG',
+type: 'RFA',
+age: '27.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var ShakeMilton = {
+name: 'Shake Milton',
+pos: 'SG',
+type: 'CO',
+age: '25.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var StanleyJohnson = {
+name: 'Stanley Johnson',
+pos: 'SF',
+type: 'CO',
+age: '25.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var IsaiahRoby = {
+name: 'Isaiah Roby',
+pos: 'SF',
+type: 'CO',
+age: '24.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MitchellRobinson = {
+name: 'Mitchell Robinson',
+pos: 'C',
+type: 'UFA',
+age: '24.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BrunoFernando = {
+name: 'Bruno Fernando',
+pos: 'PF',
+type: 'RFA',
+age: '23.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JalenMcDaniels = {
+name: 'Jalen McDaniels',
+pos: 'PF',
+type: 'CO',
+age: '24.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var NazReid = {
+name: 'Naz Reid',
+pos: 'C',
+type: 'CO',
+age: '22.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JalenBrunson = {
+name: 'Jalen Brunson',
+pos: 'PG',
+type: 'UFA',
+age: '25.7',
+sal: 24000000,
+years: 4,
+odds: 50,
+wA: 7,
+img: ''
+};
+var DamionLee = {
+name: 'Damion Lee',
+pos: 'SG',
+type: 'UFA',
+age: '29.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var CodyMartin = {
+name: 'Cody Martin',
+pos: 'SF',
+type: 'RFA',
+age: '26.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JaeSeanTate = {
+name: 'Jae’Sean Tate',
+pos: 'SF',
+type: 'CO',
+age: '26.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var NicolasClaxton = {
+name: 'Nicolas Claxton',
+pos: 'PF',
+type: 'RFA',
+age: '23.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var EricPaschall = {
+name: 'Eric Paschall',
+pos: 'PF',
+type: 'RFA',
+age: '25.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var VlatkoCancar = {
+name: 'Vlatko Cancar',
+pos: 'SF',
+type: 'RFA',
+age: '25.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BismackBiyombo = {
+name: 'Bismack Biyombo',
+pos: 'C',
+type: 'UFA',
+age: '29.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var LuguentzDort = {
+name: 'Luguentz Dort',
+pos: 'SG',
+type: 'CO',
+age: '23.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AustinReaves = {
+name: 'Austin Reaves',
+pos: 'PG',
+type: 'CO',
+age: '23.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var LukaGarza = {
+name: 'Luka Garza',
+pos: 'C',
+type: 'CO',
+age: '23.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var OshaeBrissett = {
+name: 'Oshae Brissett',
+pos: 'SF',
+type: 'CO',
+age: '23.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DeanWade = {
+name: 'Dean Wade',
+pos: 'PF',
+type: 'CO',
+age: '25.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var CJElleby = {
+name: 'CJ Elleby',
+pos: 'SF',
+type: 'RFA',
+age: '21.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var ElijahHughes = {
+name: 'Elijah Hughes',
+pos: 'SF',
+type: 'RFA',
+age: '24.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AnthonyGill = {
+name: 'Anthony Gill',
+pos: 'PF',
+type: 'RFA',
+age: '29.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JordanNwora = {
+name: 'Jordan Nwora',
+pos: 'PF',
+type: 'RFA',
+age: '23.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JaylenNowell = {
+name: 'Jaylen Nowell',
+pos: 'SG',
+type: 'CO',
+age: '22.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DamianJones = {
+name: 'Damian Jones',
+pos: 'C',
+type: 'UFA',
+age: '26.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var YutaWatanabe = {
+name: 'Yuta Watanabe',
+pos: 'SF',
+type: 'RFA',
+age: '27.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JuanToscanoAnderson = {
+name: 'Juan Toscano-Anderson',
+pos: 'SF',
+type: 'RFA',
+age: '29.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var TristanThompson = {
+name: 'Tristan Thompson',
+pos: 'C',
+type: 'UFA',
+age: '31.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var WenyenGabriel = {
+name: 'Wenyen Gabriel',
+pos: 'PF',
+type: 'CO',
+age: '25.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var WenyenGabriel = {
+name: 'Wenyen Gabriel',
+pos: 'PF',
+type: 'UFA',
+age: '25.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var CarsenEdwards = {
+name: 'Carsen Edwards',
+pos: 'PG',
+type: 'CO',
+age: '24.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var SamHauser = {
+name: 'Sam Hauser',
+pos: 'SF',
+type: 'CO',
+age: '24.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var LanceStephenson = {
+name: 'Lance Stephenson',
+pos: 'SG',
+type: 'UFA',
+age: '31.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JuwanMorgan = {
+name: 'Juwan Morgan',
+pos: 'SF',
+type: 'CO',
+age: '25.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var GoranDragic = {
+name: 'Goran Dragic',
+pos: 'PG',
+type: 'UFA',
+age: '36.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DeMarcusCousins = {
+name: 'DeMarcus Cousins',
+pos: 'C',
+type: 'UFA',
+age: '31.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DanuelHouse = {
+name: 'Danuel House',
+pos: 'SF',
+type: 'UFA',
+age: '28.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DJAugustin = {
+name: 'D.J. Augustin',
+pos: 'PG',
+type: 'UFA',
+age: '34.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var LukeKornet = {
+name: 'Luke Kornet',
+pos: 'C',
+type: 'UFA',
+age: '26.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DeAndreJordan = {
+name: 'DeAndre Jordan',
+pos: 'C',
+type: 'UFA',
+age: '33.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var CalebMartin = {
+name: 'Caleb Martin',
+pos: 'SF',
+type: 'RFA',
+age: '26.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var TomasSatoransky = {
+name: 'Tomas Satoransky',
+pos: 'SG',
+type: 'UFA',
+age: '30.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JevonCarter = {
+name: 'Jevon Carter',
+pos: 'PG',
+type: 'UFA',
+age: '26.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DevontaeCacok = {
+name: 'Devontae Cacok',
+pos: 'C',
+type: 'RFA',
+age: '25.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var IsaiahThomas = {
+name: 'Isaiah Thomas',
+pos: 'PG',
+type: 'UFA',
+age: '33.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JoeWieskamp = {
+name: 'Joe Wieskamp',
+pos: 'SF',
+type: 'RFA',
+age: '27.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AmirCoffey = {
+name: 'Amir Coffey',
+pos: 'SG',
+type: 'RFA',
+age: '24.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var SkylarMays = {
+name: 'Skylar Mays',
+pos: 'SG',
+type: 'RFA',
+age: '24.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var GregMonroe = {
+name: 'Greg Monroe',
+pos: 'C',
+type: 'UFA',
+age: '31.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BrandonGoodwin = {
+name: 'Brandon Goodwin',
+pos: 'PG',
+type: 'UFA',
+age: '26.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MosesBrown = {
+name: 'Moses Brown',
+pos: 'C',
+type: 'RFA',
+age: '22.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JaredHarper = {
+name: 'Jared Harper',
+pos: 'PG',
+type: 'RFA',
+age: '24.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
 var QuinndaryWeatherspoon = {
-firstName: 'Quinndary',
-lastName: 'Weatherspoon',
-team: 'SAS',
+name: 'Quinndary Weatherspoon',
 pos: 'SG',
-age: '25',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '25.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-var ArmoniBrooks = {
-firstName: 'Armoni',
-lastName: 'Brooks',
-team: 'HOU',
+var IshmailWainright = {
+name: 'Ishmail Wainright',
+pos: 'G',
+type: 'RFA',
+age: '27.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var TrentForrest = {
+name: 'Trent Forrest',
 pos: 'SG',
-age: '23',
 type: 'RFA',
-cYears: 0,
-cTotal: 0,
-img: '',
-ws: 0,
-interest: 100
+age: '23.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
 };
-
-var formerKnicks = [TimHardawayJr, TrevorAriza, DougMcDermott, RobinLopez, EnesKanter, CarmeloAnthony];
-
-var broadFA = [ ChrisPaul, KawhiLeonard, MikeConley, KyleLowry, DeMarDeRozan, OttoPorterJr, VictorOladipo, GoranDragic, TimHardawayJr, DennisSchrder, EvanFournier, DannyGreen, AndreIguodala, KellyOubreJr, JamesJohnson, CodyZeller, WillBarton, JJRedick, JustiseWinslow, KellyOlynyk, TrevorAriza, PatrickMills, TonySnell, SpencerDinwiddie, DanteExum, JoshRichardson, NormanPowell, PaulMillsap, SergeIbaka, DerrickJonesJr, MontrezlHarrell, LonzoBall, LouisWilliams, CristianoFelicio, PJTucker, DerrickRose, JaMychalGreen, DougMcDermott, RobinLopez, NemanjaBjelica, IshmaelSmith, AlecBurks, AveryBradley, TreyLyles, LauriMarkkanen, KrisDunn, DanielTheis, NerlensNoel, MikeScott, EdDavis, EnesKanter, RichaunHolmes, KevonLooney, FrankKaminsky, GarrettTemple, ElfridPayton, FrankNtilikina, DenzelValentine, DennisSmithJr, JaValeMcGee, ReggieBullock, WillieCauleyStein, ZachCollins, NicoloMelli, MalikMonk, StanleyJohnson, BobbyPortis, MauriceHarkless, WesleyMatthews, BobanMarjanovic, TJMcConnell, BismackBiyombo, JamesEnnisIII, PatrickPatterson, DJWilson, RyanArcidiacono, JohnCollins, AlexCaruso, WayneEllington, JaredDudley, JeffGreen, CarmeloAnthony, NicolasBatum, UdonisHaslem, DwightHoward, JarrettAllen, BrynForbes, MarkieffMorris, ReggieJackson, ETwaunMoore, HassanWhiteside, KentBazemore, TajGibson, AustinRivers, LukeKornet, BradWanamaker, SolomonHill, MatthewDellavedova, TonyBradley, JoshHart, EdmondSumner, LangstonGalloway, TylerJohnson, RaulNeto, JaKarrSampson, WillyHernangomez, AlexLen, IsaiahHartenstein, TorreyCraig, HarryGiles, SterlingBrown, GeorgesNiang, WenyenGabriel, ThanasisAntetokounmpo, MitchellRobinson, SviatoslavMykhailiuk, TheoPinson, SemiOjeleye, DavidNwaba, IsaacBonga, DevonteGraham, GaryTrentJr, JarredVanderbilt, BruceBrown, HamidouDiallo, BlakeGriffin, TerenceDavis, TalenHortonTucker, JavonteGreen, ErsanIlyasova, JuwanMorgan, BrandonGoodwin, CameronPayne, DuncanRobinson, KendrickNunn, GorguiDieng, JeffTeague, AndreDrummond, DeonteBurton, BenMcLemore, DewayneDedmon, KhemBirch, DeMarcusCousins, TimFrazier, RondaeHollisJefferson, MoritzWagner, DidiLouzada, SindariusThornwell, JordanBell, JaredHarper, MikeJames, IgnasBrazdeikis, JayScrubb, ShaquilleHarrison, ReggiePerry, SkylarMays, JarrellBrantley, KeitaBatesDiop, SabenLee, TylerBey, MarkusHoward, MaxStrus, GrantRiller, NateDarling, JeremiahMartin, KyleGuy, AmirCoffey, JaylenHoard, JoshHall, KostasAntetokounmpo, DevontaeCacok, NicoMannion, AxelToupane, GaryClark, LouisKing, ChassonRandle, RayjonTucker, AdamMokoka, FrankMasonIII, BrodricThomas, TackoFall, TremontWaters, JamesNunnally, KeljinBlevins, TrentForrest, CassiusStanley, JalenHarris, AmidaBrimah, JordanMcLaughlin, AnthonyLamb, TJLeaf, ChrisChiozza, FrankJackson, KillianTillie, SeanMcDermott, NathanKnight, CassiusWinston, NateHinton, GabeVincent, DevonDotson, GarrisonMathews, QuinndaryWeatherspoon, ArmoniBrooks, ]
+var NateHinton = {
+name: 'Nate Hinton',
+pos: 'SG',
+type: 'RFA',
+age: '22.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AnthonyLamb = {
+name: 'Anthony Lamb',
+pos: 'SF',
+type: 'RFA',
+age: '24.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MosesWright = {
+name: 'Moses Wright',
+pos: 'F',
+type: 'RFA',
+age: '23.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var GaryClark = {
+name: 'Gary Clark',
+pos: 'PF',
+type: 'UFA',
+age: '27.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var KyleGuy = {
+name: 'Kyle Guy',
+pos: 'SG',
+type: 'RFA',
+age: '24.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var KeljinBlevins = {
+name: 'Keljin Blevins',
+pos: 'G',
+type: 'RFA',
+age: '26.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var BrodricThomas = {
+name: 'Brodric Thomas',
+pos: 'G',
+type: 'RFA',
+age: '32.9',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DruSmith = {
+name: 'Dru Smith',
+pos: 'SG',
+type: 'RFA',
+age: '24.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var GabeYork = {
+name: 'Gabe York',
+pos: 'SG',
+type: 'RFA',
+age: '28.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JayHuff = {
+name: 'Jay Huff',
+pos: 'C',
+type: 'RFA',
+age: '23.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var CassiusWinston = {
+name: 'Cassius Winston',
+pos: 'PG',
+type: 'RFA',
+age: '24.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DavonReed = {
+name: 'Davon Reed',
+pos: 'SG',
+type: 'RFA',
+age: '26.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MattRyan = {
+name: 'Matt Ryan',
+pos: 'SF',
+type: 'RFA',
+age: '25.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MasonJones = {
+name: 'Mason Jones',
+pos: 'SG',
+type: 'RFA',
+age: '23.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var TrevelinQueen = {
+name: 'Trevelin Queen',
+pos: 'SG',
+type: 'RFA',
+age: '25.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var RobertWoodardII = {
+name: 'Robert Woodard II',
+pos: 'SG',
+type: 'RFA',
+age: '22.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var YvesPons = {
+name: 'Yves Pons',
+pos: 'G',
+type: 'RFA',
+age: '23.0',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var XavierMoon = {
+name: 'Xavier Moon',
+pos: 'SG',
+type: 'RFA',
+age: '27.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var ChrisChiozza = {
+name: 'Chris Chiozza',
+pos: 'PG',
+type: 'UFA',
+age: '26.4',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var TheoPinson = {
+name: 'Theo Pinson',
+pos: 'SG',
+type: 'UFA',
+age: '26.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var AdmiralSchofield = {
+name: 'Admiral Schofield',
+pos: 'SF',
+type: 'RFA',
+age: '25.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JayScrubb = {
+name: 'Jay Scrubb',
+pos: 'SG',
+type: 'RFA',
+age: '21.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MacMcClung = {
+name: 'Mac McClung',
+pos: 'PG',
+type: 'RFA',
+age: '23.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DJStewartJr = {
+name: 'D.J. Stewart Jr.',
+pos: 'SG',
+type: 'RFA',
+age: '22.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var ScottieLewis = {
+name: 'Scottie Lewis',
+pos: 'SG',
+type: 'RFA',
+age: '22.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var ArnoldasKulboka = {
+name: 'Arnoldas Kulboka',
+pos: 'SF',
+type: 'RFA',
+age: '24.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MalcolmHill = {
+name: 'Malcolm Hill',
+pos: 'G',
+type: 'RFA',
+age: '26.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var RJNembhard = {
+name: 'R.J. Nembhard',
+pos: 'PG',
+type: 'RFA',
+age: '23.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var NathanKnight = {
+name: 'Nathan Knight',
+pos: 'PF',
+type: 'RFA',
+age: '24.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var SharifeCooper = {
+name: 'Sharife Cooper',
+pos: 'PG',
+type: 'RFA',
+age: '20.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MylesPowell = {
+name: 'Myles Powell',
+pos: 'SG',
+type: 'RFA',
+age: '24.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var McKinleyWrightIV = {
+name: 'McKinley Wright IV',
+pos: 'PG',
+type: 'RFA',
+age: '23.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JamorkoPickett = {
+name: 'Jamorko Pickett',
+pos: 'SF',
+type: 'RFA',
+age: '24.3',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var IgnasBrazdeikis = {
+name: 'Ignas Brazdeikis',
+pos: 'SF',
+type: 'RFA',
+age: '23.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var QuincyDouby = {
+name: 'Quincy Douby',
+pos: 'PG',
+type: 'RFA',
+age: '29.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DavidDukeJr = {
+name: 'David Duke Jr.',
+pos: 'SG',
+type: 'RFA',
+age: '22.5',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var DavidJohnson = {
+name: 'David Johnson',
+pos: 'PG',
+type: 'RFA',
+age: '21.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var TylerCook = {
+name: 'Tyler Cook',
+pos: 'PF',
+type: 'RFA',
+age: '24.6',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MarkusHoward = {
+name: 'Markus Howard',
+pos: 'PG',
+type: 'RFA',
+age: '23.2',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var NeemiasQueta = {
+name: 'Neemias Queta',
+pos: 'C',
+type: 'RFA',
+age: '22.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var JustinChampagnie = {
+name: 'Justin Champagnie',
+pos: 'F',
+type: 'RFA',
+age: '20.8',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var LindellWiggington = {
+name: 'Lindell Wiggington',
+pos: 'SG',
+type: 'RFA',
+age: '24.1',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var MelvinFrazier = {
+name: 'Melvin Frazier',
+pos: 'SF',
+type: 'RFA',
+age: '25.7',
+sal: 0,
+years: 0,
+odds: 0,
+wA: 0,
+img: ''
+};
+var freeAgents = [ JohnWall, JamesHarden, RussellWestbrook, BradleyBeal, KyrieIrving, GaryHarris, ZachLaVine, RickyRubio, AndreIguodala, ThaddeusYoung, JoeIngles, TaureanPrince, JusufNurkic, TJWarren, JeremyLamb, DeandreAyton, DerrickFavors, SergeIbaka, MontrezlHarrell, DerrickJonesJr, DelonWright, KyleAnderson, MarvinBagleyIII, TyusJones, ThomasBryant, JaMychalGreen, PJTucker, IvicaZubac, ChrisBoucher, JarrettCulver, PatrickMills, MohamedBamba, DennisSchrder, AveryBradley, PatConnaughton, HamidouDiallo, KendrickNunn, CollinSexton, CoryJoseph, JaValeMcGee, RobinLopez, LouisWilliams, JoshJackson, JalenSmith, KevonLooney, BruceBrownJr, KevinKnox, JeffGreen, BrynForbes, BobbyPortis, MilesBridges, GorguiDieng, JakeLayman, TroyBrownJr, MikeMuscala, DonteDiVincenzo, NicolasBatum, FacundoCampazzo, TreyBurke, LonnieWalkerIV, FrankJackson, RyanArcidiacono, JoshOkogie, LaMarcusAldridge, PaulMillsap, WayneEllington, DwightHoward, BlakeGriffin, EdDavis, UdonisHaslem, CarmeloAnthony, RajonRondo, MarkieffMorris, AaronHoliday, TreyLyles, AnferneeSimons, KentBazemore, AustinRivers, HassanWhiteside, AndreDrummond, DewayneDedmon, VictorOladipo, OttoPorterJr, BenMcLemore, TonySnell, RodneyHood, ElfridPayton, BolBol, RaulNeto, NemanjaBjelica, WesleyMatthews, RodneyMcGruder, GaryPaytonII, TonyBradley, FrankNtilikina, SviatoslavMykhailiuk, ThanasisAntetokounmpo, MalikMonk, IsaacBonga, IsaiahHartenstein, MattThomas, ShakeMilton, StanleyJohnson, IsaiahRoby, MitchellRobinson, BrunoFernando, JalenMcDaniels, NazReid, JalenBrunson, DamionLee, CodyMartin, JaeSeanTate, NicolasClaxton, EricPaschall, VlatkoCancar, BismackBiyombo, LuguentzDort, AustinReaves, LukaGarza, OshaeBrissett, DeanWade, CJElleby, ElijahHughes, AnthonyGill, JordanNwora, JaylenNowell, DamianJones, YutaWatanabe, JuanToscanoAnderson, TristanThompson, WenyenGabriel, WenyenGabriel, CarsenEdwards, SamHauser, LanceStephenson, JuwanMorgan, GoranDragic, DeMarcusCousins, DanuelHouse, DJAugustin, LukeKornet, DeAndreJordan, CalebMartin, TomasSatoransky, JevonCarter, DevontaeCacok, IsaiahThomas, JoeWieskamp, AmirCoffey, SkylarMays, GregMonroe, BrandonGoodwin, MosesBrown, JaredHarper, QuinndaryWeatherspoon, IshmailWainright, TrentForrest, NateHinton, AnthonyLamb, MosesWright, GaryClark, KyleGuy, KeljinBlevins, BrodricThomas, DruSmith, GabeYork, JayHuff, CassiusWinston, DavonReed, MattRyan, MasonJones, TrevelinQueen, RobertWoodardII, YvesPons, XavierMoon, ChrisChiozza, TheoPinson, AdmiralSchofield, JayScrubb, MacMcClung, DJStewartJr, ScottieLewis, ArnoldasKulboka, MalcolmHill, RJNembhard, NathanKnight, SharifeCooper, MylesPowell, McKinleyWrightIV, JamorkoPickett, IgnasBrazdeikis, QuincyDouby, DavidDukeJr, DavidJohnson, TylerCook, MarkusHoward, NeemiasQueta, JustinChampagnie, LindellWiggington, MelvinFrazier, ]

@@ -1,204 +1,212 @@
+var anthonyDavis = {
+  name: "Anthony Davis",
+  pos: "PF",
+  sal: 37980720,
+  option: "none",
+  guaranteed: true,
+  wA: 0,
+  img: ""
+};
 
-var andrewWiggins = {
-  firstName: "Andrew",
-  lastName: "Wiggins",
-  pos: "F",
-  age: "26",
-  sal: 31579390,
-  ws: 3.9,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3059319.png&w=350&h=254"
+
+var exampleOffer = {
+  otherTeam: "Lakers",
+  receiveText: ["Anthony Davis"],
+  giveText: ["Julius Randle", "Evan Fournier", "2023 Round 1"],
+  pickText: ["2023 Round 1"],
+  receiveIndex: [],
+  giveIndex: [],
+  receivePlayer: [anthonyDavis],
+  givePlayer: [juliusRandle, evanFournier]
 }
 
-var gsw1 = {
-  team: warriors,
-  give: [mitchellRobinson, kevinKnox, first2022, second2023DET],
-  receive: [andrewWiggins]
+var rudyGobert = {
+  name: "Rudy Gobert",
+  pos: "C",
+  sal: 38172414,
+  option: "none",
+  guaranteed: true,
+  wA: 10,
+  img: ""
+};
+
+var rudyOffer = {
+  otherTeam: "Jazz",
+  receiveText: ["Rudy Gobert"],
+  giveText: ["Derrick Rose", "Evan Fournier", "Cam Reddish", "2023 Round 1", "2023 Round 1 (DAL)"],
+  pickText: ["2023 Round 1", "2023 Round 1 (DAL)"],
+  receiveIndex: [],
+  giveIndex: [],
+  receivePlayer: [rudyGobert],
+  givePlayer: [derrickRose, evanFournier, camReddish]
 }
 
-var okc1 = {
-  team: thunder,
-  give: [kevinKnox],
-  receive: ["2022 2nd Round (OKC)", "2026 2nd Round (OKC)"]
+var mylesTurner = {
+  name: "Myles Turner",
+  pos: "C",
+  sal: 17500000,
+  option: "none",
+  guaranteed: true,
+  wA: 3.1,
+  img: ""
+};
+
+var mylesOffer = {
+  otherTeam: "Pacers",
+  receiveText: ["Myles Turner"],
+  giveText: ["Cam Reddish", "Alec Burks", "2023 Round 1 (DAL)"],
+  pickText: ["2023 Round 1 (DAL)"],
+  receiveIndex: [],
+  giveIndex: [],
+  receivePlayer: [mylesTurner],
+  givePlayer: [camReddish, alecBurks]
 }
 
-var damianLillard = {
-  firstName: "Damian",
-  lastName: "Lillard",
-  pos: "G",
-  age: "31",
-  sal: 39344900,
-  ws: 11.4,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png&w=350&h=254"
+var donovanMitchell = {
+  name: "Donovan Mitchell",
+  pos: "SG",
+  sal: 30351780,
+  option: "none",
+  guaranteed: true,
+  wA: 7.2,
+  img: ""
+};
+
+var donovanOffer = {
+  otherTeam: "Jazz",
+  receiveText: ["Donovan Mitchell"],
+  giveText: ["Julius Randle", "Immanuel Quickley", "Quentin Grimes", "2023 Round 1", "2023 Round 1 (DAL)", "2025 Round 1"],
+  pickText: ["2023 Round 1", "2023 Round 1 (DAL)", "2025 Round 1"],
+  receiveIndex: [],
+  giveIndex: [],
+  receivePlayer: [donovanMitchell],
+  givePlayer: [juliusRandle, immanuelQuickley, quentinGrimes]
 }
 
-var por1 = {
-  team: blazers,
-  give: [rjBarrett, immanuelQuickley, mitchellRobinson, kevinKnox, first2023DAL, first2022, first2024],
-  receive: [damianLillard]
+var russellWestbrook = {
+name: 'Russell Westbrook',
+pos: 'PG',
+type: 'PO',
+age: '33.4',
+sal: 47063478,
+years: 0,
+odds: 0,
+wA: 2.7,
+img: ''
+};
+
+var westbrookOffer = {
+  otherTeam: "Lakers",
+  receiveText: ["Russell Westbrook", "2027 Round 1"],
+  giveText: ["Julius Randle", "Evan Fournier", "2023 Round 2"],
+  pickText: ["2023 Round 2"],
+  receiveIndex: [],
+  giveIndex: [],
+  receivePlayer: [russellWestbrook],
+  givePlayer: [juliusRandle, evanFournier]
 }
 
-var malikBeasley = {
-  firstName: "Malik",
-  lastName: "Beasley",
-  pos: "G",
-  age: "24",
-  sal: 14391964,
-  ws: 2.5,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907822.png&w=350&h=254"
+
+var knicksTrades = [mylesOffer, donovanOffer, rudyOffer, westbrookOffer];
+
+
+
+
+///////////////////////////////////////
+
+var ericBledsoe = {
+  name: "Eric Bledsoe",
+  pos: "SG",
+  sal: 19375000,
+  option: "none",
+  guaranteed: true,
+  wA: 1.3,
+  img: ""
+};
+
+var keonJohnson = {
+  name: "Keon Johnson",
+  pos: "SG",
+  sal: 2681040,
+  option: "none",
+  guaranteed: true,
+  wA: 0,
+  img: ""
+};
+
+var gregBrownIII = {
+  name: "Greg Brown III",
+  pos: "PF",
+  sal: 1563518,
+  option: "none",
+  guaranteed: true,
+  wA: 0.4,
+  img: ""
+};
+
+var sevenOffer = {
+  otherTeam: "Trail Blazers",
+  receiveText: ["Pick #7", "Keon Johnson", "Greg Brown III"],
+  giveText: ["Obi Toppin", "Pick #11", "2023 Round 1 (DAL)"],
+  pickText: ["Pick #11", "2023 Round 1 (DAL)"],
+  receiveIndex: [6],
+  giveIndex: [10],
+  receivePlayer: [keonJohnson, gregBrownIII],
+  givePlayer: [obiToppin]
 }
 
-var min1 = {
-  team: timberwolves,
-  give: [mitchellRobinson, obiToppin],
-  receive: [malikBeasley]
+var kellyOlynyk = {
+  name: "Kelly Olynyk",
+  pos: "C",
+  sal: 12804878,
+  option: "none",
+  guaranteed: true,
+  wA: 1.6,
+  img: ""
+};
+
+var fiveOffer = {
+  otherTeam: "Pistons",
+  receiveText: ["Pick #5", "Kelly Olynyk"],
+  giveText: ["Pick #11", "Cam Reddish", "Obi Toppin"],
+  pickText: ["Pick #11"],
+  receiveIndex: [4],
+  giveIndex: [10],
+  receivePlayer: [kellyOlynyk],
+  givePlayer: [camReddish, obiToppin]
 }
 
-var shai = {
-  firstName: "Shai",
-  lastName: "Gilgeous-Alexander",
-  pos: "G",
-  age: "22",
-  sal: 4141320,
-  ws: 6.5,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278073.png&w=350&h=254"
+var malcolmBrogdon = {
+  name: "Malcolm Brogdon",
+  pos: "PG",
+  sal: 22600000,
+  option: "none",
+  guaranteed: true,
+  wA: 4.2,
+  img: ""
+};
+
+var sixOffer = {
+  otherTeam: "Pacers",
+  receiveText: ["Pick #6", "Malcolm Brogdon"],
+  giveText: ["Pick #11", "2023 Round 1 (DAL)", "2024 Round 1", "Alec Burks", "Nerlens Noel", "Immanuel Quickley"],
+  pickText: ["Pick #11", "2023 Round 1 (DAL)", "2024 Round 1"],
+  receiveIndex: [5],
+  giveIndex: [10],
+  receivePlayer: [kellyOlynyk],
+  givePlayer: [alecBurks, nerlensNoel, immanuelQuickley]
 }
 
-var okc2 = {
-  team: thunder,
-  give: [immanuelQuickley, obiToppin, first2023DAL, first2022, first2024],
-  receive: [shai]
+var fourOffer = {
+  otherTeam: "Kings",
+  receiveText: ["Pick #4"],
+  giveText: ["Pick #11", "2023 Round 1 (DAL)", "2024 Round 1", "2027 Round 1"],
+  pickText: ["Pick #11", "2023 Round 1 (DAL)", "2024 Round 1", "2027 Round 1"],
+  receiveIndex: [3],
+  giveIndex: [10],
+  receivePlayer: [],
+  givePlayer: []
 }
 
-var benSimmons = {
-  firstName: "Ben",
-  lastName: "Simmons",
-  pos: "F",
-  age: "24",
-  sal: 33003936,
-  ws: 6,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907387.png&w=350&h=254",
-  note: "He’s one of the biggest and fastest cars in the race but what holds him back is his motor going cold. If he’s not slashing and generating points for himself or teammates, he’s pretty much worthless. And I don’t expect Thibodeau to become an offensive genius this offseason. I don’t think he’s nimble enough to walk the tightrope that leads to an offense in which Simmons is always producing. That’s why, despite his talent, I’m not sure how much better he would make the Knicks.",
-  noteAuthor: "Sam DiGiovanni"
-}
 
-var phi1 = {
-  team: sixers,
-  give: [rjBarrett, obiToppin, first2023DAL, first2024],
-  receive: [benSimmons]
-}
-
-var jalenBrunson = {
-  firstName: "Jalen",
-  lastName: "Brunson",
-  pos: "G",
-  age: "24",
-  sal: 1802057,
-  ws: 3.5,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3934672.png&w=350&h=254"
-}
-
-var dal1 = {
-  team: mavericks,
-  give: [kevinKnox, first2023DAL],
-  receive: [jalenBrunson]
-}
-
-var bradleyBeal = {
-  firstName: "Bradley",
-  lastName: "Beal",
-  pos: "G",
-  age: "28",
-  sal: 34502129,
-  ws: 5.9,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6580.png&w=350&h=254"
-}
-
-var was1 = {
-  team: wizards,
-  give: [immanuelQuickley, obiToppin, first2022, first2023DAL, first2024, first2026],
-  receive: [bradleyBeal]
-}
-
-var zachLavine = {
-  firstName: "Zach",
-  lastName: "Lavine",
-  pos: "G",
-  age: "26",
-  sal: 19500000,
-  ws: 5.9,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064440.png&w=350&h=254"
-}
-
-var chi1 = {
-  team: bulls,
-  give: [immanuelQuickley, obiToppin, first2022, first2023DAL, first2024, first2026],
-  receive: [zachLavine]
-}
-
-var collinSexton = {
-  firstName: "Collin",
-  lastName: "Sexton",
-  pos: "G",
-  age: "22",
-  sal: 6349671,
-  ws: 3.7,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277811.png&w=350&h=254",
-  note: "If the Knicks can acquire Sexton, he would be a fine player for the Knicks, thanks to the foundation. Thibodeau and Mitchell Robinson can cover for him on defense, while the offense has some room for improvement, and he can offer the shooting and driving element it needs. However, the concerns about how he impacts the team’s creativity while taking over a sizable chunk of the team’s ball-handling are a concern—also, the imminent contract extension.",
-  noteAuthor: "Quentin Haynes"
-}
-
-var cle1 = {
-  team: cavaliers,
-  give: [obiToppin, kevinKnox, first2022],
-  receive: [collinSexton]
-}
-
-var cjMccollum = {
-  firstName: "CJ",
-  lastName: "McCollum",
-  pos: "G",
-  age: "29",
-  sal: 30864198,
-  ws: 3.5,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2490149.png&w=350&h=254"
-}
-
-var por2 = {
-  team: blazers,
-  give: [immanuelQuickley, kevinKnox, first2022],
-  receive: [cjMccollum]
-}
-
-var dejounteMurray = {
-  firstName: "Dejounte",
-  lastName: "Murray",
-  pos: "G",
-  age: "24",
-  sal: 15428880,
-  ws: 3.3,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907497.png&w=350&h=254"
-}
-
-var sas1 = {
-  team: spurs,
-  give: [obiToppin, kevinKnox, first2022],
-  receive: [dejounteMurray]
-}
-
-var derrickWhite = {
-  firstName: "Derrick",
-  lastName: "White",
-  pos: "G",
-  age: "27",
-  sal: 15178571,
-  ws: 4.2,
-  img: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3078576.png&w=350&h=254"
-}
-
-var sas2 = {
-  team: spurs,
-  give: [obiToppin, first2022],
-  receive: [derrickWhite]
-}
-
-trades = [gsw1, okc1, por1, min1, phi1, dal1, was1, chi1, cle1, por2, sas1, sas2];
+var knicksDraftTrades = [sevenOffer, fiveOffer, sixOffer, fourOffer]

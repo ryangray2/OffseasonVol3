@@ -1,0 +1,543 @@
+.container {
+}
+
+body {
+  /* background: rgb(226,228,243);
+background: radial-gradient(circle, rgba(226,228,243,1) 20%, rgba(226,228,243,1) 61%, rgba(176,178,207,1) 100%); */
+    background: linear-gradient(344deg, rgba(123,166,219,1) 10%, rgba(21,76,119,1) 76%);
+  transition: background 1s;
+}
+
+html,
+body {
+    height: 100%;
+    -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+#startCont {
+
+}
+
+#me {
+  font-family: 'Montserrat';
+color: #c0ccdb;
+}
+
+#popInfo {
+  color: #1aaefd;
+font-family: 'Montserrat';
+}
+
+#popUp {
+  display: none;
+  width: 90%;
+  position: absolute;
+  top: 40%;
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+border-radius: 20px;
+padding: 10px;
+background: linear-gradient(344deg, rgba(159,182,210,1) 36%, rgba(179,222,255,1) 100%);
+background: linear-gradient(344deg, rgba(227,191,191,1) 36%, rgba(255,241,241,1) 100%);
+border-bottom: 5px solid #0a6fa3;
+}
+
+.draftName {
+  font-size: 30px;
+  font-family: Kdam Thmor Pro;
+}
+
+.tradecont {
+  color: #f9e6e6;
+    font-family: Kdam Thmor Pro;
+}
+
+#teamClock {
+  width: 80%;
+      max-width: 250px;
+
+}
+
+#showDraft {
+  background: linear-gradient(344deg, rgba(48,13,13,0.7455575980392157) 37%, rgba(245,41,41,1) 100%);
+  color: white;
+  font-family: Kdam Thmor Pro;
+  margin-top: 10vh;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.dropPic {
+  height: 14vh;
+}
+
+#mleText {
+  background-color: #cb7274;
+color: white;
+font-family: 'Montserrat';
+box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+border-radius: 20px;
+margin-top: -13px;
+}
+}
+
+.drop {
+  height: 1px;
+  -webkit-transition: all .25s ease !important;
+-moz-transition: all .25s ease !important;
+-ms-transition: all .25s ease !important;
+-o-transition: all .25s ease !important;
+transition: all .25s ease !important;
+}
+
+#simImg {
+  width: 80%;
+  max-width:200px;
+
+}
+
+.blurb {
+  font-family: 'Kdam Thmor Pro';
+}
+
+.prospectRow {
+  border-bottom: 1px solid rgb(355, 355, 355, .5);
+background: linear-gradient(344deg, rgb(82 69 69 / 75%) 37%, rgb(192 30 30) 100%);
+}
+
+.draftStats {
+    font-family: Kdam Thmor Pro;
+}
+
+#boardCont {
+  display: block;
+background: linear-gradient(313deg, rgb(0 0 0 / 80%) 37%, rgb(68 68 68 / 80%) 100%);
+color: white;
+overflow: scroll;
+    height: 70vh;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#yourFaNavCont {
+  overflow: scroll;
+      height: 66vh;
+}
+
+#tradeNavCont {
+  overflow: scroll;
+      height: 70vh;
+}
+
+#rosterNavCont {
+  overflow: scroll;
+      height: 70vh;
+}
+
+#faNavCont {
+  overflow: scroll;
+      height: 70vh;
+}
+
+#advance {
+
+}
+
+#capSpaceText {
+    background-color: #18affe;
+color: white;
+font-family: 'Montserrat';
+box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+border-radius: 20px;
+}
+
+.teamCont {
+  background: rgb(234,236,255);
+  background: linear-gradient(344deg, rgba(234,236,255,1) 37%, rgba(187,190,214,1) 100%);
+height: 110%;
+}
+
+.teamSelectName {
+  color: #134dfe;
+  font-family: 'Montserrat';
+  font-size: 3vw;
+}
+
+#teamSelectCont {
+  display: none
+}
+
+.selectLogo {
+  width: 100%;
+}
+
+.selectLogo:hover {
+  cursor: pointer;
+}
+
+#draftGateCont {
+  display: none;
+}
+
+#draftCont {
+  display: none;
+}
+
+#showLogo {
+  width: 80%;
+  max-width: 200px
+}
+
+#dashboard {
+  display: none;
+}
+
+.navButt {
+
+}
+
+.currNav {
+  background-color: #18affe !important;
+      color: #ebeaed !important;
+      padding: 11px;
+      border-radius: 15px;
+}
+
+.yourFaImg {
+  width: 60%;
+      max-width: 24vh;
+      border: 2px solid #1aaefd63;
+      border-radius: 20px;
+}
+
+.faName {
+  font-family: 'Kdam Thmor Pro';
+    color: #0a6fa3;
+    font-size: 3vh;
+    margin-bottom: 0px;
+}
+
+.signBut {
+  font-family: 'Montserrat' !important;
+  color: #b2e4ff !important;
+  background-color: #0a6fa3 !important;
+}
+
+.faSal {
+  font-family: 'Kdam Thmor Pro';
+color: #0a6fa3;
+font-size: 2vh;
+margin-bottom: 0px;
+}
+
+.notradeP {
+    font-family: 'Kdam Thmor Pro';
+  color: #0a6fa3;
+}
+
+.tradeP {
+  color: #0a6fa3;
+}
+
+.drafttradeP {
+  color: #faeaea;
+}
+
+.rosterCut {
+  color:  #d23434;
+}
+
+.rosterPos {
+  font-family: 'Kdam Thmor Pro';
+    color: #0a6fa3;
+}
+
+.faRow {
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(344deg, rgba(159,182,210,1) 36%, rgba(179,222,255,1) 100%);
+    background: linear-gradient(344deg, rgba(227,191,191,1) 36%, rgba(255,241,241,1) 100%);
+    border-bottom: 5px solid #0a6fa3;
+    margin-bottom: 10px;
+}
+
+.starterImg {
+    width: 100%;
+    max-width: 200px;
+}
+
+.restartRow {
+  margin-top: 10px;
+}
+
+.starter {
+  border-radius: 20px;
+  background: rgb(159,182,210);
+  background: linear-gradient(344deg, rgba(159,182,210,1) 36%, rgba(179,222,255,1) 100%);
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+}
+
+.recordRow {
+  font-size: 5vh;
+color: #0a6fa3;
+font-family: 'Montserrat';
+box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+border-radius: 20px;
+/* padding: 10px; */
+/* background: linear-gradient(344deg, rgba(159,182,210,1) 36%, rgba(179,222,255,1) 100%); */
+background: linear-gradient(344deg, rgba(227,191,191,1) 36%, rgba(255,241,241,1) 100%);
+border-bottom: 5px solid #0a6fa3;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.faImg {
+  width: 60%;
+}
+
+.rosterImg {
+  width: 100%
+}
+
+.rosterHead {
+  font-family: 'Kdam Thmor Pro';
+    color: #0a6fa3;
+}
+
+.rosterName {
+  font-family: 'Kdam Thmor Pro';
+  color: #0a6fa3;
+}
+
+.advance {
+  font-family: 'Montserrat' !important;
+    color: #1aaefd !important;
+    background-color: #cfd1e7 !important;
+}
+
+.tradeLogo {
+  height: 100%;
+    max-height: 11vh;
+  margin-bottom: 10px;
+  background: linear-gradient(344deg, rgba(227,191,191,1) 36%, rgba(255,241,241,1) 100%);
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: rgb(0 0 0 / 7%) 0px 1px 1px, rgb(0 0 0 / 7%) 0px 2px 2px, rgb(0 0 0 / 7%) 0px 4px 4px, rgb(0 0 0 / 7%) 0px 8px 8px, rgb(0 0 0 / 7%) 0px 16px 16px;
+}
+
+#sumCont {
+  display: none;
+}
+
+#sRoster {
+  display: none;
+}
+
+#sCap {
+  font-family: 'Montserrat';
+color: #0a6fa3;
+}
+
+.sumCol {
+  box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+border-radius: 20px;
+background: rgb(159,182,210);
+background: linear-gradient(344deg, rgba(159,182,210,1) 36%, rgba(179,222,255,1) 100%);
+padding: 20px;
+}
+
+.sumP {
+  color: #0a6fa3;
+font-family: 'Kdam Thmor Pro';
+}
+
+.sumAddDrop {
+  font-family: 'Montserrat';
+color: #0a6fa3;
+}
+
+#mainLogo {
+  width: 100%;
+  max-width: 500px;
+}
+
+#draftLogo {
+  width: 100%;
+  max-width: 500px;
+}
+
+.draftLogo {
+  width: 100%;
+  max-width: 500px;
+}
+
+#topBar {
+  height: 5vh;
+  background-color: white;
+  font-size: 3vh;
+  display: none;
+  color: #70052a;
+  font-family: 'Montserrat';
+
+}
+
+.navButt {
+  background: none;
+  border: none;
+  font-size: 3vh;
+  color: #707070;
+}
+
+#navbar {
+  background-color: #cfd1e7;
+  padding: 5px;
+  margin-top: 10px;
+  color: #707070;
+  border-bottom: #18b0ff solid 4px;
+  font-family: Antonio;
+  font-size: 3vh;
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px inset;
+}
+
+.tradeAcceptButt {
+      margin-bottom: 5px;
+}
+
+
+/* CSS */
+.button-59 {
+  align-items: center;
+      background-color: #fff0;
+      border: 2px solid #fff;
+      box-sizing: border-box;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      fill: #8f102d;
+      font-family: Montserrat,sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      height: 48px;
+      justify-content: center;
+      letter-spacing: -.8px;
+      line-height: 24px;
+      min-width: 140px;
+      outline: 0;
+      padding: 0 17px;
+      text-align: center;
+      text-decoration: none;
+      transition: all .3s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+}
+
+.button-59:focus {
+  color: #171e29;
+}
+
+.button-59:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+.button-59:active {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}
+
+
+
+
+/* CSS */
+.button-38 {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-38:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-38:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible {
+  box-shadow: none;
+}
+
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-bottom2 {
+	-webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-6-18 19:59:27
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
